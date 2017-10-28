@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="css/perfect-scrollbar-0.4.5.min.css">
         <link rel="stylesheet" href="css/magnific-popup.css">
         <link rel="stylesheet" href="css/style.css">
-<link id="theme-style" rel="stylesheet" href="css/styles/blue.css">
+		<link id="theme-style" rel="stylesheet" href="css/styles/blue.css">
         
         <!--/CSS styles-->
         <!--Javascript files-->
@@ -103,36 +103,629 @@
                 </div>
             </div>
 
-            <div id="main">
 
-                <div id="research" class="page">
-                    <div class="pageheader">
-
-                        <div class="headercontent">
-
-                            <div class="section-container">
-                                <h2 class="title">Publications</h2>
-
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <p>Many of my publications are available in main computer science digital libraries and indexed elsewhere, therefore I would not like to duplicate entries here. Please check for them at <a href="https://www.researchgate.net/profile/Anderson_Uchoa" target="_new">Research Gate</a>, <a href="https://scholar.google.com.br/citations?user=_bwg28kAAAAJ&hl=en" target="_new">Google Scholar</a>, <a href="http://dblp.uni-trier.de/search/publ?q=author:Anderson_G._Uch%C3%B4a:" target="_new">DBLP</a>, and <a href="http://lattes.cnpq.br/3740664626762609" target="_new">Lattes (in Portuguese)</a>. Feel free to contact me if you want to further discuss the ideas of any of the papers.</p>
+<div id="main">
+            
+                <div id="publications" class="page">
+                    <div class="page-container">
+                        <div class="pageheader">
+                            <div class="headercontent">
+                                <div class="section-container">
+                                    
+                                    <h2 class="title">Publications</h2>
+                                    <div class="row">
+                                        <div class="col-md-12">
+							 <p>A complete list of my publications with abstracts, doi link to publisher (when available), and author version eprints can be found below. You may also want to check out my profile at <a href="https://www.researchgate.net/profile/Anderson_Uchoa" target="_new">Research Gate</a>, <a href="https://scholar.google.com.br/citations?user=_bwg28kAAAAJ&hl=en" target="_new">Google Scholar</a>, <a href="http://dblp.uni-trier.de/search/publ?q=author:Anderson_G._Uch%C3%B4a:" target="_new">DBLP</a>, and <a href="http://lattes.cnpq.br/3740664626762609" target="_new">Lattes (in Portuguese)</a>. Feel free to contact me if you want to further discuss the ideas of any of the papers.</p>
+                                               </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="subtitle text-center">
-                                            <h3>Publications @</h3>
-                                        </div>
-                                        <ul class="ul-boxed list-unstyled">
-											<li><a href="https://www.researchgate.net/profile/Anderson_Uchoa" target="_new">Research Gate</a></li>
-											<li><a href="https://scholar.google.com.br/citations?user=_bwg28kAAAAJ&hl=en" target="_new">Google Scholar</a></li>
-											<li><a href="http://dblp.uni-trier.de/search/publ?q=author:Anderson_G._Uch%C3%B4a:" target="_new">DBLP</a></li>
-											<li><a href="http://lattes.cnpq.br/3740664626762609" target="_new">Lattes (in Portuguese)</a></li>
-                                        </ul>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
+
+                        <div class="pagecontents">
+                            
+                            <div class="section color-1" id="filters">
+                                <div class="section-container">
+                                    <div class="row">
+                                        
+                                        <div class="col-md-3">
+                                            <h3>Filter by type:</h3>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select id="cd-dropdown" name="cd-dropdown" class="cd-select">
+                                                <option class="filter" value="all" selected>All types</option>
+                                                <!-- <option class="filter" value="jpaper">Jounal Papers</option> !-->
+                                                <option class="filter" value="cpaper">Conference Papers</option>
+                                                <!-- <option class="filter" value="bookchapter">Book Chapters</option>
+                                                <option class="filter" value="book">Tutorials</option> !-->
+                                                <option class="filter" value="report">Extended Abstracts</option>
+                                                <option class="filter" value="tpaper">Workshop Papers</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="col-md-3" id="sort">
+                                            <span>Sort by year:</span>
+                                            <div class="btn-group pull-right"> 
+
+                                                <button type="button" data-sort="data-year" data-order="desc" class="sort btn btn-default"><i class="icon-sort-by-order"></i></button>
+                                                <button type="button" data-sort="data-year" data-order="asc" class="sort btn btn-default"><i class="icon-sort-by-order-alt"></i></button>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="section color-2" id="pub-grid">
+                                <div class="section-container">
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="pitems">
+                                                
+                                                <div class="item mix cpaper" data-year="2015">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="icon-expand-alt"></i>
+                                                            </a>
+                                                            <a href="http://dl.acm.org/citation.cfm?id=2817750" class="tooltips" title="External link" target="_blank">
+                                                                <i class="icon-external-link"></i>
+                                                            </a>
+                                                            <a href="publications/SoD Toolkit - A Toolkit for Interactively Prototyping and Developing Multi-Sensor Multi-Device Environments.pdf" class="tooltips" title="Download" target="_blank">
+                                                                <i class="icon-cloud-download"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+
+                                                        <h4 class="pubtitle">SoD-Toolkit: A Toolkit for Interactively Prototyping and Developing Multi-Sensor, Multi-Device Environments</h4>
+                                                        <div class="pubauthor">Teddy Seyed, <strong>Alaa Azazi</strong>,  Edwin Chan, Yuxi Wang, Frank Maurer</div>
+                                                        <div class="pubcite"><span class="label label-info">Conference Paper</span> ACM International Conference on Interactive Tabletops & Surfaces (ITS), November 2015, Pages 171-180</div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <h4>Abstract</h4>
+                                                        <p>As ubiquitous environments become increasingly commonplace with newer sensors and forms of computing devices (e.g. wearables, digital tabletops), researchers have continued to design and implement novel interaction possibilities. However, as the number of sensors and devices continues to rise, researchers still face numerous instrumentation, implementation and cost barriers before being able to take advantage of the additional capabilities. In this paper, we present the SoD-Toolkit -- a toolkit that facilitates the exploration and development of multi-device interactions, applications and ubiquitous environments by using combinations of low-cost sensors to provide spatial-awareness. The toolkit offers three main features. (1) A "plug and play" architecture for seamless multi-sensor integration, allowing for novel explorations and ad-hoc setups of ubiquitous environments. (2) Client libraries that integrate natively with several major device and UI platforms. (3) Unique tools that allow designers to prototype interactions and ubiquitous environments without a need for people, sensors, rooms or devices. We demonstrate and reflect on real-world case-studies from industry-based collaborations that influenced the design of our toolkit, as well as discuss advantages and limitations of our toolkit.</p>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="item mix tpaper" data-year="2015">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="icon-expand-alt"></i>
+                                                            </a>
+                                                            <a href="https://localremote.wordpress.com/advanced-program/" class="tooltips" title="External link" target="_blank">
+                                                                <i class="icon-external-link"></i>
+                                                            </a>
+                                                            <a href="publications/A Unified Model for Mapping Gestures to Tracking Sensors in Multi-Surface Environments.pdf" class="tooltips" title="Download" target="_blank">
+                                                                <i class="icon-cloud-download"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+
+                                                        <h4 class="pubtitle">A Unified Model for Mapping Gestures to Tracking Sensors in Multi-Surface Environments</h4>
+                                                        <div class="pubauthor"><strong>Alaa Azazi</strong>,  Teddy Seyed, Frank Maurer</div>
+                                                        <div class="pubcite"><span class="label label-warning">Workshop Paper</span> Workshop on Supporting "Local Remote" Collaboration, ACM Computer-Supported Cooperative Work (CSCW), March 2015</div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <h4>Abstract</h4>
+                                                        <p>Multi-surface environments (MSEs) incorporate a wide variety of heterogeneous devices such as smart phones, tablets, tabletops and large displays into a single interactive environment. To enable natural and seamless interaction between these devices, designers and researchers have proposed a variety of gestures to perform different tasks (such as picking, dropping, flicking, etc.) in MSEs. These gestures often require using the spatial layout of the environment, and the spatial information of devices and users within the environment. This means instrumenting the environment or the devices with tracking technologies. However, implementations of these gestures have been subjective to the designers’ choice of sensors and technologies, which typically results in the same gesture being implemented in a number of different ways. The lack of a unified model for mapping gestures to tracking sensors motivates our research. We intend to perform a study to elicit gestures in MSEs, to suggest tracking sensors that would enable these gestures.</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="item mix tpaper" data-year="2014">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="icon-expand-alt"></i>
+                                                            </a>
+                                                            <a href="https://sites.google.com/site/collaborationsurfaces/program" class="tooltips" title="External link" target="_blank">
+                                                                <i class="icon-external-link"></i>
+                                                            </a>
+                                                            <a href="publications/From Room Instrumentation to Device Instrumentation Assessing an Inertial Measurement Unit for Spatial Awareness
+.pdf" class="tooltips" title="Download" target="_blank">
+                                                                <i class="icon-cloud-download"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+
+                                                        <h4 class="pubtitle">From Room Instrumentation to Device Instrumentation: Assessing an Inertial Measurement Unit for Spatial Awareness</h4>
+                                                        <div class="pubauthor"><strong>Alaa Azazi</strong>,  Teddy Seyed, Frank Maurer</div>
+                                                        <div class="pubcite"><span class="label label-warning">Workshop Paper</span> Workshop on Collaboration Meets Interactive Surfaces, ACM Interactive Tabletops and Surfaces (ITS), November 2014</div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+														<img alt="image" src="img/pubs/ITS2014.png" align="left"  style="padding:0 30px 30px 0;">
+                                                        <h4>Abstract</h4>
+                                                        <p>Current implementations of spatially-aware multi-surface environments rely heavily on instrumenting the room with different tracking technologies (e.g. Microsoft Kinect, Vicon Cameras). Prior research, however, has shown that real-world deployment using such approaches leads to feasibility issues and users being uncomfortable with the technology in the environment. In this work, we attempt to address these issues by examining the use of a dedicated inertial measurement unit (IMU) in a MSE. We performed a limited user study and present our results that suggest measurements provided by an IMU do not provide value over sensor fusion techniques for spatially-aware MSE’s.</p>
+                                                    </div>
+                                                </div>
+												
+                                                <div class="item mix report" data-year="2014">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="icon-expand-alt"></i>
+                                                            </a>
+                                                            <a href="http://dx.doi.org/10.1145/2659766.2661217" class="tooltips" title="External link" target="_blank">
+                                                                <i class="icon-external-link"></i>
+                                                            </a>
+                                                            <a href="publications/Investigating Inertial Measurement Units for Spatial Awareness in Multi-Surface Environments.pdf" class="tooltips" title="Download" target="_blank">
+                                                                <i class="icon-cloud-download"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+
+                                                        <h4 class="pubtitle">Investigating Inertial Measurement Units for Spatial Awareness in Multi-Surface Environments</h4>
+                                                        <div class="pubauthor"><strong>Alaa Azazi</strong>,  Teddy Seyed, Frank Maurer</div>
+                                                        <div class="pubcite"><span class="label label-success">Extended Abstract</span> ACM Symposium on Spatial User Interaction (SUI), October 2014, Pages 152-152</div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+														<img alt="image" src="img/pubs/SUI2014.png" align="left"  style="padding:0 30px 30px 0;">
+                                                        <h4>Abstract</h4>
+                                                        <p>In this work, we present an initial user study that explores the use of a dedicated inertial measurement unit (IMU) to achieve spatial awareness in Multi-surface Environments (MSE's). Our initial results suggest that measurements provided by an IMU may not provide value over sensor fusion techniques for spatially-aware MSE's, but warrant further exploration.</p>
+                                                    </div>
+                                                </div>												
+												
+                                                <div class="item mix tpaper" data-year="2013">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="icon-expand-alt"></i>
+                                                            </a>
+                                                            <a href="https://sites.google.com/site/collaborationsurfaces/2013/program" class="tooltips" title="External link" target="_blank">
+                                                                <i class="icon-external-link"></i>
+                                                            </a>
+                                                            <a href="publications/Using Multiple Kinects to Build Larger Multi-Surface Environments.pdf" class="tooltips" title="Download" target="_blank">
+                                                                <i class="icon-cloud-download"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+
+                                                        <h4 class="pubtitle">Using Multiple Kinects to Build Larger Multi-Surface Environments</h4>
+                                                        <div class="pubauthor"><strong>Alaa Azazi</strong>,  Teddy Seyed, Fadi Botros, Daniel Sabourin, Edwin Chan, Frank Maurer</div>
+                                                        <div class="pubcite"><span class="label label-warning">Workshop Paper</span> Workshop on Collaboration Meets Interactive Surfaces, ACM Interactive Tabletops and Surfaces (ITS), October 2013</div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+														<img alt="image" src="img/pubs/ITS2013.png" align="left"  style="padding:0 30px 30px 0;">
+                                                        <h4>Abstract</h4>
+														<p>Multi-surface environments integrate a wide variety of different devices such as mobile phones, tablets, digital tabletops and large wall displays into a single interactive environment. The interactions in these environments are extremely diverse and should utilize the spatial layout of the room, capabilities of the device, or both. For practical multi-surface environments, using low-cost instrumentation is essential to reduce entry barriers. When building multi-surface environments and interactions based on lower-end tracking systems (such as the Microsoft Kinect) as opposed to higher-end tracking systems (such as the Vicon Motion Tracking systems), both developer and hardware issues emerge. Issues such as time and ease to build a multi-surface environment, limited range of lowcost tracking systems, are reasons we created MSE-API. In this paper, we present MSE-API, its flexibility with low-cost tracking systems, and industry-based usage scenarios.</p>
+                                                    </div>
+                                                </div>												
+												
+                                               <!-- <div class="item mix book" data-year="2010">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="icon-expand-alt"></i>
+                                                            </a>
+                                                            <a href="http://www.sciencedirect.com/science/article/pii/S1057740812000290" class="tooltips" title="External link" target="_blank">
+                                                                <i class="icon-external-link"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+                                                        <h4 class="pubtitle">
+                                                            The Dragonfly Effect: Quick, Effective, and Powerful Ways To Use Social Media to Drive Social Change
+                                                        </h4>
+                                                        <div class="pubauthor"><strong>Jennifer Doe</strong>,  Emily N. Garbinsky, Kathleen D. Vohs</div>
+                                                        <div class="pubcite">
+                                                            <span class="label label-primary">Book</span> John Wiley & Sons | September 28, 2010 | <strong>ISBN-10:</strong> 0470614153
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <img alt="image" src="img/pubs/150x200.png" align="left"  style="padding:0 30px 30px 0;">
+                                                        <h4>Proven strategies for harnessing the power of social media to drive social change</h4>
+                                                        <p>Many books teach the mechanics of using Facebook, Twitter, and YouTube to compete in business. But no book addresses how to harness the incredible power of social media to make a difference. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                        <ul>
+                                                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                                                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                                            <li>.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                                            <li>Onsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                                        </ul>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="item mix jpaper" data-year="2013">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="icon-expand-alt"></i>
+                                                            </a>
+                                                            <a href="http://www.sciencedirect.com/science/article/pii/S1057740812000290" class="tooltips" title="External link" target="_blank">
+                                                                <i class="icon-external-link"></i>
+                                                            </a>
+                                                            <a href="http://faculty-gsb.stanford.edu/aaker/pages/documents/CultivatingAdmirationinBrands_JCP2012.pdf" class="tooltips" title="Download" target="_blank">
+                                                                <i class="icon-cloud-download"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+                                                        <h4 class="pubtitle">Cultivating admiration in brands: Warmth, competence, and landing in the “golden quadrant”</h4>
+                                                        <div class="pubauthor"><strong>Jennifer Doe</strong>,  Emily N. Garbinsky, Kathleen D. Vohs</div>
+                                                        <div class="pubcite"><span class="label label-success">Journal Paper</span> Journal of Consumer Psychology, Volume 22, Issue 2, April 2012, Pages 191-194</div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <h4>Abstract</h4>
+                                                        <p>Although a substantial amount of research has examined the constructs of warmth and competence, far less has examined how these constructs develop and what benefits may accrue when warmth and competence are cultivated. Yet there are positive consequences, both emotional and behavioral, that are likely to occur when brands hold perceptions of both. In this paper, we shed light on when and how warmth and competence are jointly promoted in brands, and why these reputations matter.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="item mix bookchapter" data-year="2010">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="icon-expand-alt"></i>
+                                                            </a>
+                                                            <a href="http://www.sciencedirect.com/science/article/pii/S1057740812000290" class="tooltips" title="External link" target="_blank">
+                                                                <i class="icon-external-link"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+                                                        <h4 class="pubtitle">
+                                                            The Dragonfly Effect: Quick, Effective, and Powerful Ways To Use Social Media to Drive Social Change
+                                                        </h4>
+                                                        <div class="pubauthor"><strong>Jennifer Doe</strong>,  Emily N. Garbinsky, Kathleen D. Vohs</div>
+                                                        <div class="pubcite">
+                                                            <span class="label label-info">Book Chapter</span> John Wiley & Sons | September 28, 2010 | <strong>ISBN-10:</strong> 0470614153
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <img alt="image" src="img/pubs/150x200.png" align="left"  style="padding:0 30px 30px 0;">
+                                                        <h4>Proven strategies for harnessing the power of social media to drive social change</h4>
+                                                        <p>Many books teach the mechanics of using Facebook, Twitter, and YouTube to compete in business. But no book addresses how to harness the incredible power of social media to make a difference. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                        <ul>
+                                                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                                                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                                            <li>.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                                            <li>Onsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                                        </ul>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="item mix jpaper" data-year="2012">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="icon-expand-alt"></i>
+                                                            </a>
+                                                            <a href="http://www.sciencedirect.com/science/article/pii/S1057740812000290" class="tooltips" title="External link" target="_blank">
+                                                                <i class="icon-external-link"></i>
+                                                            </a>
+                                                            <a href="http://faculty-gsb.stanford.edu/aaker/pages/documents/CultivatingAdmirationinBrands_JCP2012.pdf" class="tooltips" title="Download" target="_blank">
+                                                                <i class="icon-cloud-download"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+                                                        <h4 class="pubtitle">Cultivating admiration in brands: Warmth, competence, and landing in the “golden quadrant”</h4>
+                                                        <div class="pubauthor"><strong>Jennifer Doe</strong>,  Emily N. Garbinsky, Kathleen D. Vohs</div>
+                                                        <div class="pubcite"><span class="label label-success">Journal Paper</span> Journal of Consumer Psychology, Volume 22, Issue 2, April 2012, Pages 191-194</div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <h4>Abstract</h4>
+                                                        <p>Although a substantial amount of research has examined the constructs of warmth and competence, far less has examined how these constructs develop and what benefits may accrue when warmth and competence are cultivated. Yet there are positive consequences, both emotional and behavioral, that are likely to occur when brands hold perceptions of both. In this paper, we shed light on when and how warmth and competence are jointly promoted in brands, and why these reputations matter.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="item mix cpaper" data-year="2012">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="icon-expand-alt"></i>
+                                                            </a>
+                                                            <a href="http://www.sciencedirect.com/science/article/pii/S1057740812000290" class="tooltips" title="External link" target="_blank">
+                                                                <i class="icon-external-link"></i>
+                                                            </a>
+                                                            <a href="http://faculty-gsb.stanford.edu/aaker/pages/documents/CultivatingAdmirationinBrands_JCP2012.pdf" class="tooltips" title="Download" target="_blank">
+                                                                <i class="icon-cloud-download"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+                                                        <h4 class="pubtitle">Cultivating admiration in brands: Warmth, competence, and landing in the “golden quadrant”</h4>
+                                                        <div class="pubauthor"><strong>Jennifer Doe</strong>,  Emily N. Garbinsky, Kathleen D. Vohs</div>
+                                                        <div class="pubcite"><span class="label label-warning">Conference Papers</span> Journal of Consumer Psychology, Volume 22, Issue 2, April 2012, Pages 191-194</div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <h4>Abstract</h4>
+                                                        <p>Although a substantial amount of research has examined the constructs of warmth and competence, far less has examined how these constructs develop and what benefits may accrue when warmth and competence are cultivated. Yet there are positive consequences, both emotional and behavioral, that are likely to occur when brands hold perceptions of both. In this paper, we shed light on when and how warmth and competence are jointly promoted in brands, and why these reputations matter.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="item mix book" data-year="2010">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="icon-expand-alt"></i>
+                                                            </a>
+                                                            <a href="http://www.sciencedirect.com/science/article/pii/S1057740812000290" class="tooltips" title="External link" target="_blank">
+                                                                <i class="icon-external-link"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+                                                        <h4 class="pubtitle">
+                                                            The Dragonfly Effect: Quick, Effective, and Powerful Ways To Use Social Media to Drive Social Change
+                                                        </h4>
+                                                        <div class="pubauthor"><strong>Jennifer Doe</strong>,  Emily N. Garbinsky, Kathleen D. Vohs</div>
+                                                        <div class="pubcite">
+                                                            <span class="label label-primary">Book</span> John Wiley & Sons | September 28, 2010 | <strong>ISBN-10:</strong> 0470614153
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <img alt="image" src="img/pubs/150x200.png" align="left"  style="padding:0 30px 30px 0;">
+                                                        <h4>Proven strategies for harnessing the power of social media to drive social change</h4>
+                                                        <p>Many books teach the mechanics of using Facebook, Twitter, and YouTube to compete in business. But no book addresses how to harness the incredible power of social media to make a difference. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                        <ul>
+                                                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                                                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                                            <li>.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                                            <li>Onsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                                        </ul>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="item mix jpaper" data-year="2011">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="icon-expand-alt"></i>
+                                                            </a>
+                                                            <a href="http://www.sciencedirect.com/science/article/pii/S1057740812000290" class="tooltips" title="External link" target="_blank">
+                                                                <i class="icon-external-link"></i>
+                                                            </a>
+                                                            <a href="http://faculty-gsb.stanford.edu/aaker/pages/documents/CultivatingAdmirationinBrands_JCP2012.pdf" class="tooltips" title="Download" target="_blank">
+                                                                <i class="icon-cloud-download"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+                                                        <h4 class="pubtitle">Cultivating admiration in brands: Warmth, competence, and landing in the “golden quadrant”</h4>
+                                                        <div class="pubauthor"><strong>Jennifer Doe</strong>,  Emily N. Garbinsky, Kathleen D. Vohs</div>
+                                                        <div class="pubcite"><span class="label label-success">Journal Paper</span> Journal of Consumer Psychology, Volume 22, Issue 2, April 2012, Pages 191-194</div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <h4>Abstract</h4>
+                                                        <p>Although a substantial amount of research has examined the constructs of warmth and competence, far less has examined how these constructs develop and what benefits may accrue when warmth and competence are cultivated. Yet there are positive consequences, both emotional and behavioral, that are likely to occur when brands hold perceptions of both. In this paper, we shed light on when and how warmth and competence are jointly promoted in brands, and why these reputations matter.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="item mix bookchapter" data-year="2010">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="icon-expand-alt"></i>
+                                                            </a>
+                                                            <a href="http://www.sciencedirect.com/science/article/pii/S1057740812000290" class="tooltips" title="External link" target="_blank">
+                                                                <i class="icon-external-link"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+                                                        <h4 class="pubtitle">
+                                                            The Dragonfly Effect: Quick, Effective, and Powerful Ways To Use Social Media to Drive Social Change
+                                                        </h4>
+                                                        <div class="pubauthor"><strong>Jennifer Doe</strong>,  Emily N. Garbinsky, Kathleen D. Vohs</div>
+                                                        <div class="pubcite">
+                                                            <span class="label label-info">Book Chapter</span> John Wiley & Sons | September 28, 2010 | <strong>ISBN-10:</strong> 0470614153
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <img alt="image" src="img/pubs/150x200.png" align="left"  style="padding:0 30px 30px 0;">
+                                                        <h4>Proven strategies for harnessing the power of social media to drive social change</h4>
+                                                        <p>Many books teach the mechanics of using Facebook, Twitter, and YouTube to compete in business. But no book addresses how to harness the incredible power of social media to make a difference. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                        <ul>
+                                                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                                                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                                            <li>.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                                            <li>Onsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                                        </ul>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="item mix jpaper" data-year="2010">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="icon-expand-alt"></i>
+                                                            </a>
+                                                            <a href="http://www.sciencedirect.com/science/article/pii/S1057740812000290" class="tooltips" title="External link" target="_blank">
+                                                                <i class="icon-external-link"></i>
+                                                            </a>
+                                                            <a href="http://faculty-gsb.stanford.edu/aaker/pages/documents/CultivatingAdmirationinBrands_JCP2012.pdf" class="tooltips" title="Download" target="_blank">
+                                                                <i class="icon-cloud-download"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+                                                        <h4 class="pubtitle">Cultivating admiration in brands: Warmth, competence, and landing in the “golden quadrant”</h4>
+                                                        <div class="pubauthor"><strong>Jennifer Doe</strong>,  Emily N. Garbinsky, Kathleen D. Vohs</div>
+                                                        <div class="pubcite"><span class="label label-success">Journal Paper</span> Journal of Consumer Psychology, Volume 22, Issue 2, April 2010, Pages 191-194</div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <h4>Abstract</h4>
+                                                        <p>Although a substantial amount of research has examined the constructs of warmth and competence, far less has examined how these constructs develop and what benefits may accrue when warmth and competence are cultivated. Yet there are positive consequences, both emotional and behavioral, that are likely to occur when brands hold perceptions of both. In this paper, we shed light on when and how warmth and competence are jointly promoted in brands, and why these reputations matter.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="item mix cpaper" data-year="2011">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="icon-expand-alt"></i>
+                                                            </a>
+                                                            <a href="http://www.sciencedirect.com/science/article/pii/S1057740812000290" class="tooltips" title="External link" target="_blank">
+                                                                <i class="icon-external-link"></i>
+                                                            </a>
+                                                            <a href="http://faculty-gsb.stanford.edu/aaker/pages/documents/CultivatingAdmirationinBrands_JCP2012.pdf" class="tooltips" title="Download" target="_blank">
+                                                                <i class="icon-cloud-download"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+                                                        <h4 class="pubtitle">Cultivating admiration in brands: Warmth, competence, and landing in the “golden quadrant”</h4>
+                                                        <div class="pubauthor"><strong>Jennifer Doe</strong>,  Emily N. Garbinsky, Kathleen D. Vohs</div>
+                                                        <div class="pubcite"><span class="label label-warning">Conference Papers</span> Journal of Consumer Psychology, Volume 22, Issue 2, April 2011, Pages 191-194</div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <h4>Abstract</h4>
+                                                        <p>Although a substantial amount of research has examined the constructs of warmth and competence, far less has examined how these constructs develop and what benefits may accrue when warmth and competence are cultivated. Yet there are positive consequences, both emotional and behavioral, that are likely to occur when brands hold perceptions of both. In this paper, we shed light on when and how warmth and competence are jointly promoted in brands, and why these reputations matter.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="item mix book" data-year="2010">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="icon-expand-alt"></i>
+                                                            </a>
+                                                            <a href="http://www.sciencedirect.com/science/article/pii/S1057740812000290" class="tooltips" title="External link" target="_blank">
+                                                                <i class="icon-external-link"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+                                                        <h4 class="pubtitle">
+                                                            The Dragonfly Effect: Quick, Effective, and Powerful Ways To Use Social Media to Drive Social Change
+                                                        </h4>
+                                                        <div class="pubauthor"><strong>Jennifer Doe</strong>,  Emily N. Garbinsky, Kathleen D. Vohs</div>
+                                                        <div class="pubcite">
+                                                            <span class="label label-primary">Book</span> John Wiley & Sons | September 28, 2010 | <strong>ISBN-10:</strong> 0470614153
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <img alt="image" src="img/pubs/150x200.png" align="left"  style="padding:0 30px 30px 0;">
+                                                        <h4>Proven strategies for harnessing the power of social media to drive social change</h4>
+                                                        <p>Many books teach the mechanics of using Facebook, Twitter, and YouTube to compete in business. But no book addresses how to harness the incredible power of social media to make a difference. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                        <ul>
+                                                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                                                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                                            <li>.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                                            <li>Onsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                                        </ul>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="item mix jpaper" data-year="2009">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="icon-expand-alt"></i>
+                                                            </a>
+                                                            <a href="http://www.sciencedirect.com/science/article/pii/S1057740812000290" class="tooltips" title="External link" target="_blank">
+                                                                <i class="icon-external-link"></i>
+                                                            </a>
+                                                            <a href="http://faculty-gsb.stanford.edu/aaker/pages/documents/CultivatingAdmirationinBrands_JCP2012.pdf" class="tooltips" title="Download" target="_blank">
+                                                                <i class="icon-cloud-download"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+                                                        <h4 class="pubtitle">Cultivating admiration in brands: Warmth, competence, and landing in the “golden quadrant”</h4>
+                                                        <div class="pubauthor"><strong>Jennifer Doe</strong>,  Emily N. Garbinsky, Kathleen D. Vohs</div>
+                                                        <div class="pubcite"><span class="label label-success">Journal Paper</span> Journal of Consumer Psychology, Volume 22, Issue 2, April 2009, Pages 191-194</div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <h4>Abstract</h4>
+                                                        <p>Although a substantial amount of research has examined the constructs of warmth and competence, far less has examined how these constructs develop and what benefits may accrue when warmth and competence are cultivated. Yet there are positive consequences, both emotional and behavioral, that are likely to occur when brands hold perceptions of both. In this paper, we shed light on when and how warmth and competence are jointly promoted in brands, and why these reputations matter.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="item mix bookchapter" data-year="2010">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="icon-expand-alt"></i>
+                                                            </a>
+                                                            <a href="http://www.sciencedirect.com/science/article/pii/S1057740812000290" class="tooltips" title="External link" target="_blank">
+                                                                <i class="icon-external-link"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+                                                        <h4 class="pubtitle">
+                                                            The Dragonfly Effect: Quick, Effective, and Powerful Ways To Use Social Media to Drive Social Change
+                                                        </h4>
+                                                        <div class="pubauthor"><strong>Jennifer Doe</strong>,  Emily N. Garbinsky, Kathleen D. Vohs</div>
+                                                        <div class="pubcite">
+                                                            <span class="label label-info">Book Chapter</span> John Wiley & Sons | September 28, 2010 | <strong>ISBN-10:</strong> 0470614153
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <img alt="image" src="img/pubs/150x200.png" align="left"  style="padding:0 30px 30px 0;">
+                                                        <h4>Proven strategies for harnessing the power of social media to drive social change</h4>
+                                                        <p>Many books teach the mechanics of using Facebook, Twitter, and YouTube to compete in business. But no book addresses how to harness the incredible power of social media to make a difference. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                        <ul>
+                                                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                                                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                                            <li>.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                                            <li>Onsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                                        </ul>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="item mix jpaper" data-year="2008">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="icon-expand-alt"></i>
+                                                            </a>
+                                                            <a href="http://www.sciencedirect.com/science/article/pii/S1057740812000290" class="tooltips" title="External link" target="_blank">
+                                                                <i class="icon-external-link"></i>
+                                                            </a>
+                                                            <a href="http://faculty-gsb.stanford.edu/aaker/pages/documents/CultivatingAdmirationinBrands_JCP2012.pdf" class="tooltips" title="Download" target="_blank">
+                                                                <i class="icon-cloud-download"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+                                                        <h4 class="pubtitle">Cultivating admiration in brands: Warmth, competence, and landing in the “golden quadrant”</h4>
+                                                        <div class="pubauthor"><strong>Jennifer Doe</strong>,  Emily N. Garbinsky, Kathleen D. Vohs</div>
+                                                        <div class="pubcite"><span class="label label-success">Journal Paper</span> Journal of Consumer Psychology, Volume 22, Issue 2, April 2008, Pages 191-194</div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <h4>Abstract</h4>
+                                                        <p>Although a substantial amount of research has examined the constructs of warmth and competence, far less has examined how these constructs develop and what benefits may accrue when warmth and competence are cultivated. Yet there are positive consequences, both emotional and behavioral, that are likely to occur when brands hold perceptions of both. In this paper, we shed light on when and how warmth and competence are jointly promoted in brands, and why these reputations matter.</p>
+                                                    </div>
+                                                </div> !-->
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
+
+                
             </div>
         </div>
     </body>
