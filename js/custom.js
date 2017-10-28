@@ -19,13 +19,13 @@ $(document).ready(function(){
 	SidebarAnim
 		.to($(".social-icons, #main-nav"),0.2,{left:0})
 		.to($("#main"),0.2,{left:250,right:"-=250"},"-=0.2");
-
+	
 
 	$("a.mobilemenu").on("click",function(){
 		SidebarAnim.play();
 	});
 	$(".social-icons, #main-nav, #main").on("click",function(){
-		SidebarAnim.reverse();
+		SidebarAnim.reverse();		
 	});
 
 
@@ -120,12 +120,12 @@ $(document).ready(function(){
 						$commingdetail = $("div#lab-details div").eq($comming.data('index')),
 						$goingdetail = $("div#lab-details div").eq($going.data('index'));
 
-
+					
 					$goingdetail.fadeOut(100,function(){
 						$goingdetail.siblings().hide();
 						$commingdetail.fadeIn(300);
 					});
-
+					
 
 					$comming.find('img').css('zIndex', 2).animate( selectedCss, aniOpts );
 					data.items.old.eq(1).find('img').css('zIndex', 1).animate( defaultCss, aniOpts );
@@ -161,8 +161,8 @@ $(document).ready(function(){
 	/*++++++++++++++++++++++++++++++++++++
 		Publications page categorization
 	++++++++++++++++++++++++++++++++++++++*/
-
-
+	
+	
 	$('div#pub-grid').mixitup({
 		layoutMode: 'list',
 		easing : 'snap',
@@ -171,9 +171,9 @@ $(document).ready(function(){
 			$(".tooltips").tooltip();
 		}
 	}).on('click','div.pubmain',function(){
-		var $this = $(this),
+		var $this = $(this), 
 			$item = $this.closest(".item");
-
+		
 		$item.find('div.pubdetails').slideToggle(function(){
 			$this.children("i").toggleClass('icon-collapse-alt icon-expand-alt');
 		},function(){
@@ -186,15 +186,15 @@ $(document).ready(function(){
 	} );
 
 	$("[name=cd-dropdown]").on("change",function(){
-		var item = this.value;
+		var item = this.value;		
 		$('div#pub-grid').mixitup('filter',item);
 	});
 
-
+	
 
 	/*++++++++++++++++++++++++++++++++++++
 		gallery overlays and popups
-	++++++++++++++++++++++++++++++++++++++*/
+	++++++++++++++++++++++++++++++++++++++*/ 
 
 	$(".grid").on("mouseenter","li",function(){
 		new TweenLite($(this).find(".over"),0.4,{bottom:0,top:0});
@@ -212,7 +212,7 @@ $(document).ready(function(){
 
 		closeBtnInside: true,
 		preloader: false,
-
+		
 		midClick: true,
 		removalDelay: 400,
 		mainClass: 'my-mfp-slide-bottom'
@@ -240,5 +240,5 @@ $(window).load(function(){
 	$container.masonry({
 	  itemSelector: 'li'
 	});
-
+	
 });

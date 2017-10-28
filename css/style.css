@@ -4,28 +4,28 @@
 	font-family: 'Lato';
 	font-style: normal;
 	font-weight: 300;
-	src: local('Lato Light'), local('Lato-Light'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/KT3KS9Aol4WfR6Vas8kNcg.woff) format('woff');
+	src: local('Lato Light'), local('Lato-Light'), url(https://themes.googleusercontent.com/static/fonts/lato/v6/KT3KS9Aol4WfR6Vas8kNcg.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'Lato';
 	font-style: normal;
 	font-weight: 400;
-	src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff');
+	src: local('Lato Regular'), local('Lato-Regular'), url(https://themes.googleusercontent.com/static/fonts/lato/v6/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'Lato';
 	font-style: normal;
 	font-weight: 900;
-	src: local('Lato Black'), local('Lato-Black'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/BVtM30trf7q_jfqYeHfjtA.woff) format('woff');
+	src: local('Lato Black'), local('Lato-Black'), url(https://themes.googleusercontent.com/static/fonts/lato/v6/BVtM30trf7q_jfqYeHfjtA.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'Lato';
 	font-style: italic;
 	font-weight: 400;
-	src: local('Lato Italic'), local('Lato-Italic'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/oUan5VrEkpzIazlUe5ieaA.woff) format('woff');
+	src: local('Lato Italic'), local('Lato-Italic'), url(https://themes.googleusercontent.com/static/fonts/lato/v6/oUan5VrEkpzIazlUe5ieaA.woff) format('woff');
 }
 
 body {
@@ -657,7 +657,7 @@ ul.timeline li .data .text {
 #labp-heads-wrap {
 	/*background-color: #03bb7a;*/
 	position: relative;
-	height: 180px;
+	height: 180px; 
 }
 
 #labp-heads-wrap:after {
@@ -1114,14 +1114,14 @@ ul.grid li a,ul.grid li img {
 	opacity: 0;
 }
 
-/* contact
+/* contanct
  **************************************************/
 .contact-office {
-	background: #fff url('../img/contact.jpg') no-repeat;
+	background: #fff url('../img/contact-bg-1.png') no-repeat;
 }
 
 .contact-lab {
-	background: #fff url('../img/contact-bg-1.jpg') no-repeat;
+	background: #fff url('../img/contact-bg-2.png') no-repeat;
 	color: #fff;
 }
 
