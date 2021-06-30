@@ -15,20 +15,74 @@ $(document).ready(function(){
 	/*++++++++++++++++++++++++++++++++++++
 		slidepage
 	++++++++++++++++++++++++++++++++++++++*/
-	var SidebarAnim = new TimelineLite({paused:true});
+	setMenuColor();
+	var SidebarAnim = new TimelineLite({paused : true});
 	SidebarAnim
-		.to($(".social-icons, #main-nav"),0.2,{left:0})
-		.to($("#main"),0.2,{left:250,right:"-=250"},"-=0.2");
-	
+		.to($(".social-icons, #main-nav"), 0.2, {left : 0})
+		.to($("#main"), 0.2, {left : 250, right : "-=250"}, "-=0.2");
 
-	$("a.mobilemenu").on("click",function(){
-		SidebarAnim.play();
+	$("a.mobilemenu").on("click", function () {
+		if (SidebarAnim.isOpen) {
+			SidebarAnim.reverse();
+			SidebarAnim.isOpen = false;
+		} else {
+			SidebarAnim.play();
+			SidebarAnim.isOpen = true;
+		}
 	});
-	$(".social-icons, #main-nav, #main").on("click",function(){
-		SidebarAnim.reverse();		
+	$(".social-icons, #main-nav a, #main").on("click", function () {
+		SidebarAnim.reverse();
+		SidebarAnim.isOpen = false;
+		setMenuColor($(this).attr("href"));
 	});
+	// var SidebarAnim = new TimelineLite({paused:true});
+	// SidebarAnim
+	// 	.to($(".social-icons, #main-nav"),0.2,{left:0})
+	// 	.to($("#main"),0.2,{left:250,right:"-=250"},"-=0.2");
+	//
+	//
+	// $("a.mobilemenu").on("click",function(){
+	// 	if(snapper.state().state == "closed") {
+	// 	SidebarAnim.play();
+	// 	} else {
+	// 		SidebarAnim.play();
+	// 	}
+	// });
+	// $(".social-icons, #main-nav, #main").on("click",function(){
+	// 	SidebarAnim.reverse();
+	// });
+
+	// $('a.mobilemenu').on('click', function() {
+	// 	if(snapper.state().state == "closed") {
+	// 		snapper.open('left');
+	// 	} else {
+	// 		snapper.close('left');
+	// 	}
+	// });
 
 
+	function setMenuColor(hash) {
+		var loc = window.location.href;
+
+		if (hash || loc.indexOf('#') > 0) {
+			var hash = hash ? hash : loc.substring(loc.indexOf('#')),
+				par = $('a[href="' + hash + '"]').parent(),
+				sib = par.siblings();
+
+			for (var i = 0; i < sib.length; ++i) {
+				var elem = $(sib[i]);
+				if (!elem.hasClass('external')) {
+					elem.removeClass();
+				}
+			}
+			if (!par.hasClass('external')) {
+				par.addClass('currentmenu');
+			}
+			ga('send', 'pageview', {
+				'page': location.pathname + location.search  + location.hash
+			});
+		}
+	}
 	/*++++++++++++++++++++++++++++++++++++++++++++++
 		custom scrolls with perfectScroll plugin
 	++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -242,3 +296,4 @@ $(window).load(function(){
 	});
 	
 });
+
