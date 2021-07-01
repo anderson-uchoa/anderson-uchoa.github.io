@@ -143,6 +143,8 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
 
 /* sidebar
  **************************************************/
+
+
 #nav-container {
 	position: relative;
 	padding-bottom: 75px;
@@ -250,6 +252,42 @@ ul#navigation li .icon {
 	text-align: center;
 	font-size: 27px;
 }
+
+blockquote {
+	font-family: Georgia, serif;
+	position: relative;
+	margin: 0.5em;
+	padding: 0.5em 2em 0.5em 3em;
+}
+
+blockquote:before {
+	font-family: Georgia, serif;
+	position: absolute;
+	font-size: 6em;
+	line-height: 1;
+	top: 0;
+	left: 0;
+	content: "\201C";
+}
+blockquote:after {
+	font-family: Georgia, serif;
+	position: absolute;
+	/* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+	float:right;
+	font-size:6em;
+	line-height: 1;
+	right:0;
+	bottom:-0.5em;
+	content: "\201D";
+}
+blockquote footer {
+	padding: 0 2em 0 0;
+	text-align:right;
+}
+blockquote cite:before {
+	content: "\2013";
+}
+
 
 .social-icons {
 	position: absolute;
