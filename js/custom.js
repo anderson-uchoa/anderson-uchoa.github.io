@@ -295,6 +295,11 @@ $(window).load(function(){
 	$container.masonry({
 	  itemSelector: 'li'
 	});
-	
+
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip("");
+		$(".tooltip.fade.top").remove();
+	});
+
 });
 
