@@ -1,3 +1,18 @@
+@article{darwin2024trivial,
+  title={On the Effectiveness of Trivial Refactorings in Predicting Non-trivial Refactorings},
+  journal={Journal of Software Engineering Research and Development},
+  volume={12},
+  pages={5:1 – 5:16},
+  year={2024},
+  month={Apr.},
+  issn = {2195-1721},
+  doi={10.5753/jserd.2024.3324},
+  author={Darwin Pinheiro and Carla Bezerra and Anderson Uchôa},
+  abstract={Refactoring is the process of restructuring source code without changing the external behavior of the software. Refactoring can bring many benefits, such as removing code with poor structural quality, avoiding or reducing technical debt, and improving maintainability, reuse, or code readability. Although there is research on how to predict refactorings, there is still a clear lack of studies that assess the impact of operations considered less complex (trivial) to more complex (non-trivial). In addition, the literature suggests conducting studies that invest in improving automated solutions through detecting and correcting refactoring. This study aims to identify refactoring activity in non-trivial operations through trivial operations accurately. For this, we use classifier models of supervised learning, considering the influence of trivial refactorings and evaluating performance in other data domains. To achieve this goal, we assembled 3 datasets totaling 1,291 open-source projects, extracted approximately 1.9M refactoring operations, collected 45 attributes and code metrics from each file involved in the refactoring and used the algorithms Decision Tree, Random Forest, Logistic Regression, Naive Bayes and Neural Network of supervised learning to investigate the impact of trivial refactorings on the prediction of non-trivial refactorings. For this study, we contextualize the data and call context each experiment configuration in which it combines trivial and non-trivial refactorings. Our results indicate that: (i) Tree-based models such as Random Forest, Decision Tree, and Neural Networks performed very well when trained with code metrics to detect refactoring opportunities. However, only the first two were able to demonstrate good generalization in other data domain contexts of refactoring; (ii) Separating trivial and non-trivial refactorings into different classes resulted in a more efficient model. This approach still resulted in a more efficient model even when tested on different datasets; (iii) Using balancing techniques that increase or decrease samples may not be the best strategy to improve models trained on datasets composed of code metrics and configured according to our study.},
+  url={https://anderson-uchoa.github.io/publications/darwin2024trivial.pdf},
+
+}
+
 @inproceedings{ivens2023factors,
   title={What Factors Affect the Build Failures Correction Time? A Multi-Project Study},
   author={Gustavo Ivens and Carla Bezerra and Anderson Uchôa and Ivan Machado},
