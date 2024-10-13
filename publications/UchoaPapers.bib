@@ -1,22 +1,25 @@
 @article{uchoa2024towards,
   title={Towards Effective Gamification of Existing Systems: Method and Experience Report},
   journal={Software Quality Journal},
-  pages={1:57},
+  pages={1:34},
   year={2024},
   author={Anderson Uchôa and Rafael de Mello and Jairo Souza and Leopoldo Teixeira and Baldoino Fonseca and Alessandro Garcia},
   abstract={Context: Gamification promotes user engagement with software features through the incorporation of game elements and rules. Gamification is often incorporated a posteriori into already existing systems. Success in gamifying an existing system depends on careful planning and the evolution of its previously produced software artifacts. This is particularly true for artifacts produced in the earliest development phases, such as the requirements specification. Objective: Incorporating game
 elements and rules into an existing system is far from trivial. Developers eventually struggle with performing certain development activities, such as evolving existing requirements and selecting game elements and game rules. This paper reports our practical experience in gamifying an existing system. Based on this experience, we introduce Gamify4Fun, a method that aims to assist developers in performing some key activities to gamify existing systems. Method: We built Gamify4Fun based on the experience of 15 developers involved with the gamification of an existing healthcare system. We started by adopting an original method aimed at gamifying systems being built from scratch. As we needed to adapt the original method for supporting the particularities of gamifying a previously developed system, we refined the original method's development activities and their respective phases. We also interviewed the developers to capture their perception of challenging development activities through gamification. The interviews' outcomes guided some further refinements to the original method. Results: Gamify4Fun supports the gamification of existing systems at the earliest development phases: from the preparation of the system gamification to both the gamification and system design. We refined the development activities of the original method as much as needed; we also used or adapted the activities prescribed by other methods from the literature, in the context of gamification from scratch, to fill gaps whenever necessary. Conclusion: By reporting our practical experience and introducing a gamification method, we expect to guide development teams in gamifying their existing systems, as well as shed insights about the current, unaddressed limitations of existing approaches (including ours) to gamifying existing systems.},
+  doi={10.1007/s11219-024-09696-y},
+  issn = {1573-1367},
 }
-
 
 @inproceedings{bibano2024enhancing,
   title={Enhancing Recommendations of Composite Refactorings based on the Practice},
-  author={Ana Carla Bibiano and Anderson Uchôa and Daniel Tenório and Daniel Coutinho and Wesley K. G. Assunção and Alessandro Garcia and Baldoino Fonseca dos Santos Neto and Márcio Ribeiro and Thelma Colanzi and Audrey Vasconcelos and Rafael de Mello},
+  author={Ana Carla Bibiano and Daniel Coutinho and Anderson Uchôa and Wesley K. G. Assunção and Alessandro Garcia and Rafael de Mello and Thelma Colanzi and Daniel Tenório and Audrey Vasconcelos and Baldoino Fonseca dos Santos Neto and Márcio Ribeiro},
   booktitle={Proceedings of the 24th IEEE International Conference on Source Code Analysis and Manipulation (SCAM), 2024, Flagstaff, AZ, United States, 7-8 October 2024},
-  pages={1--12},
+  pages={1--11},
   year={2024},
   abstract={Refactoring is a non-trivial maintenance activity. Developers spend time and effort refactoring code to remove structural problems, i.e., code smells. Recent studies indicated that developers often apply composite refactoring (composite, for short), i.e., two or more interrelated refactorings. However, prior studies revealed that only 10% of composite refactorings are considered complete, i.e., those fully removing code smells. Many incomplete refactorings can even introduce or replace smells, requiring further removal later in the project. Moreover, existing recommendations are not well-detailed and do not alert developers about possible side effects of current recommendations. To address these gaps, we conducted a large-scale study involving more than 250k refactorings from 42 software projects, including both open-source and closed-source projects. Our goal is to investigate how the most common complete composites are combined and their side effects in the practice. Our results reveal that the current recommendation to apply Extract Method(s) with fine-grained refactoring types needs refinements. We found that certain fine-grained refactorings like Change Variable Types and Change Return Types can introduce up to 45% of Brain Methods when combined with Extract Method(s). Moreover, Extract Method(s) and Move Method(s), a common recommendation to remove Feature Envy, may inadvertently introduce about 30% of Lazy Classes and approximately 70% of Data Classes. Despite these potential side effects, existing refactoring catalogs and tools' recommenders do not alert developers about these side effects. Finally, we consolidate our findings into a catalog to provide clear guidance for developers and researchers on effectively applying composite refactorings to fully remove code smells.},
+  url = {https://anderson-uchoa.github.io/publications/bibiano2024enhancing.pdf},
 }
+
 
 @article{darwin2024trivial,
   title={On the Effectiveness of Trivial Refactorings in Predicting Non-trivial Refactorings},
