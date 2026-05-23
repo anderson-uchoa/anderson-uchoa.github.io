@@ -1,185 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-103030276-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+---
+layout: default
+title: "Publications — Anderson Uchôa | UFC & NC State"
+description: "Publications by Anderson Uchôa in empirical software engineering, mining software repositories, and AI-assisted development. ICSE, ICSME, MSR, and more."
+keywords: "anderson uchoa publications, anderson uchôa, empirical software engineering, mining software repositories, ICSE, MSR, ICSME"
+canonical: "https://anderson-uchoa.github.io/publication.html"
+og_title: "Publications — Anderson Uchôa"
+og_description: "Publications by Anderson Uchôa in empirical software engineering, mining software repositories, and AI-assisted development."
+twitter_description: "Publications by Anderson Uchôa in empirical software engineering, mining software repositories, and AI-assisted development."
+active: publications
+---
 
-        gtag('config', 'UA-103030276-2');
+<main class="site-main">
+	<div class="site-container">
 
-    </script>
+		<section class="page-header-section">
+			<h1>Publications</h1>
+			<p>A complete list of my publications with abstracts and DOI links.</p>
+			<div class="pub-profile-links">
+				<a href="https://scholar.google.com.br/citations?user=_bwg28kAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="hero-social-badge">
+					<i class="icon-graduation-cap" aria-hidden="true"></i> Google Scholar
+				</a>
+				<a href="https://dblp.uni-trier.de/search/publ?q=author:Anderson_G._Uch%C3%B4a:" target="_blank" rel="noopener noreferrer" class="hero-social-badge">
+					<i class="icon-book" aria-hidden="true"></i> DBLP
+				</a>
+				<a href="https://www.researchgate.net/profile/Anderson_Uchoa" target="_blank" rel="noopener noreferrer" class="hero-social-badge">
+					<i class="icon-group" aria-hidden="true"></i> ResearchGate
+				</a>
+				<a href="https://orcid.org/0000-0002-6847-5569" target="_blank" rel="noopener noreferrer" class="hero-social-badge">
+					<span class="orcid-social">iD</span> ORCID
+				</a>
+				<a href="https://lattes.cnpq.br/3740664626762609" target="_blank" rel="noopener noreferrer" class="hero-social-badge">
+					<i class="icon-external-link" aria-hidden="true"></i> Lattes
+				</a>
+			</div>
+		</section>
 
+		<div class="content-section" id="pub-container">
+			<div id="pub-loading" class="pub-loading">
+				<span class="pub-spinner"></span>
+				<span>Loading publications&hellip;</span>
+			</div>
+			<script src="https://bibbase.org/show?bib=https%3A%2F%2Fanderson-uchoa.github.io%2Fpublications%2FUchoaPapers.bib&jsonp=1"></script>
+		</div>
+		<script>
+		(function () {
+			var loading = document.getElementById('pub-loading');
+			var container = document.getElementById('pub-container');
+			if (!loading || !container) return;
+			var hide = function () { loading.style.display = 'none'; };
+			var observer = new MutationObserver(function (mutations, obs) {
+				for (var i = 0; i < mutations.length; i++) {
+					if (mutations[i].addedNodes.length) { hide(); obs.disconnect(); return; }
+				}
+			});
+			observer.observe(container, { childList: true, subtree: true });
+			setTimeout(function () { hide(); observer.disconnect(); }, 10000);
+		}());
+		</script>
 
-    <title>Anderson Uchôa - UFC</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="author" content="Anderson Uchôa">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <meta name="description" content="Anderson Uchôa Faculty Page" />
-    <meta name="keywords"
-          content="faculty profile, anderson uchoa, anderson uchôa, ufrj, ufc, puc-rio, puc, pontifical catholic university, pontifical catholic university of rio de janeiro, software engineering, empirical software engineering, applied software engineering" />
-
-    <link rel="shortcut icon" href="../favicon.ico">
-
-    <!--CSS styles-->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/perfect-scrollbar-0.4.5.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link id="theme-style" rel="stylesheet" href="css/styles/blue.css">
-
-
-    <!--/CSS styles-->
-    <!--Javascript files-->
-    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-    <script type="text/javascript" src="js/TweenMax.min.js"></script>
-    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
-    <script type="text/javascript" src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
-
-    <script type="text/javascript" src="js/modernizr.custom.63321.js"></script>
-    <script type="text/javascript" src="js/jquery.dropdownit.js"></script>
-
-    <script type="text/javascript" src="js/jquery.stellar.min.js"></script>
-    <script type="text/javascript" src="js/ScrollToPlugin.min.js"></script>
-
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-
-    <script type="text/javascript" src="js/masonry.min.js"></script>
-
-    <script type="text/javascript"
-            src="js/perfect-scrollbar-0.4.5.with-mousewheel.min.js"></script>
-
-    <script type="text/javascript" src="js/magnific-popup.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
-
-    <!--/Javascript files-->
-
-</head>
-<body>
-
-<div id="wrapper">
-    <a href="#sidebar" class="mobilemenu"><i class="icon-reorder"></i></a>
-
-    <div id="sidebar">
-        <div id="main-nav">
-            <div id="nav-container">
-                <div id="profile" class="clearfix">
-                    <a href="http://www.ufc.br/" target="_new"><img
-                            alt="image" width="220em" src="img/ufc_logo_v2.png"></a>
-                    <br>
-
-                    <br>
-                    <div class="portrate"></div>
-                    <div class="title">
-                        <h2>Anderson Uchôa</h2>
-                    </div>
-                </div>
-                <ul id="navigation">
-                    <li>
-                        <a href="index.html">
-                            <div class="icon icon-user"></div>
-                            <div class="text">About Me</div>
-                        </a>
-                    </li>
-
-                    <li class="currentmenu"><a href="publication.html">
-                        <div class="icon icon-edit"></div>
-                        <div class="text">Publications</div>
-                    </a></li>
-
-
-                    <li><a href="awards.html">
-                        <div class="icon icon-star"></div>
-                        <div class="text">Awards</div>
-                    </a></li>
-
-
-                    <li><a href="research.html">
-                        <div class="icon icon-book"></div>
-                        <div class="text">Research Experiences</div>
-                    </a></li>
-
-                    <!--						<li><a href="industrial.html">-->
-                    <!--							<div class="icon icon-book"></div>-->
-                    <!--							<div class="text">Industrial Experiences</div>-->
-                    <!--						</a></li>-->
-
-                    <li><a href="teaching.html">
-                        <div class="icon icon-time"></div>
-                        <div class="text">Teaching</div>
-                    </a></li>
-
-                    <li><a href="services.html">
-                        <div class="icon icon-thumbs-up"></div>
-                        <div class="text">Services</div>
-                    </a></li>
-
-                    <li><a href="http://lattes.cnpq.br/3740664626762609"
-                           target="_new">
-                        <div class="icon icon-download-alt"></div>
-                        <div class="text">CV Lattes (in Portuguese)</div>
-                    </a></li>
-
-                </ul>
-            </div>
-        </div>
-
-        <div class="social-icons">
-            <ul>
-                <li><a href="https://www.facebook.com/anderson.goncalvesuchoa"
-                       target="_new"><i class="icon-facebook"></i></a></li>
-                <li><a href="https://twitter.com/andersonguchoa" target="_new"><i
-                        class="icon-twitter"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/andersongnuchoa/"
-                       target="_new"><i class="icon-linkedin"></i></a></li>
-            </ul>
-        </div>
-    </div>
-
-
-            <div id="main">
-                <div id="publications" class="page">
-                    <div class="pageheader">
-                        <div class="headercontent">
-                            <div class="section-container">
-                                <h2 class="title"> Publications
-
-                                    <a href="#" data-toggle="tooltip" data-placement="right"  title="&copy;Copyright Notice: This material is presented to ensure timely dissemination of scholarly and technical work. Copyright and all rights therein are retained by authors or by other copyright holders. All persons copying this information are expected to adhere to the terms and constraints invoked by each author's copyright. These works may not be reposted without the explicit permission of the copyright holder. All persons copying this information are expected to adhere to the terms and constraints invoked by each author's copyright and/or copyright holders. All statements of fact, opinion or conclusions contained herein are those of the authors and should not be construed as representing the official views or policies of the sponsors. In most cases, these works may not be reposted without the explicit permission of the copyright holders. Please contact authors for further details">
-                                        <div class="icon icon-comment"></div>
-                                    </a>
-                                </h2>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <p style="text-align:justify">A complete list of my publications with abstracts, doi link to publisher (when available), and author version eprints can be found below. You may also want to check out my profile at <a href="https://www.researchgate.net/profile/Anderson_Uchoa" target="_new">Research Gate</a>, <a href="https://scholar.google.com.br/citations?user=_bwg28kAAAAJ&hl=en" target="_new">Google Scholar</a>, <a href="https://dblp.uni-trier.de/search/publ?q=author:Anderson_G._Uch%C3%B4a:" target="_new">DBLP</a>, and <a href="https://lattes.cnpq.br/3740664626762609" target="_new">Lattes (in Portuguese)</a>. Feel free to contact me if you want to further discuss the ideas of any of the papers.</p>
-                                            <p><font color=red>(the list takes a few seconds to load)</font></p>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pagecontents">
-                        <div class="section color-1">
-                            <div class="section-container">
-
-                                <div>
-                                    <script src="https://bibbase.org/show?bib=https%3A%2F%2Fanderson-uchoa.github.io%2Fpublications%2FUchoaPapers.bib&jsonp=1"></script>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div>
-
-    </body>
-</html>
+	</div>
+</main>

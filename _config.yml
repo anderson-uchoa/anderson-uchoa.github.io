@@ -1,0 +1,9 @@
+title: Anderson Uchôa
+url: "https://anderson-uchoa.github.io"
+baseurl: ""
+markdown: kramdown
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules

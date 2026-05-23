@@ -1,0 +1,23 @@
+<nav id="top-navbar" role="navigation" aria-label="Main navigation">
+	<div class="nav-inner">
+		<a href="https://www.ufc.br/" class="nav-logo" target="_blank" rel="noopener noreferrer" aria-label="Federal University of Ceará (UFC)">
+			<img src="img/ufc_logo_v2.png" alt="UFC">
+		</a>
+		<ul id="nav-links">
+			<li{% if page.active == 'about' %} class="active"{% endif %}><a href="index.html"><i class="icon-home" aria-hidden="true"></i> About</a></li>
+			<li{% if page.active == 'publications' %} class="active"{% endif %}><a href="publication.html"><i class="icon-file-text" aria-hidden="true"></i> Publications</a></li>
+			<li{% if page.active == 'awards' %} class="active"{% endif %}><a href="awards.html"><i class="icon-trophy" aria-hidden="true"></i> Awards</a></li>
+			<li{% if page.active == 'research' %} class="active"{% endif %}><a href="research.html"><i class="icon-beaker" aria-hidden="true"></i> Research</a></li>
+			<li{% if page.active == 'teaching' %} class="active"{% endif %}><a href="teaching.html"><i class="icon-graduation-cap" aria-hidden="true"></i> Teaching</a></li>
+			<li{% if page.active == 'services' %} class="active"{% endif %}><a href="services.html"><i class="icon-group" aria-hidden="true"></i> Services</a></li>
+			<li><a href="http://lattes.cnpq.br/3740664626762609" target="_blank" rel="noopener noreferrer"><i class="icon-external-link" aria-hidden="true"></i> CV Lattes</a></li>
+		</ul>
+		<button id="mobile-nav-toggle" aria-label="Open navigation menu">
+			<i class="icon-reorder" aria-hidden="true"></i>
+		</button>
+		<button id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+			<span class="light-icon">🌙</span>
+			<span class="dark-icon">☀</span>
+		</button>
+	</div>
+</nav>

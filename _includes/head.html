@@ -1,0 +1,71 @@
+<meta charset="utf-8">
+<title>{{ page.title }}</title>
+<meta name="author" content="Anderson Uchôa">
+<meta name="description" content="{{ page.description }}">
+<meta name="keywords" content="{{ page.keywords }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="{{ page.canonical }}">
+<link rel="icon" href="favicon.ico">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="{{ page.og_title }}">
+<meta property="og:description" content="{{ page.og_description }}">
+<meta property="og:url" content="{{ page.canonical }}">
+<meta property="og:image" content="https://anderson-uchoa.github.io/img/personal/me.jpeg">
+{% if page.active == 'about' %}
+<meta property="profile:first_name" content="Anderson">
+<meta property="profile:last_name" content="Uchôa">
+{% endif %}
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@andersonguchoa">
+<meta name="twitter:title" content="{{ page.og_title }}">
+<meta name="twitter:description" content="{{ page.twitter_description }}">
+<meta name="twitter:image" content="https://anderson-uchoa.github.io/img/personal/me.jpeg">
+
+{% if page.active == 'about' %}
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "Person",
+	"name": "Anderson Uchôa",
+	"alternateName": "Anderson Gonçalves Uchôa",
+	"url": "https://anderson-uchoa.github.io/",
+	"image": "https://anderson-uchoa.github.io/img/personal/me.jpeg",
+	"jobTitle": "Professor of Software Engineering",
+	"worksFor": [
+		{ "@type": "Organization", "name": "Federal University of Ceará (UFC)", "url": "https://www.ufc.br/" },
+		{ "@type": "Organization", "name": "North Carolina State University", "url": "https://www.ncsu.edu/" }
+	],
+	"alumniOf": [
+		{ "@type": "Organization", "name": "PUC-Rio" },
+		{ "@type": "Organization", "name": "Federal University of Ceará (UFC)" },
+		{ "@type": "Organization", "name": "Sapienza University of Rome" }
+	],
+	"knowsAbout": [
+		"Empirical Software Engineering",
+		"Software Evolution and Maintenance",
+		"Mining Software Repositories",
+		"AI-assisted Software Development",
+		"Code Quality and Code Smells",
+		"CI/CD Security Automation"
+	],
+	"sameAs": [
+		"https://orcid.org/0000-0002-6847-5569",
+		"https://scholar.google.com.br/citations?user=_bwg28kAAAAJ&hl=en",
+		"https://www.linkedin.com/in/andersongnuchoa/",
+		"https://twitter.com/andersonguchoa",
+		"https://dblp.uni-trier.de/search/publ?q=author:Anderson_G._Uch%C3%B4a:",
+		"https://lattes.cnpq.br/3740664626762609"
+	]
+}
+</script>
+{% endif %}
+
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link id="theme-style" rel="stylesheet" href="css/styles/blue.css">
+
+<!-- TODO: Add GA4 measurement ID (G-XXXXXXXXXX) to restore analytics -->
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark-mode');</script>
