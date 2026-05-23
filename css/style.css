@@ -2669,14 +2669,15 @@ html.dark-mode .news-text a { color: #7ab0e0; }
 	padding: 22px 26px 26px;
 	font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
 	font-size: 13px;
-	line-height: 1;
+	line-height: 1.9;
+	direction: ltr;
 }
 .nf-line {
 	display: block;
-	margin-bottom: 10px;
-	white-space: pre-wrap;
+	margin: 0;
+	word-break: break-all;
 }
-.nf-line:last-child { margin-bottom: 0; }
+.nf-line + .nf-line { margin-top: 2px; }
 .nf-prompt {
 	color: #61afef;
 	font-weight: 700;
