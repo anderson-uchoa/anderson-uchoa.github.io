@@ -1754,7 +1754,9 @@ html.dark-mode .pub-count-badge { background: #2563eb; }
 		z-index: 999;
 	}
 	#nav-links.open { display: flex; }
-	#nav-links li a  { padding: 10px 22px; }
+	#nav-links li a  { padding: 10px 22px; color: #1a2744; }
+	#nav-links li a:hover { color: #1a2744; background: rgba(26,39,68,0.07); }
+	#nav-links li.active > a { color: #1a2744; border-bottom-color: #1a2744; }
 	#mobile-nav-toggle { display: block; }
 	.nav-logo { margin-right: auto; }
 	.hero-name { font-size: 26px; }
