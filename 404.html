@@ -1,17 +1,47 @@
 ---
 layout: default
-title: "Page Not Found — Anderson Uchôa"
+title: "404 — Page Not Found · Anderson Uchôa"
 description: "The page you are looking for does not exist."
 permalink: /404.html
 ---
 
 <main class="site-main">
 	<div class="site-container">
-		<div class="not-found-wrap">
-			<p class="not-found-code">404</p>
-			<h1 class="not-found-title">Page not found</h1>
-			<p class="not-found-msg">The page you're looking for doesn't exist or has been moved.</p>
-			<a href="index.html" class="not-found-btn">Go to homepage</a>
+		<div class="nf-wrap">
+
+			<div class="nf-icon-wrap" aria-hidden="true">
+				<i class="icon-bug nf-bug"></i>
+			</div>
+
+			<div class="nf-terminal" role="region" aria-label="Error terminal">
+				<div class="nf-terminal-bar">
+					<span class="nf-dot nf-dot--red"></span>
+					<span class="nf-dot nf-dot--yellow"></span>
+					<span class="nf-dot nf-dot--green"></span>
+					<span class="nf-terminal-title">bash — anderson-uchoa.github.io</span>
+				</div>
+				<div class="nf-terminal-body">
+					<span class="nf-line">
+						<span class="nf-prompt">~</span>
+						<span class="nf-cmd"> curl https://anderson-uchoa.github.io/<span class="nf-arg">&#123;page&#125;</span></span>
+					</span>
+					<span class="nf-line nf-err">
+						<span class="nf-label">Error 404:</span> No such file or directory
+					</span>
+					<span class="nf-line nf-comment"># The requested page does not exist.</span>
+					<span class="nf-line nf-comment"># Check the URL or navigate back to the homepage.</span>
+					<span class="nf-line">
+						<span class="nf-prompt">~</span>
+						<span class="nf-cmd"> cd ~/home</span><span class="nf-cursor" aria-hidden="true"></span>
+					</span>
+				</div>
+			</div>
+
+			<p class="nf-msg">Looks like this page doesn't exist.</p>
+			<a href="index.html" class="nf-btn">
+				<i class="icon-home" aria-hidden="true"></i> Go to homepage
+			</a>
+
 		</div>
 	</div>
 </main>

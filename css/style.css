@@ -2607,47 +2607,126 @@ html.dark-mode .news-text a { color: #7ab0e0; }
 /* ======================================================
    404 page
    ====================================================== */
-.not-found-wrap {
+.nf-wrap {
 	text-align: center;
-	padding: 80px 0 120px;
+	padding: 64px 0 100px;
 }
-.not-found-code {
-	font-size: 96px;
-	font-weight: 800;
-	color: #e0e8f4;
-	line-height: 1;
-	margin: 0 0 8px;
-	letter-spacing: -4px;
+
+/* Bug icon */
+.nf-icon-wrap {
+	margin: 0 0 24px;
 }
-.not-found-title {
-	font-size: 28px;
-	font-weight: 700;
-	color: #1a2744;
-	margin: 0 0 12px;
+.nf-bug {
+	font-size: 64px;
+	color: #c0392b;
+	opacity: 0.85;
+	display: inline-block;
+	animation: nf-wobble 3s ease-in-out infinite;
 }
-.not-found-msg {
-	font-size: 15px;
-	color: #666;
+@keyframes nf-wobble {
+	0%, 100% { transform: rotate(-6deg); }
+	50%       { transform: rotate(6deg); }
+}
+
+/* Terminal card */
+.nf-terminal {
+	display: inline-block;
+	text-align: left;
+	max-width: 540px;
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: 0 10px 48px rgba(0,0,0,0.18);
+	overflow: hidden;
 	margin: 0 0 28px;
 }
-.not-found-btn {
+.nf-terminal-bar {
+	background: #dde2ec;
+	padding: 10px 16px;
+	display: flex;
+	align-items: center;
+	gap: 7px;
+}
+.nf-dot {
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
 	display: inline-block;
-	padding: 10px 28px;
+	flex-shrink: 0;
+}
+.nf-dot--red    { background: #ff5f57; }
+.nf-dot--yellow { background: #ffbd2e; }
+.nf-dot--green  { background: #28c840; }
+.nf-terminal-title {
+	margin-left: 8px;
+	font-size: 11.5px;
+	color: #777;
+	font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+	flex: 1;
+	text-align: center;
+}
+.nf-terminal-body {
+	background: #1b2132;
+	padding: 22px 26px 26px;
+	font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+	font-size: 13px;
+	line-height: 1;
+}
+.nf-line {
+	display: block;
+	margin-bottom: 10px;
+	white-space: pre-wrap;
+}
+.nf-line:last-child { margin-bottom: 0; }
+.nf-prompt {
+	color: #61afef;
+	font-weight: 700;
+}
+.nf-prompt::before { content: "❯ "; }
+.nf-cmd   { color: #abb2bf; }
+.nf-arg   { color: #e5c07b; }
+.nf-err   { color: #e06c75; }
+.nf-err .nf-label { font-weight: 700; }
+.nf-comment { color: #5c6370; }
+.nf-cursor {
+	display: inline-block;
+	width: 8px;
+	height: 14px;
+	background: #abb2bf;
+	vertical-align: -2px;
+	margin-left: 2px;
+	animation: nf-blink 1.1s step-end infinite;
+}
+@keyframes nf-blink {
+	0%, 100% { opacity: 1; }
+	50%       { opacity: 0; }
+}
+
+.nf-msg {
+	font-size: 14.5px;
+	color: #666;
+	margin: 0 0 20px;
+}
+.nf-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 11px 28px;
 	background: #1a2744;
 	color: #fff;
-	border-radius: 6px;
+	border-radius: 7px;
 	font-size: 14px;
 	font-weight: 600;
 	text-decoration: none;
 	transition: background 0.18s;
 }
-.not-found-btn:hover { background: #243560; color: #fff; text-decoration: none; }
+.nf-btn:hover { background: #243560; color: #fff; text-decoration: none; }
 
-html.dark-mode .not-found-code  { color: #1e2d4a; }
-html.dark-mode .not-found-title { color: #e0e0e0; }
-html.dark-mode .not-found-msg   { color: #888; }
-html.dark-mode .not-found-btn   { background: #2a3a60; }
-html.dark-mode .not-found-btn:hover { background: #344a7a; }
+html.dark-mode .nf-terminal-bar { background: #252d3f; }
+html.dark-mode .nf-terminal-bar .nf-terminal-title { color: #555; }
+html.dark-mode .nf-terminal   { box-shadow: 0 10px 48px rgba(0,0,0,0.4); }
+html.dark-mode .nf-msg        { color: #888; }
+html.dark-mode .nf-btn        { background: #2a3a60; }
+html.dark-mode .nf-btn:hover  { background: #344a7a; }
 
 /* ======================================================
    Footer
