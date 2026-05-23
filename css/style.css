@@ -1978,16 +1978,16 @@ html.dark-mode .exp-degree-badge--bsc   { background: #2a1500; color: #e08040; }
 }
 
 .award-card-sq-logo {
-	width: 72px;
-	height: 72px;
+	width: 64px;
+	height: 64px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background: #fff;
 	border: 1px solid #dde5f0;
-	border-radius: 10px;
-	padding: 8px;
-	margin-bottom: 12px;
+	border-radius: 8px;
+	padding: 6px;
+	margin-bottom: 8px;
 }
 
 .award-card-sq-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
@@ -2480,14 +2480,17 @@ html.dark-mode .research-status-badge--completed { background: #252535; color: #
 }
 .teaching-card:hover { box-shadow: 0 6px 20px rgba(26,39,68,0.13); transform: translateY(-2px); }
 .teaching-card--past {
-	background: #f2f3f5;
-	border-top-color: #c0c8d8;
+	background: #f7f8fa;
+	border-top-color: #b0bcd0;
 	border-color: #e2e6ed;
 	box-shadow: none;
-	opacity: 0.72;
 }
-.teaching-card--past .teaching-card-title { color: #888; }
-.teaching-card--past .teaching-sem-badge  { background: #e8e8ee; color: #888; }
+.teaching-card--past .teaching-card-title { color: #777; }
+.teaching-card--past .teaching-card-level { color: #aaa; }
+.teaching-card--past .teaching-code       { color: #bbb; }
+.teaching-card--past .teaching-sem-badge  { background: #ebebef; color: #999; }
+.teaching-card--past .teaching-sem        { color: #ccc; }
+.teaching-card--past:hover { transform: none; box-shadow: none; }
 
 .teaching-card-top {
 	display: flex;
