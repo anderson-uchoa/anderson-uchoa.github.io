@@ -2248,16 +2248,16 @@ html.dark-mode #scroll-indicator { color: rgba(255,255,255,0.45); }
 	gap: 7px;
 	margin: 12px 0 8px;
 	padding: 8px 20px;
-	background: rgba(255,255,255,0.14);
-	border: 1px solid rgba(255,255,255,0.28);
-	color: #fff !important;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.38);
+	color: rgba(255,255,255,0.90) !important;
 	font-size: 13px;
 	font-weight: 600;
 	border-radius: 6px;
 	text-decoration: none !important;
-	transition: background 0.18s;
+	transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
-.about-cv-btn:hover { background: rgba(255,255,255,0.26); color: #fff !important; }
+.about-cv-btn:hover { background: #fff; border-color: #fff; color: #1a2744 !important; }
 
 .about-cta {
 	display: block !important;
