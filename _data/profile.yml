@@ -7,7 +7,7 @@ interests:
   - "CI/CD Security"
 
 positions:
-  - logo: "img/logo-NC-State-University.png"
+  - logo: "/img/logo-NC-State-University.png"
     logo_alt: "NC State University"
     period: "2026 – Present"
     title: "Postdoctoral Researcher"
@@ -15,7 +15,7 @@ positions:
     department: "Dept. of Computer Science"
     location: "Raleigh, NC, USA"
 
-  - logo: "img/logo_ufc.png"
+  - logo: "/img/logo_ufc.png"
     logo_alt: "UFC"
     period: "2021 – Present"
     title: "Professor of Software Engineering"
@@ -23,7 +23,7 @@ positions:
     department: "Campus de Itapajé"
     location: "Ceará, Brazil"
 
-  - logo: "img/logo_ufrj.png"
+  - logo: "/img/logo_ufrj.png"
     logo_alt: "UFRJ"
     period: "2021"
     title: "Substitute Professor of Computer Science"
@@ -32,7 +32,7 @@ positions:
     location: "Rio de Janeiro, Brazil"
 
 education:
-  - logo: "img/logo_puc_rio.gif"
+  - logo: "/img/logo_puc_rio.gif"
     logo_alt: "PUC-Rio"
     period: "2021"
     degree: phd   # phd | msc | bsc
@@ -42,7 +42,7 @@ education:
     advisor_name: "Alessandro Garcia"
     advisor_url: "http://www-di.inf.puc-rio.br/~afgarcia/"
 
-  - logo: "img/logo_puc_rio.gif"
+  - logo: "/img/logo_puc_rio.gif"
     logo_alt: "PUC-Rio"
     period: "2019"
     degree: msc
@@ -52,7 +52,7 @@ education:
     advisor_name: "Alessandro Garcia"
     advisor_url: "http://www-di.inf.puc-rio.br/~afgarcia/"
 
-  - logo: "img/logo_ufc.png"
+  - logo: "/img/logo_ufc.png"
     logo_alt: "UFC"
     period: "2016"
     degree: bsc

@@ -60,21 +60,59 @@ publication:
   subtitle: Lista completa das minhas publicações com resumos e links de DOI.
 
 awards:
-  title: Prêmios
-  subtitle: Reconhecimentos ao longo da minha carreira acadêmica.
+  title: "Honrarias, Prêmios & Bolsas"
+  subtitle: "Uma seleção de honrarias, prêmios e bolsas recebidos ao longo da minha carreira acadêmica."
+  summary_papers: "Melhores Artigos"
+  summary_grants: "Bolsas & Financiamentos"
+  summary_volunteers: "Voluntário Estudantil"
+  section_papers: "Melhores Artigos"
+  section_grants: "Bolsas & Financiamentos"
+  section_volunteers: "Voluntário Estudantil"
+  badge_best: "🏆 Melhor Artigo"
+  badge_second: "🥈 2º Melhor Artigo"
+  badge_travel: "🎖️ Bolsa de Viagem"
+  badge_scholarship: "💰 Bolsa"
+  badge_volunteer: "🎓 Voluntário"
 
 research:
   title: Pesquisa
-  subtitle: Experiências e projetos de pesquisa.
-  ongoing: Projetos em Andamento
-  completed: Projetos Concluídos
+  subtitle: "Projetos de pesquisa atuais e passados. Clique em um card para expandir a descrição completa."
+  summary_projects: "Projetos de Pesquisa"
+  summary_ongoing: "Em Andamento"
+  summary_completed: "Concluídos"
+  section_ongoing: "Projetos em Andamento"
+  section_completed: "Projetos Concluídos"
+  badge_ongoing: "Em Andamento"
+  badge_completed: "Concluído"
+  coordinator: "Coordenador"
+  coordinators: "Coordenadores"
+  sponsor: "Patrocinador"
+  sponsors: "Patrocinadores"
+  partners: "Parceiros"
 
 teaching:
   title: Ensino
-  subtitle: Disciplinas ministradas na Universidade Federal do Ceará (UFC).
+  subtitle: "Disciplinas ministradas na Universidade Federal do Ceará (UFC)."
+  quote: '"A educação é uma coisa admirável. Mas é bom lembrar de tempos em tempos que nada do que vale a pena saber pode ser ensinado."'
+  quote_author: "Oscar Wilde (1854–1900)"
+  summary_courses: "Disciplinas Únicas"
+  summary_institutions: "Instituições"
+  summary_active: "Lecionando Atualmente"
+  offered: "Oferecida:"
+  badge_active: "🟢 Ativa"
 
 services:
-  title: Serviços
-  subtitle: Serviços à comunidade, comitês de programa e revisão de periódicos.
+  title: "Serviços à Comunidade"
+  subtitle: "Meu histórico de contribuições à comunidade de pesquisa em engenharia de software."
+  summary_international: "Eventos Internacionais"
+  summary_brazilian: "Eventos Brasileiros"
+  summary_journals: "Periódicos"
+  summary_organizer: "Organizador"
+  section_organization: "Organização de Eventos"
+  tpc_text: "Presidente do Comitê de Programa dos seguintes eventos:"
+  section_conferences: "Conferências & Workshops"
+  sub_international: "🌐 Internacional"
+  sub_brazilian: "🇧🇷 Eventos Brasileiros"
+  section_journals: "Periódicos"
   pc_member: Membro de PC
   reviewer: Revisor

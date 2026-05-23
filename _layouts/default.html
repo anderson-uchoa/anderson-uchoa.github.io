@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-{% assign t = site.data.i18n[site.active_lang] | default: site.data.i18n["en"] %}
+{% assign _lang = page.lang | default: "en" %}
+{% assign t = site.data.i18n[_lang] | default: site.data.i18n["en"] %}
 <html lang="{{ site.active_lang | default: 'en' }}">
 <head>
 	{% include head.html %}

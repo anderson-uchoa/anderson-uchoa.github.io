@@ -1,22 +1,28 @@
-{% assign t = site.data.i18n[site.active_lang] | default: site.data.i18n["en"] %}
-{% assign cur_lang = site.active_lang | default: "en" %}
-{% if cur_lang == "en" %}{% assign other_lang = "pt-BR" %}{% assign other_prefix = "/pt-BR" %}{% else %}{% assign other_lang = "en" %}{% assign other_prefix = "" %}{% endif %}
+{% assign cur_lang = page.lang | default: "en" %}
+{% assign t = site.data.i18n[cur_lang] | default: site.data.i18n["en"] %}
+{% if cur_lang == "en" %}
+  {% assign cur_prefix = "" %}
+  {% assign other_prefix = "/pt-BR" %}
+{% else %}
+  {% assign cur_prefix = "/pt-BR" %}
+  {% assign other_prefix = "" %}
+{% endif %}
 
 <nav id="top-navbar" role="navigation" aria-label="Main navigation">
 	<div class="nav-inner">
 		<a href="https://www.ufc.br/" class="nav-logo" target="_blank" rel="noopener noreferrer" aria-label="Federal University of Ceará (UFC)">
-			<img src="{{ site.baseurl }}/img/ufc_logo_v2.png" alt="UFC">
+			<img src="/img/ufc_logo_v2.png" alt="UFC">
 		</a>
 		<ul id="nav-links">
-			<li{% if page.active == 'about' %} class="active"{% endif %}><a href="{{ other_prefix }}/index.html"><i class="icon-home" aria-hidden="true"></i> {{ t.nav.about }}</a></li>
-			<li{% if page.active == 'publications' %} class="active"{% endif %}><a href="{{ other_prefix }}/publication.html"><i class="icon-file-text" aria-hidden="true"></i> {{ t.nav.publications }}</a></li>
-			<li{% if page.active == 'awards' %} class="active"{% endif %}><a href="{{ other_prefix }}/awards.html"><i class="icon-trophy" aria-hidden="true"></i> {{ t.nav.awards }}</a></li>
-			<li{% if page.active == 'research' %} class="active"{% endif %}><a href="{{ other_prefix }}/research.html"><i class="icon-beaker" aria-hidden="true"></i> {{ t.nav.research }}</a></li>
-			<li{% if page.active == 'teaching' %} class="active"{% endif %}><a href="{{ other_prefix }}/teaching.html"><i class="icon-graduation-cap" aria-hidden="true"></i> {{ t.nav.teaching }}</a></li>
-			<li{% if page.active == 'services' %} class="active"{% endif %}><a href="{{ other_prefix }}/services.html"><i class="icon-group" aria-hidden="true"></i> {{ t.nav.services }}</a></li>
+			<li{% if page.active == 'about' %} class="active"{% endif %}><a href="{{ cur_prefix }}/index.html"><i class="icon-home" aria-hidden="true"></i> {{ t.nav.about }}</a></li>
+			<li{% if page.active == 'publications' %} class="active"{% endif %}><a href="{{ cur_prefix }}/publication.html"><i class="icon-file-text" aria-hidden="true"></i> {{ t.nav.publications }}</a></li>
+			<li{% if page.active == 'awards' %} class="active"{% endif %}><a href="{{ cur_prefix }}/awards.html"><i class="icon-trophy" aria-hidden="true"></i> {{ t.nav.awards }}</a></li>
+			<li{% if page.active == 'research' %} class="active"{% endif %}><a href="{{ cur_prefix }}/research.html"><i class="icon-beaker" aria-hidden="true"></i> {{ t.nav.research }}</a></li>
+			<li{% if page.active == 'teaching' %} class="active"{% endif %}><a href="{{ cur_prefix }}/teaching.html"><i class="icon-graduation-cap" aria-hidden="true"></i> {{ t.nav.teaching }}</a></li>
+			<li{% if page.active == 'services' %} class="active"{% endif %}><a href="{{ cur_prefix }}/services.html"><i class="icon-group" aria-hidden="true"></i> {{ t.nav.services }}</a></li>
 			<li><a href="http://lattes.cnpq.br/3740664626762609" target="_blank" rel="noopener noreferrer"><i class="icon-external-link" aria-hidden="true"></i> {{ t.nav.cv }}</a></li>
 		</ul>
-		<a href="{{ other_prefix }}{{ page.url }}" class="lang-switcher" title="{{ t.lang_switcher.title }}" aria-label="{{ t.lang_switcher.title }}">{{ t.lang_switcher.label }}</a>
+		<a href="{{ other_prefix }}/index.html" class="lang-switcher" title="{{ t.lang_switcher.title }}" aria-label="{{ t.lang_switcher.title }}">{{ t.lang_switcher.label }}</a>
 		<button id="mobile-nav-toggle" aria-label="Open navigation menu">
 			<i class="icon-reorder" aria-hidden="true"></i>
 		</button>

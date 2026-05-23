@@ -3,14 +3,14 @@ layout: default
 title: "Teaching — Anderson Uchôa | UFC"
 description: "Teaching activities of Anderson Uchôa at the Federal University of Ceará (UFC), including Software Engineering, Object Oriented Programming, and Systems Analysis."
 keywords: "anderson uchoa teaching, anderson uchôa, software engineering courses, ufc itapajé, object oriented programming"
-canonical: "https://anderson-uchoa.github.io/teaching.html"
+canonical: "https://anderson-uchoa.github.io/pt-BR/teaching.html"
 og_title: "Teaching — Anderson Uchôa"
 og_description: "Teaching activities of Anderson Uchôa at the Federal University of Ceará (UFC), including Software Engineering and Object Oriented Programming."
 twitter_description: "Teaching activities of Anderson Uchôa at the Federal University of Ceará (UFC)."
 active: teaching
 lang: pt-BR
 ---
-
+{% assign _lang = page.lang | default: "en" %}{% assign t = site.data.i18n[_lang] %}
 {% assign institutions = site.data.teaching.institutions %}
 {% assign total_courses = 0 %}
 {% assign active_courses = 0 %}
@@ -25,10 +25,10 @@ lang: pt-BR
 	<div class="site-container">
 
 		<section class="page-header-section">
-			<h1>Teaching</h1>
+			<h1>{{ t.teaching.title }}</h1>
 			<p>
-				<em>"Education is an admirable thing. But it is well to remember from time to time that nothing that is worth knowing can be taught."</em><br>
-				— Oscar Wilde (1854–1900)
+				<em>{{ t.teaching.quote }}</em><br>
+				— {{ t.teaching.quote_author }}
 			</p>
 		</section>
 
@@ -36,17 +36,17 @@ lang: pt-BR
 			<div class="award-summary-item">
 				<span class="award-summary-icon">📚</span>
 				<span class="award-summary-count">{{ total_courses }}</span>
-				<span class="award-summary-label">Unique Courses</span>
+				<span class="award-summary-label">{{ t.teaching.summary_courses }}</span>
 			</div>
 			<div class="award-summary-item">
 				<span class="award-summary-icon">🏛️</span>
 				<span class="award-summary-count">{{ institutions | size }}</span>
-				<span class="award-summary-label">Institutions</span>
+				<span class="award-summary-label">{{ t.teaching.summary_institutions }}</span>
 			</div>
 			<div class="award-summary-item">
 				<span class="award-summary-icon">🟢</span>
 				<span class="award-summary-count">{{ active_courses }}</span>
-				<span class="award-summary-label">Currently Teaching</span>
+				<span class="award-summary-label">{{ t.teaching.summary_active }}</span>
 			</div>
 		</div>
 
@@ -58,12 +58,12 @@ lang: pt-BR
 				<div class="teaching-card{% unless course.active %} teaching-card--past{% endunless %}">
 					<div class="teaching-card-top">
 						<span class="teaching-code">{{ course.code | escape }}</span>
-						{% if course.active %}<span class="teaching-active-badge">🟢 Active</span>{% endif %}
+						{% if course.active %}<span class="teaching-active-badge">{{ t.teaching.badge_active }}</span>{% endif %}
 					</div>
 					<h3 class="teaching-card-title">{{ course.title | escape }}</h3>
 					<p class="teaching-card-level">{{ course.level | escape }}</p>
 					<div class="teaching-semesters">
-						<span class="teaching-sem">Offered:</span>
+						<span class="teaching-sem">{{ t.teaching.offered }}</span>
 						{% for sem in course.semesters %}
 						<span class="teaching-sem-badge{% if sem.current %} teaching-sem-badge--current{% endif %}">{{ sem.label | escape }}</span>
 						{% endfor %}

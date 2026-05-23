@@ -10,35 +10,36 @@ twitter_description: "Awards and recognition received by Anderson Uchôa, Softwa
 active: awards
 lang: en
 ---
+{% assign _lang = page.lang | default: "en" %}{% assign t = site.data.i18n[_lang] %}
 
 <main class="site-main">
 	<div class="site-container">
 
 		<section class="page-header-section">
-			<h1>Honors, Awards &amp; Grants</h1>
-			<p>A selection of honors, awards, and grants received throughout my academic career.</p>
+			<h1>{{ t.awards.title }}</h1>
+			<p>{{ t.awards.subtitle }}</p>
 		</section>
 
 		<div class="award-summary">
 			<div class="award-summary-item">
 				<span class="award-summary-icon">🏆</span>
 				<span class="award-summary-count">{{ site.data.awards.best_papers | size }}</span>
-				<span class="award-summary-label">Best Paper Awards</span>
+				<span class="award-summary-label">{{ t.awards.summary_papers }}</span>
 			</div>
 			<div class="award-summary-item">
 				<span class="award-summary-icon">💰</span>
 				<span class="award-summary-count">{{ site.data.awards.grants | size }}</span>
-				<span class="award-summary-label">Grants &amp; Scholarships</span>
+				<span class="award-summary-label">{{ t.awards.summary_grants }}</span>
 			</div>
 			<div class="award-summary-item">
 				<span class="award-summary-icon">🎓</span>
 				<span class="award-summary-count">{{ site.data.awards.volunteers | size }}</span>
-				<span class="award-summary-label">Student Volunteer</span>
+				<span class="award-summary-label">{{ t.awards.summary_volunteers }}</span>
 			</div>
 		</div>
 
 		<div class="content-section">
-			<h2 class="section-title"><i class="icon-trophy" aria-hidden="true"></i> Best Paper Awards</h2>
+			<h2 class="section-title"><i class="icon-trophy" aria-hidden="true"></i> {{ t.awards.section_papers }}</h2>
 			<div class="award-grid">
 				{% for award in site.data.awards.best_papers %}
 				<div class="award-card-sq">
@@ -46,9 +47,9 @@ lang: en
 						<img src="{{ award.image }}" alt="{{ award.image_alt | escape }}">
 					</div>
 					{% if award.badge_type == 'gold' %}
-					<span class="award-badge award-badge--gold">🏆 Best Paper</span>
+					<span class="award-badge award-badge--gold">{{ t.awards.badge_best }}</span>
 					{% elsif award.badge_type == 'silver' %}
-					<span class="award-badge award-badge--silver">🥈 2nd Best Paper</span>
+					<span class="award-badge award-badge--silver">{{ t.awards.badge_second }}</span>
 					{% endif %}
 					<p class="award-sq-title">{{ award.title | escape }}</p>
 					<p class="award-sq-venue">{{ award.venue | escape }}</p>
@@ -64,7 +65,7 @@ lang: en
 		</div>
 
 		<div class="content-section">
-			<h2 class="section-title"><i class="icon-money" aria-hidden="true"></i> Grants &amp; Scholarships</h2>
+			<h2 class="section-title"><i class="icon-money" aria-hidden="true"></i> {{ t.awards.section_grants }}</h2>
 			<div class="award-grid">
 				{% for grant in site.data.awards.grants %}
 				<div class="award-card-sq">
@@ -72,9 +73,9 @@ lang: en
 						<img src="{{ grant.image }}" alt="{{ grant.image_alt | escape }}">
 					</div>
 					{% if grant.badge_type == 'travel' %}
-					<span class="award-badge award-badge--blue">🎖️ Travel Grant</span>
+					<span class="award-badge award-badge--blue">{{ t.awards.badge_travel }}</span>
 					{% elsif grant.badge_type == 'scholarship' %}
-					<span class="award-badge award-badge--green">💰 Scholarship</span>
+					<span class="award-badge award-badge--green">{{ t.awards.badge_scholarship }}</span>
 					{% endif %}
 					<p class="award-sq-title">{{ grant.title | escape }}</p>
 					<p class="award-sq-venue">{{ grant.venue | escape }}</p>
@@ -86,14 +87,14 @@ lang: en
 		</div>
 
 		<div class="content-section">
-			<h2 class="section-title"><i class="icon-group" aria-hidden="true"></i> Student Volunteer</h2>
+			<h2 class="section-title"><i class="icon-group" aria-hidden="true"></i> {{ t.awards.section_volunteers }}</h2>
 			<div class="award-grid">
 				{% for vol in site.data.awards.volunteers %}
 				<div class="award-card-sq">
 					<div class="award-card-sq-logo">
 						<img src="{{ vol.image }}" alt="{{ vol.image_alt | escape }}">
 					</div>
-					<span class="award-badge award-badge--purple">🎓 Volunteer</span>
+					<span class="award-badge award-badge--purple">{{ t.awards.badge_volunteer }}</span>
 					<p class="award-sq-title">{{ vol.title | escape }}</p>
 					<p class="award-sq-venue">{{ vol.venue | escape }}</p>
 					<p class="award-sq-paper"></p>

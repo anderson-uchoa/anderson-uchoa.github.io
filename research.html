@@ -10,7 +10,7 @@ twitter_description: "Research experiences and projects by Anderson Uchôa in em
 active: research
 lang: en
 ---
-
+{% assign _lang = page.lang | default: "en" %}{% assign t = site.data.i18n[_lang] %}
 {% assign ongoing   = site.data.research | where: "status", "ongoing" %}
 {% assign completed = site.data.research | where: "status", "completed" %}
 
@@ -18,49 +18,49 @@ lang: en
 	<div class="site-container">
 
 		<section class="page-header-section">
-			<h1>Research</h1>
-			<p>Current and past research projects. Click on a card to expand its full description.</p>
+			<h1>{{ t.research.title }}</h1>
+			<p>{{ t.research.subtitle }}</p>
 		</section>
 
 		<div class="award-summary">
 			<div class="award-summary-item">
 				<span class="award-summary-icon">🔬</span>
 				<span class="award-summary-count">{{ site.data.research | size }}</span>
-				<span class="award-summary-label">Research Projects</span>
+				<span class="award-summary-label">{{ t.research.summary_projects }}</span>
 			</div>
 			<div class="award-summary-item">
 				<span class="award-summary-icon">🟢</span>
 				<span class="award-summary-count">{{ ongoing | size }}</span>
-				<span class="award-summary-label">Ongoing</span>
+				<span class="award-summary-label">{{ t.research.summary_ongoing }}</span>
 			</div>
 			<div class="award-summary-item">
 				<span class="award-summary-icon">✅</span>
 				<span class="award-summary-count">{{ completed | size }}</span>
-				<span class="award-summary-label">Completed</span>
+				<span class="award-summary-label">{{ t.research.summary_completed }}</span>
 			</div>
 		</div>
 
 		<div class="content-section">
-			<h2 class="section-title"><i class="icon-beaker" aria-hidden="true"></i> Ongoing Research Projects</h2>
+			<h2 class="section-title"><i class="icon-beaker" aria-hidden="true"></i> {{ t.research.section_ongoing }}</h2>
 
 			{% for project in ongoing %}
 			<div class="research-card">
 				<div class="research-card-header">
 					<div class="research-card-info">
 						<div class="research-card-meta">
-							<span class="research-status-badge research-status-badge--ongoing">Ongoing</span>
+							<span class="research-status-badge research-status-badge--ongoing">{{ t.research.badge_ongoing }}</span>
 							<span class="research-period">{{ project.period }}</span>
 						</div>
 						<h3 class="research-card-title">{{ project.title | escape }}</h3>
 						<p class="research-card-coordinator">
-							{% if project.coordinator contains '&' %}Coordinators{% else %}Coordinator{% endif %}:
+							{% if project.coordinator contains '&' %}{{ t.research.coordinators }}{% else %}{{ t.research.coordinator }}{% endif %}:
 							{% if project.coordinator_url %}
 								{{ project.coordinator | escape }} (<a href="{{ project.coordinator_url }}" target="_blank" rel="noopener noreferrer">{{ project.coordinator_institution }}</a>)
 							{% else %}
 								{{ project.coordinator | escape }}
 							{% endif %}
 							&middot;
-							{% if project.sponsor contains '&' %}Sponsors{% else %}Sponsor{% endif %}: {{ project.sponsor | escape }}
+							{% if project.sponsor contains '&' %}{{ t.research.sponsors }}{% else %}{{ t.research.sponsor }}{% endif %}: {{ project.sponsor | escape }}
 						</p>
 						<div class="research-tags">
 							{% for tag in project.tags %}<span class="research-tag">{{ tag }}</span>{% endfor %}
@@ -71,7 +71,7 @@ lang: en
 					</button>
 				</div>
 				<div class="research-card-details">
-					<p>Partners: {{ project.partners | escape }}{% if project.partners_link %} <a href="{{ project.partners_link }}" target="_blank" rel="noopener noreferrer">{{ project.partners_link_text }}</a>.{% endif %}</p>
+					<p>{{ t.research.partners }}: {{ project.partners | escape }}{% if project.partners_link %} <a href="{{ project.partners_link }}" target="_blank" rel="noopener noreferrer">{{ project.partners_link_text }}</a>.{% endif %}</p>
 					{% for para in project.description %}<p>{{ para | escape }}</p>{% endfor %}
 				</div>
 			</div>
@@ -79,26 +79,26 @@ lang: en
 		</div>
 
 		<div class="content-section">
-			<h2 class="section-title"><i class="icon-ok-circle" aria-hidden="true"></i> Completed Research Projects</h2>
+			<h2 class="section-title"><i class="icon-ok-circle" aria-hidden="true"></i> {{ t.research.section_completed }}</h2>
 
 			{% for project in completed %}
 			<div class="research-card">
 				<div class="research-card-header">
 					<div class="research-card-info">
 						<div class="research-card-meta">
-							<span class="research-status-badge research-status-badge--completed">Completed</span>
+							<span class="research-status-badge research-status-badge--completed">{{ t.research.badge_completed }}</span>
 							<span class="research-period">{{ project.period }}</span>
 						</div>
 						<h3 class="research-card-title">{{ project.title | escape }}</h3>
 						<p class="research-card-coordinator">
-							{% if project.coordinator contains '&' %}Coordinators{% else %}Coordinator{% endif %}:
+							{% if project.coordinator contains '&' %}{{ t.research.coordinators }}{% else %}{{ t.research.coordinator }}{% endif %}:
 							{% if project.coordinator_url %}
 								{{ project.coordinator | escape }} (<a href="{{ project.coordinator_url }}" target="_blank" rel="noopener noreferrer">{{ project.coordinator_institution }}</a>)
 							{% else %}
 								{{ project.coordinator | escape }}
 							{% endif %}
 							&middot;
-							{% if project.sponsor contains '&' %}Sponsors{% else %}Sponsor{% endif %}: {{ project.sponsor | escape }}
+							{% if project.sponsor contains '&' %}{{ t.research.sponsors }}{% else %}{{ t.research.sponsor }}{% endif %}: {{ project.sponsor | escape }}
 						</p>
 						<div class="research-tags">
 							{% for tag in project.tags %}<span class="research-tag">{{ tag }}</span>{% endfor %}
@@ -109,7 +109,7 @@ lang: en
 					</button>
 				</div>
 				<div class="research-card-details">
-					<p>Partners: {{ project.partners | escape }}{% if project.partners_link %} <a href="{{ project.partners_link }}" target="_blank" rel="noopener noreferrer">{{ project.partners_link_text }}</a>.{% endif %}</p>
+					<p>{{ t.research.partners }}: {{ project.partners | escape }}{% if project.partners_link %} <a href="{{ project.partners_link }}" target="_blank" rel="noopener noreferrer">{{ project.partners_link_text }}</a>.{% endif %}</p>
 					{% for para in project.description %}<p>{{ para | escape }}</p>{% endfor %}
 				</div>
 			</div>

@@ -1,6 +1,6 @@
-{% assign t = site.data.i18n[site.active_lang] | default: site.data.i18n["en"] %}
-{% assign cur_lang = site.active_lang | default: "en" %}
-{% if cur_lang == "en" %}{% assign other_prefix = "" %}{% else %}{% assign other_prefix = "/pt-BR" %}{% endif %}
+{% assign cur_lang = page.lang | default: "en" %}
+{% assign t = site.data.i18n[cur_lang] | default: site.data.i18n["en"] %}
+{% if cur_lang == "en" %}{% assign cur_prefix = "" %}{% else %}{% assign cur_prefix = "/pt-BR" %}{% endif %}
 
 <footer id="site-footer">
 	<div class="footer-inner">
@@ -25,12 +25,12 @@
 				<div class="footer-nav">
 					<p class="footer-heading">{{ t.footer.pages }}</p>
 					<ul class="footer-links">
-						<li><a href="{{ other_prefix }}/index.html">{{ t.nav.about }}</a></li>
-						<li><a href="{{ other_prefix }}/publication.html">{{ t.nav.publications }}</a></li>
-						<li><a href="{{ other_prefix }}/awards.html">{{ t.nav.awards }}</a></li>
-						<li><a href="{{ other_prefix }}/research.html">{{ t.nav.research }}</a></li>
-						<li><a href="{{ other_prefix }}/teaching.html">{{ t.nav.teaching }}</a></li>
-						<li><a href="{{ other_prefix }}/services.html">{{ t.nav.services }}</a></li>
+						<li><a href="{{ cur_prefix }}/index.html">{{ t.nav.about }}</a></li>
+						<li><a href="{{ cur_prefix }}/publication.html">{{ t.nav.publications }}</a></li>
+						<li><a href="{{ cur_prefix }}/awards.html">{{ t.nav.awards }}</a></li>
+						<li><a href="{{ cur_prefix }}/research.html">{{ t.nav.research }}</a></li>
+						<li><a href="{{ cur_prefix }}/teaching.html">{{ t.nav.teaching }}</a></li>
+						<li><a href="{{ cur_prefix }}/services.html">{{ t.nav.services }}</a></li>
 					</ul>
 				</div>
 

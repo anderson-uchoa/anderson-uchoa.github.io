@@ -3,7 +3,7 @@
 # paper: optional — title of the awarded paper (without quotes, added by template)
 
 best_papers:
-  - image: "img/personal/cbsoft_2022.png"
+  - image: "/img/personal/cbsoft_2022.png"
     image_alt: "CBSoft 2022"
     badge_type: gold
     title: "SBCARS 2022"
@@ -12,7 +12,7 @@ best_papers:
     year: 2022
     location: "Uberlândia, Brazil"
 
-  - image: "img/personal/cbsoft_2021.png"
+  - image: "/img/personal/cbsoft_2021.png"
     image_alt: "CBSoft 2021"
     badge_type: silver
     title: "SBCARS 2021"
@@ -21,7 +21,7 @@ best_papers:
     year: 2021
     location: "Joinville, Brazil"
 
-  - image: "img/personal/elaes-2016.jpg"
+  - image: "/img/personal/elaes-2016.jpg"
     image_alt: "ELA-ES 2016"
     badge_type: gold
     title: "ELA-ES 2016"
@@ -30,7 +30,7 @@ best_papers:
     location: "Natal, Brazil"
 
 grants:
-  - image: "img/personal/acm-sigsoft.jpg"
+  - image: "/img/personal/acm-sigsoft.jpg"
     image_alt: "ACM SIGSOFT"
     badge_type: travel
     title: "SIGSOFT CAPS Award"
@@ -38,7 +38,7 @@ grants:
     year: 2019
     context: "ICSE 2019"
 
-  - image: "img/personal/cnpq.png"
+  - image: "/img/personal/cnpq.png"
     image_alt: "CNPq"
     badge_type: scholarship
     title: "CNPq Grant"
@@ -46,7 +46,7 @@ grants:
     year: 2019
     context: "PhD Support"
 
-  - image: "img/personal/capes.jpg"
+  - image: "/img/personal/capes.jpg"
     image_alt: "CAPES"
     badge_type: scholarship
     title: "CAPES Grant"
@@ -54,7 +54,7 @@ grants:
     year: 2017
     context: "MSc Support"
 
-  - image: "img/personal/capes.jpg"
+  - image: "/img/personal/capes.jpg"
     image_alt: "CAPES"
     badge_type: scholarship
     title: "CAPES Grant"
@@ -63,21 +63,21 @@ grants:
     context: "BSc Exchange"
 
 volunteers:
-  - image: "img/personal/icse-2020.png"
+  - image: "/img/personal/icse-2020.png"
     image_alt: "ICSE 2020"
     title: "ICSE 2020"
     venue: "International Conference on Software Engineering"
     year: 2020
     location: "Virtual"
 
-  - image: "img/personal/icsa-2020.png"
+  - image: "/img/personal/icsa-2020.png"
     image_alt: "ICSA 2020"
     title: "ICSA 2020"
     venue: "International Conference on Software Architecture"
     year: 2020
     location: "Salvador, Brazil"
 
-  - image: "img/personal/icse-2018.png"
+  - image: "/img/personal/icse-2018.png"
     image_alt: "ICSE 2018"
     title: "ICSE 2018"
     venue: "International Conference on Software Engineering"

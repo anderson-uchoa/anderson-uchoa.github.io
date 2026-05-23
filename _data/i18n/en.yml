@@ -60,21 +60,59 @@ publication:
   subtitle: A complete list of my publications with abstracts and DOI links.
 
 awards:
-  title: Awards
-  subtitle: Recognition received throughout my academic career.
+  title: "Honors, Awards & Grants"
+  subtitle: "A selection of honors, awards, and grants received throughout my academic career."
+  summary_papers: "Best Paper Awards"
+  summary_grants: "Grants & Scholarships"
+  summary_volunteers: "Student Volunteer"
+  section_papers: "Best Paper Awards"
+  section_grants: "Grants & Scholarships"
+  section_volunteers: "Student Volunteer"
+  badge_best: "🏆 Best Paper"
+  badge_second: "🥈 2nd Best Paper"
+  badge_travel: "🎖️ Travel Grant"
+  badge_scholarship: "💰 Scholarship"
+  badge_volunteer: "🎓 Volunteer"
 
 research:
   title: Research
-  subtitle: Research experiences and projects.
-  ongoing: Ongoing Projects
-  completed: Completed Projects
+  subtitle: "Current and past research projects. Click on a card to expand its full description."
+  summary_projects: "Research Projects"
+  summary_ongoing: "Ongoing"
+  summary_completed: "Completed"
+  section_ongoing: "Ongoing Research Projects"
+  section_completed: "Completed Research Projects"
+  badge_ongoing: "Ongoing"
+  badge_completed: "Completed"
+  coordinator: "Coordinator"
+  coordinators: "Coordinators"
+  sponsor: "Sponsor"
+  sponsors: "Sponsors"
+  partners: "Partners"
 
 teaching:
   title: Teaching
-  subtitle: Courses taught at the Federal University of Ceará (UFC).
+  subtitle: "Courses taught at the Federal University of Ceará (UFC)."
+  quote: '"Education is an admirable thing. But it is well to remember from time to time that nothing that is worth knowing can be taught."'
+  quote_author: "Oscar Wilde (1854–1900)"
+  summary_courses: "Unique Courses"
+  summary_institutions: "Institutions"
+  summary_active: "Currently Teaching"
+  offered: "Offered:"
+  badge_active: "🟢 Active"
 
 services:
-  title: Services
-  subtitle: Community services, program committees, and journal reviewing.
+  title: "Services for the Community"
+  subtitle: "My contribution history to the software engineering research community."
+  summary_international: "International Venues"
+  summary_brazilian: "Brazilian Venues"
+  summary_journals: "Journals"
+  summary_organizer: "Event Organizer"
+  section_organization: "Events Organization"
+  tpc_text: "TPC Chair of the following events:"
+  section_conferences: "Conferences & Workshops"
+  sub_international: "🌐 International"
+  sub_brazilian: "🇧🇷 Brazilian Venues"
+  section_journals: "Journals"
   pc_member: PC Member
   reviewer: Reviewer
