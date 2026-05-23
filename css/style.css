@@ -2143,24 +2143,24 @@ html.dark-mode #scroll-indicator { color: rgba(255,255,255,0.45); }
 
 /* ── About (Joanna-style) two-column layout ───────────────────────────────── */
 .about-section {
-	padding: 32px 0 28px;
+	padding: 18px 0 16px;
 	border-bottom: 1px solid #e0e8f4;
 	margin-bottom: 36px;
 	background: linear-gradient(135deg, #f4f7fc 0%, #ffffff 60%);
 	border-radius: 16px;
-	margin-top: 8px;
+	margin-top: 4px;
 }
 .about-left {
 	text-align: center;
-	padding: 8px 28px 16px;
+	padding: 4px 24px 12px;
 }
 .about-photo {
-	width: 210px;
-	height: 210px;
+	width: 185px;
+	height: 185px;
 	border-radius: 50%;
 	object-fit: cover;
 	display: block;
-	margin: 0 auto 14px;
+	margin: 0 auto 10px;
 	border: 4px solid #fff;
 	box-shadow: 0 8px 36px rgba(26,39,68,0.18);
 	outline: 3px solid #d4e0f5;
@@ -2248,15 +2248,15 @@ html.dark-mode .about-cv-btn { background: #2a3a60; }
 html.dark-mode .about-cv-btn:hover { background: #344a7a; }
 
 .about-right {
-	padding-left: 20px;
-	padding-top: 8px;
+	padding-left: 18px;
+	padding-top: 4px;
 }
 .about-right h2.section-title:first-child {
 	margin-top: 0;
 }
 .about-right h2.section-title {
-	margin-top: 28px;
-	margin-bottom: 12px;
+	margin-top: 16px;
+	margin-bottom: 10px;
 }
 
 /* dark mode for about layout */
@@ -2272,10 +2272,10 @@ html.dark-mode .about-email           { color: #93b4e6; }
 html.dark-mode .about-photo           { border-color: #2a3550; outline-color: #2a3a60; }
 
 @media (max-width: 767px) {
-	.about-section { border-radius: 10px; padding: 20px 0 16px; }
-	.about-left  { padding-bottom: 28px; }
+	.about-section { border-radius: 10px; padding: 16px 0 12px; }
+	.about-left  { padding-bottom: 24px; }
 	.about-right { padding-left: 0; padding-top: 0; }
-	.about-photo { width: 160px; height: 160px; }
+	.about-photo { width: 150px; height: 150px; }
 }
 /* ================================================
    Research cards
