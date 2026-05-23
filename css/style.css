@@ -1682,14 +1682,13 @@ html.dark-mode .lang-switcher:hover { color: #fff; border-color: rgba(255,255,25
 /* ---- Section headings ---- */
 .section-title {
 	font-family: 'Raleway', sans-serif;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 700;
-	font-variant: small-caps;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.01em;
 	color: #1a2744;
 	border-bottom: 2px solid #1a2744;
-	padding-bottom: 6px;
-	margin: 0 0 22px;
+	padding-bottom: 7px;
+	margin: 0 0 20px;
 }
 
 /* ---- Page header (non-home pages) ---- */
@@ -1702,16 +1701,17 @@ html.dark-mode .lang-switcher:hover { color: #fff; border-color: rgba(255,255,25
 
 .page-header-section h1 {
 	font-family: 'Raleway', sans-serif;
-	font-size: 28px;
-	font-weight: 800;
+	font-size: 30px;
+	font-weight: 700;
 	color: #1a1a1a;
 	margin: 0 0 8px;
 }
 
 .page-header-section p {
-	font-size: 15px;
+	font-size: 15.5px;
 	color: #666;
 	margin: 0;
+	line-height: 1.6;
 }
 
 .pub-count-badge {
@@ -1860,10 +1860,10 @@ html.dark-mode .contact-block a        { color: #5b9bd5; }
 
 .exp-card-period {
 	display: inline;
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: 700;
 	color: #999;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.03em;
 }
 
 .exp-card-meta {
@@ -1874,20 +1874,21 @@ html.dark-mode .contact-block a        { color: #5b9bd5; }
 }
 
 .exp-card-title {
-	font-size: 14px;
+	font-size: 14.5px;
 	font-weight: 700;
 	color: #1a1a1a;
 	margin: 0 0 2px;
+	line-height: 1.4;
 }
 
 .exp-card-institution {
-	font-size: 13px;
+	font-size: 13.5px;
 	color: #555;
 	margin: 0 0 2px;
 }
 
 .exp-card-sub {
-	font-size: 12px;
+	font-size: 12.5px;
 	color: #888;
 	margin: 0;
 }
@@ -1992,29 +1993,30 @@ html.dark-mode .exp-degree-badge--bsc   { background: #2a1500; color: #e08040; }
 .award-card-sq-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
 .award-sq-title {
-	font-size: 15px;
+	font-size: 15.5px;
 	font-weight: 700;
 	color: #1a1a1a;
 	margin: 8px 0 4px;
+	line-height: 1.35;
 }
 
 .award-sq-venue {
-	font-size: 12px;
+	font-size: 13px;
 	color: #666;
 	margin: 0 0 4px;
-	line-height: 1.4;
+	line-height: 1.45;
 }
 
 .award-sq-paper {
-	font-size: 12px;
+	font-size: 13px;
 	color: #555;
 	margin: 0 0 8px;
-	line-height: 1.4;
+	line-height: 1.45;
 	min-height: 0;
 }
 
 .award-sq-year {
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: 700;
 	color: #999;
 	letter-spacing: 0.04em;
@@ -2184,8 +2186,14 @@ html.dark-mode #scroll-indicator { color: rgba(255,255,255,0.45); }
 	margin: 0 0 6px;
 	line-height: 1.15;
 }
+.about-bio {
+	font-size: 14.5px;
+	line-height: 1.7;
+	color: #333;
+	margin-bottom: 10px;
+}
 .about-title {
-	font-size: 12.5px;
+	font-size: 13px;
 	color: rgba(255,255,255,0.72);
 	margin: 0 0 3px;
 	line-height: 1.55;
@@ -2197,13 +2205,13 @@ html.dark-mode #scroll-indicator { color: rgba(255,255,255,0.45); }
 .about-title a { color: #93c0f0 !important; }
 .about-title a:hover { color: #c0deff !important; text-decoration: none; }
 .about-affil {
-	font-size: 11.5px;
+	font-size: 12px;
 	color: rgba(255,255,255,0.42);
 	margin: 6px 0 8px;
 	line-height: 1.5;
 }
 .about-email {
-	font-size: 12px;
+	font-size: 12.5px;
 	font-weight: 600;
 	color: rgba(255,255,255,0.80);
 	margin-bottom: 10px;
@@ -2331,24 +2339,24 @@ html.dark-mode .about-cta             { background: rgba(180,60,60,0.18) !import
 	margin-bottom: 6px;
 }
 .research-period {
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: 700;
 	color: #999;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.02em;
 }
 .research-card-title {
 	font-family: 'Lato', sans-serif;
-	font-size: 14px;
+	font-size: 15px;
 	font-weight: 700;
 	color: #1a1a1a;
 	margin: 0 0 4px;
-	line-height: 1.4;
+	line-height: 1.45;
 }
 .research-card-coordinator {
-	font-size: 12px;
+	font-size: 13px;
 	color: #666;
 	margin: 0 0 10px;
-	line-height: 1.5;
+	line-height: 1.6;
 }
 .research-card-coordinator a { color: #1a56a0; }
 .research-card-coordinator a:hover { text-decoration: underline; }
@@ -2360,9 +2368,9 @@ html.dark-mode .about-cta             { background: rgba(180,60,60,0.18) !import
 }
 .research-tag {
 	display: inline-block;
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: 600;
-	padding: 2px 9px;
+	padding: 3px 10px;
 	border-radius: 10px;
 	background: #e8f0fe;
 	color: #1a56a0;
@@ -2570,23 +2578,23 @@ html.dark-mode .teaching-sem-badge--current { background: #0e2e1a; color: #5ac47
 
 .service-year {
 	flex-shrink: 0;
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: 700;
 	color: #aaa;
 	min-width: 36px;
-	letter-spacing: 0.03em;
+	letter-spacing: 0.02em;
 }
 .service-name {
 	flex: 1;
-	font-size: 13.5px;
+	font-size: 14px;
 	color: #333;
-	line-height: 1.5;
+	line-height: 1.55;
 }
 .srv-role {
 	flex-shrink: 0;
-	font-size: 10px;
+	font-size: 11px;
 	font-weight: 700;
-	padding: 2px 9px;
+	padding: 2px 10px;
 	border-radius: 10px;
 	white-space: nowrap;
 }
@@ -2651,29 +2659,28 @@ html.dark-mode .journal-tag          { background: #1e2a40; border-color: #2a3a5
 }
 .news-item {
 	display: flex;
-	gap: 14px;
-	align-items: baseline;
-	padding: 4px 0;
+	gap: 12px;
+	align-items: center;
+	padding: 6px 0;
 	border-bottom: 1px solid #edf1f7;
-	font-size: 13px;
-	line-height: 1.45;
+	font-size: 14px;
+	line-height: 1.55;
 }
 .news-item:last-child { border-bottom: none; }
 .news-date {
 	flex-shrink: 0;
 	display: inline-block;
-	font-size: 10.5px;
+	font-size: 11.5px;
 	font-weight: 700;
 	color: #fff;
 	background: #1a2744;
-	min-width: 72px;
+	min-width: 76px;
 	text-align: center;
-	padding: 2px 8px;
+	padding: 3px 8px;
 	border-radius: 20px;
-	letter-spacing: 0.03em;
-	align-self: center;
+	letter-spacing: 0.02em;
 }
-.news-text { color: #444; }
+.news-text { color: #444; line-height: 1.55; }
 .news-text a { color: #1a5a9a; text-decoration: none; }
 .news-text a:hover { text-decoration: underline; }
 
