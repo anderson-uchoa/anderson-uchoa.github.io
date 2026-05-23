@@ -1,0 +1,19 @@
+# Recent news items — add new entries at the top, oldest at the bottom.
+# Fields: date (string), text (HTML supported), link (optional), link_text (optional)
+- date: "Jan 2026"
+  text: "Started as Postdoctoral Researcher at North Carolina State University."
+  link: "https://www.ncsu.edu/"
+  link_text: "NC State"
+
+- date: "Sep 2022"
+  text: "Best Paper Award at SBCARS 2022 for work on trivial refactorings and their impact on software quality."
+  link: "awards.html"
+  link_text: "See award"
+
+- date: "Mar 2021"
+  text: "Joined the Federal University of Ceará (UFC) as Professor of Software Engineering, Campus de Itapajé."
+  link: "https://www.ufc.br/"
+  link_text: "UFC"
+
+- date: "Feb 2021"
+  text: "Successfully defended PhD in Software Engineering at PUC-Rio. Advisor: Prof. Alessandro Garcia."

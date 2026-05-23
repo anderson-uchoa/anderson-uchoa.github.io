@@ -2185,6 +2185,25 @@ html.dark-mode #scroll-indicator { color: rgba(255,255,255,0.45); }
 	text-align: center;
 }
 
+.about-cv-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 7px;
+	margin: 14px 0 10px;
+	padding: 9px 20px;
+	background: #1a2744;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 600;
+	border-radius: 6px;
+	text-decoration: none;
+	transition: background 0.18s, opacity 0.18s;
+}
+.about-cv-btn:hover { background: #243560; color: #fff; text-decoration: none; }
+html.dark-mode .about-cv-btn { background: #2a3a60; }
+html.dark-mode .about-cv-btn:hover { background: #344a7a; }
+
 .about-right {
 	padding-left: 16px;
 }
@@ -2549,6 +2568,86 @@ html.dark-mode .srv-role--ideas      { background: #0a1e1e; color: #40a0a0; }
 html.dark-mode .srv-role--showcase   { background: #0a1e1e; color: #40a0a0; }
 html.dark-mode .srv-role--chair      { background: #1e1800; color: #c0a020; }
 html.dark-mode .journal-tag          { background: #1e2a40; border-color: #2a3a58; color: #c0d0e8; }
+
+/* ======================================================
+   News list
+   ====================================================== */
+.news-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.news-item {
+	display: flex;
+	gap: 14px;
+	align-items: baseline;
+	padding: 9px 0;
+	border-bottom: 1px solid #edf1f7;
+	font-size: 13.5px;
+	line-height: 1.55;
+}
+.news-item:last-child { border-bottom: none; }
+.news-date {
+	flex-shrink: 0;
+	font-size: 11.5px;
+	font-weight: 700;
+	color: #1a2744;
+	min-width: 68px;
+	letter-spacing: 0.02em;
+}
+.news-text { color: #444; }
+.news-text a { color: #1a5a9a; text-decoration: none; }
+.news-text a:hover { text-decoration: underline; }
+
+html.dark-mode .news-item  { border-bottom-color: #2a3550; }
+html.dark-mode .news-date  { color: #93b4e6; }
+html.dark-mode .news-text  { color: #bbb; }
+html.dark-mode .news-text a { color: #7ab0e0; }
+
+/* ======================================================
+   404 page
+   ====================================================== */
+.not-found-wrap {
+	text-align: center;
+	padding: 80px 0 120px;
+}
+.not-found-code {
+	font-size: 96px;
+	font-weight: 800;
+	color: #e0e8f4;
+	line-height: 1;
+	margin: 0 0 8px;
+	letter-spacing: -4px;
+}
+.not-found-title {
+	font-size: 28px;
+	font-weight: 700;
+	color: #1a2744;
+	margin: 0 0 12px;
+}
+.not-found-msg {
+	font-size: 15px;
+	color: #666;
+	margin: 0 0 28px;
+}
+.not-found-btn {
+	display: inline-block;
+	padding: 10px 28px;
+	background: #1a2744;
+	color: #fff;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	transition: background 0.18s;
+}
+.not-found-btn:hover { background: #243560; color: #fff; text-decoration: none; }
+
+html.dark-mode .not-found-code  { color: #1e2d4a; }
+html.dark-mode .not-found-title { color: #e0e0e0; }
+html.dark-mode .not-found-msg   { color: #888; }
+html.dark-mode .not-found-btn   { background: #2a3a60; }
+html.dark-mode .not-found-btn:hover { background: #344a7a; }
 
 /* ======================================================
    Footer

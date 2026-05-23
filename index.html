@@ -58,6 +58,9 @@ active: about
 							<i class="icon-twitter" aria-hidden="true"></i> Twitter
 						</a>
 					</div>
+					<a href="files/cv.pdf" class="about-cv-btn" target="_blank" rel="noopener noreferrer">
+						<i class="icon-file-text" aria-hidden="true"></i> Download CV
+					</a>
 					<div class="about-cta">
 						If you are interested in collaborating on <strong>Empirical Software Engineering</strong> and/or <strong>AI-assisted Development</strong> projects, please <a href="mailto:andersonuchoa@ufc.br">get in touch</a>.
 					</div>
@@ -98,6 +101,16 @@ active: about
 						<span class="research-tag">{{ interest | escape }}</span>
 						{% endfor %}
 					</div>
+
+					<h2 class="section-title" style="margin-top:32px">Recent News</h2>
+					<ul class="news-list">
+						{% for item in site.data.news %}
+						<li class="news-item">
+							<span class="news-date">{{ item.date | escape }}</span>
+							<span class="news-text">{{ item.text }}{% if item.link %} <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.link_text | escape }}</a>{% endif %}</span>
+						</li>
+						{% endfor %}
+					</ul>
 
 				</div>
 			</div>

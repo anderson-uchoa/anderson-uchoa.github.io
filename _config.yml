@@ -2,6 +2,8 @@ title: Anderson Uchôa
 url: "https://anderson-uchoa.github.io"
 baseurl: ""
 markdown: kramdown
+plugins:
+  - jekyll-sitemap
 exclude:
   - README.md
   - Gemfile
