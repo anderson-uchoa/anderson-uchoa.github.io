@@ -6,13 +6,15 @@ canonical: "https://anderson-uchoa.github.io/pt-BR/publication.html"
 active: publications
 lang: pt-BR
 ---
-{% assign t = site.data.i18n["pt-BR"] %}
+{% assign _lang = page.lang | default: "en" %}{% assign t = site.data.i18n[_lang] %}
 
 <main class="site-main">
 	<div class="site-container">
 
+		{% capture bib_raw %}{% include UchoaPapers.bib %}{% endcapture %}
+		{% assign pub_count = bib_raw | split: '@' | size | minus: 1 %}
 		<section class="page-header-section">
-			<h1>{{ t.publication.title }} <span class="pub-count-badge">51</span></h1>
+			<h1>{{ t.publication.title }} <span class="pub-count-badge">{{ pub_count }}</span></h1>
 			<p>{{ t.publication.subtitle }}</p>
 			<div class="pub-profile-links">
 				<a href="https://scholar.google.com.br/citations?user=_bwg28kAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="hero-social-badge">

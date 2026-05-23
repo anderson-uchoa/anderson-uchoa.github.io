@@ -10,12 +10,12 @@ twitter_description: "Publications by Anderson Uchôa in empirical software engi
 active: publications
 lang: en
 ---
-{% assign t = site.data.i18n["en"] %}
+{% assign _lang = page.lang | default: "en" %}{% assign t = site.data.i18n[_lang] %}
 
 <main class="site-main">
 	<div class="site-container">
 
-		{% capture bib_raw %}{% include_relative publications/UchoaPapers.bib %}{% endcapture %}
+		{% capture bib_raw %}{% include UchoaPapers.bib %}{% endcapture %}
 		{% assign pub_count = bib_raw | split: '@' | size | minus: 1 %}
 		<section class="page-header-section">
 			<h1>{{ t.publication.title }} <span class="pub-count-badge">{{ pub_count }}</span></h1>
