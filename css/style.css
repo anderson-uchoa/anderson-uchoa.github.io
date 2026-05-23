@@ -2220,22 +2220,26 @@ html.dark-mode #scroll-indicator { color: rgba(255,255,255,0.45); }
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 5px;
+	gap: 6px;
 	margin-bottom: 0;
 }
 
-/* social badges — light variant inside dark sidebar */
+/* social badges — ghost style with strong invert on hover */
 .about-left .hero-social-badge {
-	background: rgba(255,255,255,0.10) !important;
-	border-color: rgba(255,255,255,0.22) !important;
-	color: rgba(255,255,255,0.82) !important;
+	background: transparent !important;
+	border-color: rgba(255,255,255,0.38) !important;
+	color: rgba(255,255,255,0.90) !important;
+	font-size: 12.5px;
+	padding: 5px 14px;
+	transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 .about-left .hero-social-badge:hover {
-	background: rgba(255,255,255,0.22) !important;
-	color: #fff !important;
-	border-color: rgba(255,255,255,0.40) !important;
+	background: #fff !important;
+	color: #1a2744 !important;
+	border-color: #fff !important;
 }
-.about-left .orcid-social { color: rgba(255,255,255,0.82) !important; }
+.about-left .hero-social-badge:hover .orcid-social { color: #1a2744 !important; }
+.about-left .orcid-social { color: rgba(255,255,255,0.90) !important; }
 
 .about-cv-btn {
 	display: flex;
