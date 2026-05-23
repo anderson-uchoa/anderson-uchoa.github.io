@@ -18,156 +18,87 @@ active: awards
 			<p>A selection of honors, awards, and grants received throughout my academic career.</p>
 		</section>
 
-		<!-- Summary -->
 		<div class="award-summary">
 			<div class="award-summary-item">
 				<span class="award-summary-icon">🏆</span>
-				<span class="award-summary-count">3</span>
+				<span class="award-summary-count">{{ site.data.awards.best_papers | size }}</span>
 				<span class="award-summary-label">Best Paper Awards</span>
 			</div>
 			<div class="award-summary-item">
 				<span class="award-summary-icon">💰</span>
-				<span class="award-summary-count">4</span>
+				<span class="award-summary-count">{{ site.data.awards.grants | size }}</span>
 				<span class="award-summary-label">Grants &amp; Scholarships</span>
 			</div>
 			<div class="award-summary-item">
 				<span class="award-summary-icon">🎓</span>
-				<span class="award-summary-count">3</span>
+				<span class="award-summary-count">{{ site.data.awards.volunteers | size }}</span>
 				<span class="award-summary-label">Student Volunteer</span>
 			</div>
 		</div>
 
-		<!-- Best Paper Awards -->
 		<div class="content-section">
 			<h2 class="section-title"><i class="icon-trophy" aria-hidden="true"></i> Best Paper Awards</h2>
 			<div class="award-grid">
-
+				{% for award in site.data.awards.best_papers %}
 				<div class="award-card-sq">
 					<div class="award-card-sq-logo">
-						<img src="img/personal/cbsoft_2022.png" alt="CBSoft 2022">
+						<img src="{{ award.image }}" alt="{{ award.image_alt | escape }}">
 					</div>
+					{% if award.badge_type == 'gold' %}
 					<span class="award-badge award-badge--gold">🏆 Best Paper</span>
-					<p class="award-sq-title">SBCARS 2022</p>
-					<p class="award-sq-venue">Brazilian Symposium on Software Components, Architectures, and Reuse</p>
-					<p class="award-sq-paper"><em>"How do trivial refactorings affect classification prediction models?"</em></p>
-					<span class="award-sq-year">2022 · Uberlândia, Brazil</span>
-				</div>
-
-				<div class="award-card-sq">
-					<div class="award-card-sq-logo">
-						<img src="img/personal/cbsoft_2021.png" alt="CBSoft 2021">
-					</div>
+					{% elsif award.badge_type == 'silver' %}
 					<span class="award-badge award-badge--silver">🥈 2nd Best Paper</span>
-					<p class="award-sq-title">SBCARS 2021</p>
-					<p class="award-sq-venue">Brazilian Symposium on Software Components, Architectures, and Reuse</p>
-					<p class="award-sq-paper"><em>"Do Critical Components Smell Bad? An Empirical Study with Component-based Software Product Lines"</em></p>
-					<span class="award-sq-year">2021 · Joinville, Brazil</span>
-				</div>
-
-				<div class="award-card-sq">
-					<div class="award-card-sq-logo">
-						<img src="img/personal/elaes-2016.jpg" alt="ELA-ES 2016">
-					</div>
-					<span class="award-badge award-badge--gold">🏆 Best Paper</span>
-					<p class="award-sq-title">ELA-ES 2016</p>
-					<p class="award-sq-venue">3rd Latin-American School on Software Engineering</p>
+					{% endif %}
+					<p class="award-sq-title">{{ award.title | escape }}</p>
+					<p class="award-sq-venue">{{ award.venue | escape }}</p>
+					{% if award.paper %}
+					<p class="award-sq-paper"><em>"{{ award.paper | escape }}"</em></p>
+					{% else %}
 					<p class="award-sq-paper"></p>
-					<span class="award-sq-year">2016 · Natal, Brazil</span>
+					{% endif %}
+					<span class="award-sq-year">{{ award.year }} · {{ award.location | escape }}</span>
 				</div>
-
+				{% endfor %}
 			</div>
 		</div>
 
-		<!-- Grants & Scholarships -->
 		<div class="content-section">
 			<h2 class="section-title"><i class="icon-money" aria-hidden="true"></i> Grants &amp; Scholarships</h2>
 			<div class="award-grid">
-
+				{% for grant in site.data.awards.grants %}
 				<div class="award-card-sq">
 					<div class="award-card-sq-logo">
-						<img src="img/personal/acm-sigsoft.jpg" alt="ACM SIGSOFT">
+						<img src="{{ grant.image }}" alt="{{ grant.image_alt | escape }}">
 					</div>
+					{% if grant.badge_type == 'travel' %}
 					<span class="award-badge award-badge--blue">🎖️ Travel Grant</span>
-					<p class="award-sq-title">SIGSOFT CAPS Award</p>
-					<p class="award-sq-venue">Association for Computing Machinery (ACM)</p>
-					<p class="award-sq-paper"></p>
-					<span class="award-sq-year">2019 · ICSE 2019</span>
-				</div>
-
-				<div class="award-card-sq">
-					<div class="award-card-sq-logo">
-						<img src="img/personal/cnpq.png" alt="CNPq">
-					</div>
+					{% elsif grant.badge_type == 'scholarship' %}
 					<span class="award-badge award-badge--green">💰 Scholarship</span>
-					<p class="award-sq-title">CNPq Grant</p>
-					<p class="award-sq-venue">National Council for Scientific and Technological Development</p>
+					{% endif %}
+					<p class="award-sq-title">{{ grant.title | escape }}</p>
+					<p class="award-sq-venue">{{ grant.venue | escape }}</p>
 					<p class="award-sq-paper"></p>
-					<span class="award-sq-year">2019 · PhD Support</span>
+					<span class="award-sq-year">{{ grant.year }} · {{ grant.context | escape }}</span>
 				</div>
-
-				<div class="award-card-sq">
-					<div class="award-card-sq-logo">
-						<img src="img/personal/capes.jpg" alt="CAPES">
-					</div>
-					<span class="award-badge award-badge--green">💰 Scholarship</span>
-					<p class="award-sq-title">CAPES Grant</p>
-					<p class="award-sq-venue">Brazilian Federal Agency for Postgraduate Education</p>
-					<p class="award-sq-paper"></p>
-					<span class="award-sq-year">2017 · MSc Support</span>
-				</div>
-
-				<div class="award-card-sq">
-					<div class="award-card-sq-logo">
-						<img src="img/personal/capes.jpg" alt="CAPES">
-					</div>
-					<span class="award-badge award-badge--green">💰 Scholarship</span>
-					<p class="award-sq-title">CAPES Grant</p>
-					<p class="award-sq-venue">Brazilian Federal Agency for Postgraduate Education</p>
-					<p class="award-sq-paper"></p>
-					<span class="award-sq-year">2014 · BSc Exchange</span>
-				</div>
-
+				{% endfor %}
 			</div>
 		</div>
 
-		<!-- Student Volunteer -->
 		<div class="content-section">
 			<h2 class="section-title"><i class="icon-group" aria-hidden="true"></i> Student Volunteer</h2>
 			<div class="award-grid">
-
+				{% for vol in site.data.awards.volunteers %}
 				<div class="award-card-sq">
 					<div class="award-card-sq-logo">
-						<img src="img/personal/icse-2020.png" alt="ICSE 2020">
+						<img src="{{ vol.image }}" alt="{{ vol.image_alt | escape }}">
 					</div>
 					<span class="award-badge award-badge--purple">🎓 Volunteer</span>
-					<p class="award-sq-title">ICSE 2020</p>
-					<p class="award-sq-venue">International Conference on Software Engineering</p>
+					<p class="award-sq-title">{{ vol.title | escape }}</p>
+					<p class="award-sq-venue">{{ vol.venue | escape }}</p>
 					<p class="award-sq-paper"></p>
-					<span class="award-sq-year">2020 · Virtual</span>
+					<span class="award-sq-year">{{ vol.year }} · {{ vol.location | escape }}</span>
 				</div>
-
-				<div class="award-card-sq">
-					<div class="award-card-sq-logo">
-						<img src="img/personal/icsa-2020.png" alt="ICSA 2020">
-					</div>
-					<span class="award-badge award-badge--purple">🎓 Volunteer</span>
-					<p class="award-sq-title">ICSA 2020</p>
-					<p class="award-sq-venue">International Conference on Software Architecture</p>
-					<p class="award-sq-paper"></p>
-					<span class="award-sq-year">2020 · Salvador, Brazil</span>
-				</div>
-
-				<div class="award-card-sq">
-					<div class="award-card-sq-logo">
-						<img src="img/personal/icse-2018.png" alt="ICSE 2018">
-					</div>
-					<span class="award-badge award-badge--purple">🎓 Volunteer</span>
-					<p class="award-sq-title">ICSE 2018</p>
-					<p class="award-sq-venue">International Conference on Software Engineering</p>
-					<p class="award-sq-paper"></p>
-					<span class="award-sq-year">2018 · Gothenburg, Sweden</span>
-				</div>
-
+				{% endfor %}
 			</div>
 		</div>
 

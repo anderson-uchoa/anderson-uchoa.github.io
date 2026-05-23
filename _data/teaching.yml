@@ -1,0 +1,71 @@
+# active: true | false
+# semesters: list of { label, current }
+# current: true marks the badge as green (ongoing)
+
+institutions:
+  - name: "Federal University of Ceará (UFC) — Campus de Itapajé"
+    courses:
+      - code: "IT0062"
+        title: "Software Engineering I"
+        level: "B.Sc. in Computer Engineering"
+        active: true
+        semesters:
+          - label: "2022.2–Present"
+            current: true
+          - label: "2022.1"
+
+      - code: "IT0064 · IT0010"
+        title: "Object Oriented Programming"
+        level: "B.Sc. in Computer Engineering"
+        active: true
+        semesters:
+          - label: "2022.2–Present"
+            current: true
+          - label: "2022.1"
+
+      - code: "IT0072"
+        title: "Systems Analysis and Design"
+        level: "B.Sc. in Computer Engineering"
+        active: true
+        semesters:
+          - label: "2022.2–Present"
+            current: true
+
+      - code: "IT0055 · IT0004"
+        title: "Programming Fundamentals"
+        level: "B.Sc. in Computer Engineering"
+        active: false
+        semesters:
+          - label: "2021.2"
+
+      - code: "IT0061"
+        title: "Introduction to Computing"
+        level: "B.Sc. in Computer Engineering"
+        active: false
+        semesters:
+          - label: "2021.2"
+
+  - name: "Federal University of Rio de Janeiro (UFRJ)"
+    courses:
+      - code: "MAB240"
+        title: "Computing II"
+        level: "B.Sc. level"
+        active: false
+        semesters:
+          - label: "2021.2"
+
+      - code: "CMT012"
+        title: "Introduction to C/C++ Programming"
+        level: "B.Sc. level"
+        active: false
+        semesters:
+          - label: "2021.2"
+
+  - name: "Pontifical Catholic University of Rio de Janeiro (PUC-Rio)"
+    courses:
+      - code: "INF1028"
+        title: "Systems Design and Construction"
+        level: "B.Sc. level"
+        active: false
+        semesters:
+          - label: "2021.1"

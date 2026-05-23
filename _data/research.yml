@@ -1,0 +1,214 @@
+# status: ongoing | completed
+# coordinator_url / coordinator_institution: optional link for coordinator's institution
+# partners_link / partners_link_text: optional link appended to the partners paragraph
+
+- title: "MAINTAIN — Intelligent Maintenance of Software Systems"
+  status: ongoing
+  period: "2024 – Present"
+  coordinator: "Dr. Matheus Paixão (UECE)"
+  sponsor: "CNPq"
+  tags: [NLP, software maintenance, machine learning, developer]
+  partners: >-
+    Anderson Uchôa (UFC, Brasil), Matheus Paixão (UECE, Brasil),
+    Paulo Henrique Mendes Maia (UECE, Brasil), Jerffeson Teixeira de Souza (UECE, Brasil),
+    Ismayle de Sousa Santos (UECE, Brasil), Allysson Allex de Paula Araújo (UFCA, Brasil),
+    Thiago do Nascimento Ferreira (University Of Michigan, EUA), and
+    Chaiyong Ragkhitwetsagul (Mahidol University, Thailand).
+  description:
+    - >-
+      Currently, digital technologies are used for several aspects of an individual's life,
+      such as entertainment, work etc. Hence, the software industry grows every year with a
+      constant increase in the number of products being developed. As a sub-area of Software
+      Engineering, Software Maintenance refers to updating software after it has been deployed
+      to its users. Among the maintenance tasks, one may mention bug fixing, source code
+      improvement, technical debt management etc. As pointed out by Lehman, software needs to
+      constantly change to remain useful. Thus, on average, more than half of a software
+      project's resources are spent on maintenance.
+    - >-
+      Considering the existing software industry, the massive amount of data and the complexity
+      of modern software generates scenarios where practitioners have difficulties in performing
+      efficient maintenance tasks. In parallel, recent advances in Artificial Intelligence (AI)
+      have been gaining notoriety. Techniques such as natural language processing, data mining
+      and optimization have been successfully applied to several scientific and engineering areas.
+      Thus, this project aims at investigating and using AI techniques to assist practitioners in
+      software maintenance tasks. Data mining will be used to analyze large amounts of maintenance
+      data to identify recurrent patterns and find best practices. We plan to employ natural
+      language processing to assist in tasks related to text writing and comprehension, such as
+      technical debt management and code review, for instance.
+
+- title: "Modernization of Legacy Systems: (Semi-)Automated Support and Development Practices"
+  status: ongoing
+  period: "2023 – Present"
+  coordinator: "Dr. Anderson Uchôa (UFC)"
+  sponsor: "FUNCAP"
+  tags: [software modernization, software maintenance, machine learning, development practices]
+  partners: >-
+    Anderson Uchôa (UFC, Brasil), Rafael Maiani de Mello (UFRJ, Brasil),
+    Matheus Paixão (UECE, Brasil), Paulo Henrique Mendes Maia (UECE, Brasil),
+    Carla Ilane (UFC, Brasil), and Alessandro Garcia (PUC-Rio, Brasil).
+  description:
+    - >-
+      The State of Ceará is responsible for a significant portion of software development,
+      accounting for about 20% of national production. Many of these software programs become
+      legacy systems: they provide essential functionalities for organizations but use commonly
+      outdated technologies. There is a great difficulty in maintaining or even modernizing these
+      software programs, especially due to structural degradation that affects the code. However,
+      several of these software programs are too important to be discarded. For organizations to
+      remain competitive in national and international markets, it is crucial to modernize legacy
+      software and use good software development practices.
+    - >-
+      The inclusion of new disruptive technologies, such as microservices and Big Data, helps to
+      avoid the discontinuation of essential legacy software and offer various other opportunities
+      for organizations. Thus, the project aims to: (i) conduct studies with the legacy systems of
+      the Ceará industry that are undergoing modernization; (ii) investigate software development
+      practices that assist in the identification, application, and restructuring of legacy code;
+      (iii) propose and develop a technique that aids in the process of modernizing and evolving
+      legacy code; and (iv) evaluate the impact on software quality after the restructuring
+      proposed by the technique.
+
+- title: "An Exploratory Study on Developers' Perception of Code Smells in AI-Enabled Systems"
+  status: ongoing
+  period: "2022 – Present"
+  coordinator: "Dr. Anderson Uchôa (UFC)"
+  sponsor: "CNPq / PIBIC"
+  tags: [code smells, AI-enabled systems, machine learning, developer survey]
+  partners: >-
+    Anderson Uchôa (UFC, Brasil), and Juliana Alves Pereira (PUC-Rio, Brasil).
+  description:
+    - >-
+      AI-enabled systems are composed of one or more components that learn how to perform a task
+      from a given dataset. Similar to other complex systems, AI-enabled systems are also affected
+      by poor code structures (e.g., code smells). In particular, the code quality of AI-enabled
+      systems has rarely been studied. Unfortunately, little is known about the perception of
+      developers of AI-enabled systems regarding the code smells that affect their systems.
+      Understanding developers' perceptions is important to direct research efforts that aim to
+      support the needs and problems of developers of AI-enabled systems.
+    - >-
+      Our goal is to obtain empirically driven actionable insights for researchers and tool
+      builders about the level of knowledge regarding code smells, their perceived criticality,
+      and the procedures used by developers to remove or minimize the effects of code smells in
+      AI-enabled systems. We intend to conduct an exploratory survey with developers involved in
+      the development of AI-enabled systems, including frameworks, systems, and machine learning
+      libraries. We will also include developers who have used these frameworks to build their
+      AI-enabled systems.
+
+- title: "MAssiSo — Assisted Modernization of Legacy Software for Adoption of Disruptive Technologies"
+  status: ongoing
+  period: "2019 – Present"
+  coordinator: "Dr. Alessandro Garcia (PUC-Rio)"
+  sponsor: "FAPERJ"
+  tags: [modularization, legacy systems, refactoring, recommendation system]
+  partners: >-
+    Marcos Kalinowski (PUC-Rio), Thibaut Vidal (PUC-Rio), Leonardo Murta (UFF),
+    Leonardo Tizzei e Renato Cerqueira (IBM Research, Brasil), Gustavo Soares (Microsoft Research, EUA),
+    Diego Cedrim (Amazon, Brasil), Myriung Kim (UCLA, EUA), Nenad Medvidovic (UCLA, EUA),
+    and Jens Krinke (UCL, The United Kingdom).
+  description:
+    - >-
+      This project aims to (i) perform studies concerning legacy systems of the industry in
+      Rio de Janeiro, which are going through the modernization process; (ii) propose and develop
+      a recommendation system to assist the refactoring process of legacy code; (iii) investigate
+      optimization and recommendation techniques that allow the identification, application, and
+      reintegration of refactoring in legacy code; (iv) evaluate the impact of software quality
+      after the restructuring proposed by the recommender.
+
+- title: "ReSTaurA — Sequential Refactoring: Theory and Automated Support"
+  status: ongoing
+  period: "2018 – Present"
+  coordinator: "Dr. Alessandro Garcia (PUC-Rio)"
+  sponsor: "CNPq"
+  tags: [refactoring, sequential refactoring, recommendation system, conceptual framework]
+  partners: >-
+    Microsoft Research (Gustavo Soares), Google (Emerson Murphy-Hill), Amazon (Diego Cedrim),
+    IBM Research (Renato Cerqueira), NCSU (Christopher Parnin), UCLA (Myriung Kim),
+    UCI (Andre van der Hoek), PUC-Rio (Marcos Kalinowski, Carlos J. P. Lucena),
+    UFCG (Rohit Gheyi), UFAM (Tayana Conte), UFAL (Baldoino F. Neto, Marcio Ribeiro), and others.
+  description:
+    - >-
+      This project aims to: (i) provide a conceptual framework for sequential refactoring as well
+      as related concepts; (ii) develop a theory that explains how developers perform sequential
+      refactoring in practice; (iii) propose heuristics for automated identification of sequential
+      refactoring existing in a program; (iv) assess the quality impact of sequential refactoring;
+      (v) evaluate and classify sequential refactoring as positive or negative based on their
+      impact on structural degradation symptoms; and (vi) propose a recommendation system for
+      sequential refactoring.
+
+- title: "Leveraging Gamification and Social Networks for Improving Prevention and Control of Zika"
+  status: completed
+  period: "2017 – 2019"
+  coordinator: "Prof. Alexander Romanovsky & Dr. Paolo Missier"
+  coordinator_url: "https://www.ncl.ac.uk/"
+  coordinator_institution: "Newcastle University"
+  sponsor: "British Council & Newton Fund"
+  tags: [zika virus, gamification, legacy system, healthcare system]
+  partners: >-
+    Federal University of Alagoas (Prof Baldoino Fonseca), Federal University of Pernambuco
+    (Prof Leopoldo Teixeira), Pontifical Catholic University of Rio de Janeiro
+    (Prof Alessandro Garcia) and Fundacao Oswaldo Cruz - Fiocruz (Dr Oswado Cruz), Brazil.
+  partners_link: "https://www.ncl.ac.uk/computing/research/projects/leveraginggamificationandsocialnetworksforimprovingpreventionandcontrol.html"
+  partners_link_text: "Newcastle University project page"
+  description:
+    - >-
+      Brazilian population has not responded well to the prevention programs to combat arboviral
+      diseases, such as Zika and Dengue. Concerns with such diseases has led an overwhelming
+      number of people to increasingly share online strategic information, including the discovery
+      of mosquito breeding sites in public locations. The term social sensors refers to the online
+      population that is motivated to contribute relevant information on social media channels.
+      Recent increasing use of smartphones triggered the growing use of social networks even in
+      poorer communities.
+    - >-
+      The project developed a platform for promoting virtual communities to prevent and combat Zika.
+      Its core is the VazaZika application, which uses geolocation and gamification technologies
+      for stimulating citizens to denounce and confirm Aedes breeding sites, and for updating users,
+      in real time, about actions taken by health agents.
+
+- title: "CARECO — Recommendation Systems for Collaborative Software Maintenance"
+  status: completed
+  period: "2018"
+  coordinator: "Dr. Alessandro Garcia & Carlos José Pereira de Lucena (PUC-Rio)"
+  sponsor: "CAPES"
+  tags: [recommendation system, software maintenance, development environment, collaborative maintenance]
+  partners: >-
+    PUC-Rio (Prof. Alberto Raposo), PUC-Rio (Prof. Hugo Fuks),
+    Federal University of Campina Grande (Prof. Rohit Gheyi),
+    Federal University of Alagoas (Prof. Márcio Ribeiro),
+    Federal University of Manaus (Prof. Tayana Conte),
+    PUC-Rio (Prof. Simone Barbosa) and PUC-Rio (Prof. Clarisse Sousa).
+  description:
+    - >-
+      The CARECO project aimed to develop: (i) recommendation systems to support collaborative
+      maintenance of software systems; (ii) methods that support the evaluation of the quality of
+      use of recommendation systems; (iii) new collaboration mechanisms integrated with development
+      environments; (iv) application of advanced artificial intelligence and database techniques to
+      develop recommendation systems that support collaborative maintenance of software systems, and
+      (v) design and evaluation of recommendation systems to support the teaching and learning
+      software maintenance.
+
+- title: "A Software Infrastructure for Promoting Efficient Entomological Monitoring of Dengue Fever"
+  status: completed
+  period: "2017 – 2018"
+  coordinator: "Prof. Dr. Alessandro Garcia & Prof. Dr. Alexander Romanovsky"
+  coordinator_url: "https://www.ncl.ac.uk/"
+  coordinator_institution: "Newcastle University"
+  sponsor: "British Council & Newton Fund"
+  tags: [dengue fever, healthcare system, geo-referenced data, social network]
+  partners: >-
+    Federal University of Alagoas (Prof Baldoino Fonseca),
+    Pontifical Catholic University of Rio de Janeiro (Prof Alessandro Garcia)
+    and Fundacao Oswaldo Cruz - Fiocruz (Dr Oswado Cruz), Brazil.
+  partners_link: "https://gtr.ukri.org/projects?ref=MR%2FM026388%2F1"
+  partners_link_text: "UKRI project page"
+  description:
+    - >-
+      Dengue is an endemic problem in many areas where public health services assistance is
+      inefficient, and sometimes it is not even there. The Brazilian public health system cannot
+      meet the demands of these areas due to the scarcity of resources available and the number
+      of risk areas that requires monitoring. To make the matters worse, it is very difficult to
+      identify and control dengue outbreaks in their initial stages.
+    - >-
+      To assist the surveillance and detection of dengue mosquito and outbreaks, we propose an
+      integrated platform for population to act as an etymological surveillance agent. The goal is
+      to collect and transmit geo-referenced data, providing information to assist in entomological
+      surveillance of dengue. To accomplish the aforementioned goal, we developed (i) mobile
+      applications to collect data, (ii) a web portal for centralizing data and (iii) social media
+      mining to extract data and to monitor dengue outbreaks.

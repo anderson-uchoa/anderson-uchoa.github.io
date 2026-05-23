@@ -10,6 +10,9 @@ twitter_description: "Research experiences and projects by Anderson Uchôa in em
 active: research
 ---
 
+{% assign ongoing   = site.data.research | where: "status", "ongoing" %}
+{% assign completed = site.data.research | where: "status", "completed" %}
+
 <main class="site-main">
 	<div class="site-container">
 
@@ -18,44 +21,48 @@ active: research
 			<p>Current and past research projects. Click on a card to expand its full description.</p>
 		</section>
 
-		<!-- Summary -->
 		<div class="award-summary">
 			<div class="award-summary-item">
 				<span class="award-summary-icon">🔬</span>
-				<span class="award-summary-count">8</span>
+				<span class="award-summary-count">{{ site.data.research | size }}</span>
 				<span class="award-summary-label">Research Projects</span>
 			</div>
 			<div class="award-summary-item">
 				<span class="award-summary-icon">🟢</span>
-				<span class="award-summary-count">5</span>
+				<span class="award-summary-count">{{ ongoing | size }}</span>
 				<span class="award-summary-label">Ongoing</span>
 			</div>
 			<div class="award-summary-item">
 				<span class="award-summary-icon">✅</span>
-				<span class="award-summary-count">3</span>
+				<span class="award-summary-count">{{ completed | size }}</span>
 				<span class="award-summary-label">Completed</span>
 			</div>
 		</div>
 
-		<!-- Ongoing Research Projects -->
 		<div class="content-section">
 			<h2 class="section-title"><i class="icon-beaker" aria-hidden="true"></i> Ongoing Research Projects</h2>
 
-			<!-- MAINTAIN -->
+			{% for project in ongoing %}
 			<div class="research-card">
 				<div class="research-card-header">
 					<div class="research-card-info">
 						<div class="research-card-meta">
 							<span class="research-status-badge research-status-badge--ongoing">Ongoing</span>
-							<span class="research-period">2024 – Present</span>
+							<span class="research-period">{{ project.period }}</span>
 						</div>
-						<h3 class="research-card-title">MAINTAIN — Intelligent Maintenance of Software Systems</h3>
-						<p class="research-card-coordinator">Coordinator: Dr. Matheus Paixão (UECE) &middot; Sponsor: CNPq</p>
+						<h3 class="research-card-title">{{ project.title | escape }}</h3>
+						<p class="research-card-coordinator">
+							{% if project.coordinator contains '&' %}Coordinators{% else %}Coordinator{% endif %}:
+							{% if project.coordinator_url %}
+								{{ project.coordinator | escape }} (<a href="{{ project.coordinator_url }}" target="_blank" rel="noopener noreferrer">{{ project.coordinator_institution }}</a>)
+							{% else %}
+								{{ project.coordinator | escape }}
+							{% endif %}
+							&middot;
+							{% if project.sponsor contains '&' %}Sponsors{% else %}Sponsor{% endif %}: {{ project.sponsor | escape }}
+						</p>
 						<div class="research-tags">
-							<span class="research-tag">NLP</span>
-							<span class="research-tag">software maintenance</span>
-							<span class="research-tag">machine learning</span>
-							<span class="research-tag">developer</span>
+							{% for tag in project.tags %}<span class="research-tag">{{ tag }}</span>{% endfor %}
 						</div>
 					</div>
 					<button class="research-chevron" aria-label="Expand project details" aria-expanded="false">
@@ -63,140 +70,37 @@ active: research
 					</button>
 				</div>
 				<div class="research-card-details">
-					<p>Partners: Anderson Uchôa (UFC, Brasil), Matheus Paixão (UECE, Brasil), Paulo Henrique Mendes Maia (UECE, Brasil), Jerffeson Teixeira de Souza (UECE, Brasil), Ismayle de Sousa Santos (UECE, Brasil), Allysson Allex de Paula Araújo (UFCA, Brasil), Thiago do Nascimento Ferreira (University Of Michigan, EUA), and Chaiyong Ragkhitwetsagul (Mahidol University, Thailand).</p>
-					<p>Currently, digital technologies are used for several aspects of an individual's life, such as entertainment, work etc. Hence, the software industry grows every year with a constant increase in the number of products being developed. As a sub-area of Software Engineering, Software Maintenance refers to updating software after it has been deployed to its users. Among the maintenance tasks, one may mention bug fixing, source code improvement, technical debt management etc. As pointed out by Lehman, software needs to constantly change to remain useful. Thus, on average, more than half of a software project's resources are spent on maintenance. Considering the existing software industry, the massive amount of data and the complexity of modern software generates scenarios where practitioners have difficulties in performing efficient maintenance tasks. In parallel, recent advances in Artificial Intelligence (AI) have been gaining notoriety. Techniques such as natural language processing, data mining and optimization have been successfully applied to several scientific and engineering areas. Thus, this project aims at investigating and using AI techniques to assist practitioners in software maintenance tasks. Data mining will be used to analyze large amounts of maintenance data to identify recurrent patterns and find best practices. We plan to employ natural language processing to assist in tasks related to text writing and comprehension, such as technical debt management and code review, for instance. We will apply optimization algorithms to combinatorial maintenance tasks, such as code modularization and test case prioritization, for example. Hence, this project will expand the scientific knowledge in SE by investigating and proposing new approaches for the maintenance of software systems.</p>
+					<p>Partners: {{ project.partners | escape }}{% if project.partners_link %} <a href="{{ project.partners_link }}" target="_blank" rel="noopener noreferrer">{{ project.partners_link_text }}</a>.{% endif %}</p>
+					{% for para in project.description %}<p>{{ para | escape }}</p>{% endfor %}
 				</div>
 			</div>
-
-			<!-- Modernization of Legacy Systems -->
-			<div class="research-card">
-				<div class="research-card-header">
-					<div class="research-card-info">
-						<div class="research-card-meta">
-							<span class="research-status-badge research-status-badge--ongoing">Ongoing</span>
-							<span class="research-period">2023 – Present</span>
-						</div>
-						<h3 class="research-card-title">Modernization of Legacy Systems: (Semi-)Automated Support and Development Practices</h3>
-						<p class="research-card-coordinator">Coordinator: Dr. Anderson Uchôa (UFC) &middot; Sponsor: FUNCAP</p>
-						<div class="research-tags">
-							<span class="research-tag">software modernization</span>
-							<span class="research-tag">software maintenance</span>
-							<span class="research-tag">machine learning</span>
-							<span class="research-tag">development practices</span>
-						</div>
-					</div>
-					<button class="research-chevron" aria-label="Expand project details" aria-expanded="false">
-						<i class="icon-chevron-down" aria-hidden="true"></i>
-					</button>
-				</div>
-				<div class="research-card-details">
-					<p>Partners: Anderson Uchôa (UFC, Brasil), Rafael Maiani de Mello (UFRJ, Brasil), Matheus Paixão (UECE, Brasil), Paulo Henrique Mendes Maia (UECE, Brasil), Carla Ilane (UFC, Brasil), and Alessandro Garcia (PUC-Rio, Brasil).</p>
-					<p>The State of Ceará is responsible for a significant portion of software development, accounting for about 20% of national production. Many of these software programs become legacy systems: they provide essential functionalities for organizations but use commonly outdated technologies. There is a great difficulty in maintaining or even modernizing these software programs, especially due to structural degradation that affects the code. However, several of these software programs are too important to be discarded. For organizations to remain competitive in national and international markets, it is crucial to modernize legacy software and use good software development practices. The inclusion of new disruptive technologies, such as microservices and Big Data, helps to: (i) avoid the discontinuation of essential legacy software, and (ii) offer various other opportunities for organizations. Additionally, the use of good development practices helps in the modernization of legacy software. To carry out such modernizations, one of the main practices used is the refactoring and review of software artifacts. Refactoring is the primary and most challenging practice, given that the level of degradation of legacy code requires complex restructurings. Thus, the project aims to: (i) conduct studies with the legacy systems of the Ceará industry that are undergoing modernization; (ii) investigate software development practices that assist in the identification, application, and restructuring of legacy code; (iii) propose and develop a technique that aids in the process of modernizing and evolving legacy code; and (iv) evaluate the impact on software quality after the restructuring proposed by the technique.</p>
-				</div>
-			</div>
-
-			<!-- Code Smells in AI-Enabled Systems -->
-			<div class="research-card">
-				<div class="research-card-header">
-					<div class="research-card-info">
-						<div class="research-card-meta">
-							<span class="research-status-badge research-status-badge--ongoing">Ongoing</span>
-							<span class="research-period">2022 – Present</span>
-						</div>
-						<h3 class="research-card-title">An Exploratory Study on Developers' Perception of Code Smells in AI-Enabled Systems</h3>
-						<p class="research-card-coordinator">Coordinator: Dr. Anderson Uchôa (UFC) &middot; Sponsor: CNPq / PIBIC</p>
-						<div class="research-tags">
-							<span class="research-tag">code smells</span>
-							<span class="research-tag">AI-enabled systems</span>
-							<span class="research-tag">machine learning</span>
-							<span class="research-tag">developer survey</span>
-						</div>
-					</div>
-					<button class="research-chevron" aria-label="Expand project details" aria-expanded="false">
-						<i class="icon-chevron-down" aria-hidden="true"></i>
-					</button>
-				</div>
-				<div class="research-card-details">
-					<p>Partners: Anderson Uchôa (UFC, Brasil), and Juliana Alves Pereira (PUC-Rio, Brasil).</p>
-					<p>AI-enabled systems are composed of one or more components that learn how to perform a task from a given dataset. Similar to other complex systems, AI-enabled systems are also affected by poor code structures (e.g., code smells). In particular, the code quality of AI-enabled systems has rarely been studied. Unfortunately, little is known about the perception of developers of AI-enabled systems regarding the code smells that affect their systems. Understanding developers' perceptions is important to direct research efforts that aim to support the needs and problems of developers of AI-enabled systems. Our goal is to obtain empirically driven actionable insights for researchers and tool builders about the level of knowledge regarding code smells, their perceived criticality, and the procedures used by developers to remove or minimize the effects of code smells in AI-enabled systems. We intend to conduct an exploratory survey with developers involved in the development of AI-enabled systems, including frameworks, systems, and machine learning libraries. We will also include developers who have used these frameworks to build their AI-enabled systems.</p>
-				</div>
-			</div>
-
-			<!-- MAssiSo -->
-			<div class="research-card">
-				<div class="research-card-header">
-					<div class="research-card-info">
-						<div class="research-card-meta">
-							<span class="research-status-badge research-status-badge--ongoing">Ongoing</span>
-							<span class="research-period">2019 – Present</span>
-						</div>
-						<h3 class="research-card-title">MAssiSo — Assisted Modernization of Legacy Software for Adoption of Disruptive Technologies</h3>
-						<p class="research-card-coordinator">Coordinator: Dr. Alessandro Garcia (PUC-Rio) &middot; Sponsor: FAPERJ</p>
-						<div class="research-tags">
-							<span class="research-tag">modularization</span>
-							<span class="research-tag">legacy systems</span>
-							<span class="research-tag">refactoring</span>
-							<span class="research-tag">recommendation system</span>
-						</div>
-					</div>
-					<button class="research-chevron" aria-label="Expand project details" aria-expanded="false">
-						<i class="icon-chevron-down" aria-hidden="true"></i>
-					</button>
-				</div>
-				<div class="research-card-details">
-					<p>Partners: Marcos Kalinowski (PUC-Rio), Thibaut Vidal (PUC-Rio), Leonardo Murta (UFF), Leonardo Tizzei e Renato Cerqueira (IBM Research, Brasil), Gustavo Soares (Microsoft Research, EUA), Diego Cedrim (Amazon, Brasil), Myriung Kim (UCLA, EUA), Nenad Medvidovic (UCLA, EUA), and Jens Krinke (UCL, The United Kingdom).</p>
-					<p>This project aims to (i) perform studies concerning legacy systems of the industry in Rio de Janeiro, which are going through the modernization process; (ii) propose and develop a recommendation system to assist the refactoring process of legacy code; (iii) investigate optimization and recommendation techniques that allow the identification, application, and reintegration of refactoring in legacy code; (iv) evaluate the impact of software quality after the restructuring proposed by the recommender.</p>
-				</div>
-			</div>
-
-			<!-- ReSTaurA -->
-			<div class="research-card">
-				<div class="research-card-header">
-					<div class="research-card-info">
-						<div class="research-card-meta">
-							<span class="research-status-badge research-status-badge--ongoing">Ongoing</span>
-							<span class="research-period">2018 – Present</span>
-						</div>
-						<h3 class="research-card-title">ReSTaurA — Sequential Refactoring: Theory and Automated Support</h3>
-						<p class="research-card-coordinator">Coordinator: Dr. Alessandro Garcia (PUC-Rio) &middot; Sponsor: CNPq</p>
-						<div class="research-tags">
-							<span class="research-tag">refactoring</span>
-							<span class="research-tag">sequential refactoring</span>
-							<span class="research-tag">recommendation system</span>
-							<span class="research-tag">conceptual framework</span>
-						</div>
-					</div>
-					<button class="research-chevron" aria-label="Expand project details" aria-expanded="false">
-						<i class="icon-chevron-down" aria-hidden="true"></i>
-					</button>
-				</div>
-				<div class="research-card-details">
-					<p>Partners: Microsoft Research (Gustavo Soares), Google (Emerson Murphy-Hill), Amazon (Diego Cedrim), IBM Research (Renato Cerqueira), NCSU (Christopher Parnin), UCLA (Myriung Kim), UCI (Andre van der Hoek), PUC-Rio (Marcos Kalinowski, Carlos J. P. Lucena), UFCG (Rohit Gheyi), UFAM (Tayana Conte), UFAL (Baldoino F. Neto, Marcio Ribeiro), and others.</p>
-					<p>This project aims to: (i) provide a conceptual framework for sequential refactoring as well as related concepts; (ii) develop a theory that explains how developers perform sequential refactoring in practice; (iii) propose heuristics for automated identification of sequential refactoring existing in a program; (iv) assess the quality impact of sequential refactoring; (v) evaluate and classify sequential refactoring as positive or negative based on their impact on structural degradation symptoms; and (vi) propose a recommendation system for sequential refactoring.</p>
-				</div>
-			</div>
-
+			{% endfor %}
 		</div>
 
-		<!-- Completed Research Projects -->
 		<div class="content-section">
 			<h2 class="section-title"><i class="icon-ok-circle" aria-hidden="true"></i> Completed Research Projects</h2>
 
-			<!-- Zika -->
+			{% for project in completed %}
 			<div class="research-card">
 				<div class="research-card-header">
 					<div class="research-card-info">
 						<div class="research-card-meta">
 							<span class="research-status-badge research-status-badge--completed">Completed</span>
-							<span class="research-period">2017 – 2019</span>
+							<span class="research-period">{{ project.period }}</span>
 						</div>
-						<h3 class="research-card-title">Leveraging Gamification and Social Networks for Improving Prevention and Control of Zika</h3>
-						<p class="research-card-coordinator">Coordinators: Prof. Alexander Romanovsky &amp; Dr. Paolo Missier (<a href="https://www.ncl.ac.uk/" target="_blank" rel="noopener noreferrer">Newcastle University</a>) &middot; Sponsors: British Council &amp; Newton Fund</p>
+						<h3 class="research-card-title">{{ project.title | escape }}</h3>
+						<p class="research-card-coordinator">
+							{% if project.coordinator contains '&' %}Coordinators{% else %}Coordinator{% endif %}:
+							{% if project.coordinator_url %}
+								{{ project.coordinator | escape }} (<a href="{{ project.coordinator_url }}" target="_blank" rel="noopener noreferrer">{{ project.coordinator_institution }}</a>)
+							{% else %}
+								{{ project.coordinator | escape }}
+							{% endif %}
+							&middot;
+							{% if project.sponsor contains '&' %}Sponsors{% else %}Sponsor{% endif %}: {{ project.sponsor | escape }}
+						</p>
 						<div class="research-tags">
-							<span class="research-tag">zika virus</span>
-							<span class="research-tag">gamification</span>
-							<span class="research-tag">legacy system</span>
-							<span class="research-tag">healthcare system</span>
+							{% for tag in project.tags %}<span class="research-tag">{{ tag }}</span>{% endfor %}
 						</div>
 					</div>
 					<button class="research-chevron" aria-label="Expand project details" aria-expanded="false">
@@ -204,65 +108,11 @@ active: research
 					</button>
 				</div>
 				<div class="research-card-details">
-					<p>Partners: Federal University of Alagoas (Prof Baldoino Fonseca), Federal University of Pernambuco (Prof Leopoldo Teixeira), Pontifical Catholic University of Rio de Janeiro (Prof Alessandro Garcia) and Fundacao Oswaldo Cruz - Fiocruz (Dr Oswado Cruz), Brazil. <a href="https://www.ncl.ac.uk/computing/research/projects/leveraginggamificationandsocialnetworksforimprovingpreventionandcontrol.html" target="_blank" rel="noopener noreferrer">Newcastle University project page</a>.</p>
-					<p>Brazilian population has not responded well to the prevention programs to combat arboviral diseases, such as Zika and Dengue. Concerns with such diseases has led an overwhelming number of people to increasingly share online strategic information, including the discovery of mosquito breeding sites in public locations. Term social sensors refers to the online population that is motivated to contribute relevant information on social media channels. Recent increasing use of smartphones triggered the growing use of social networks even in poorer communities. Strategic information in these locations are harder to gather for health agents. The health agencies in Northeast should explore the collective knowledge generated by people to improve prevention and combat actions. The project developed a platform for promoting virtual communities to prevent and combat Zika. Its core is the VazaZika application, which uses geolocation and gamification technologies for stimulating citizens to denounce and confirm Aedes breeding sites, and for updating users, in real time, about actions taken by health agents.</p>
+					<p>Partners: {{ project.partners | escape }}{% if project.partners_link %} <a href="{{ project.partners_link }}" target="_blank" rel="noopener noreferrer">{{ project.partners_link_text }}</a>.{% endif %}</p>
+					{% for para in project.description %}<p>{{ para | escape }}</p>{% endfor %}
 				</div>
 			</div>
-
-			<!-- CARECO -->
-			<div class="research-card">
-				<div class="research-card-header">
-					<div class="research-card-info">
-						<div class="research-card-meta">
-							<span class="research-status-badge research-status-badge--completed">Completed</span>
-							<span class="research-period">2018</span>
-						</div>
-						<h3 class="research-card-title">CARECO — Recommendation Systems for Collaborative Software Maintenance</h3>
-						<p class="research-card-coordinator">Coordinators: Dr. Alessandro Garcia &amp; Carlos José Pereira de Lucena (PUC-Rio) &middot; Sponsor: CAPES</p>
-						<div class="research-tags">
-							<span class="research-tag">recommendation system</span>
-							<span class="research-tag">software maintenance</span>
-							<span class="research-tag">development environment</span>
-							<span class="research-tag">collaborative maintenance</span>
-						</div>
-					</div>
-					<button class="research-chevron" aria-label="Expand project details" aria-expanded="false">
-						<i class="icon-chevron-down" aria-hidden="true"></i>
-					</button>
-				</div>
-				<div class="research-card-details">
-					<p>Partners: PUC-Rio (Prof. Alberto Raposo), PUC-Rio (Prof. Hugo Fuks), Federal University of Campina Grande (Prof. Rohit Gheyi), Federal University of Alagoas (Prof. Márcio Ribeiro), Federal University of Manaus (Prof. Tayana Conte), PUC-Rio (Prof. Simone Barbosa) and PUC-Rio (Prof. Clarisse Sousa).</p>
-					<p>The CARECO project aimed to develop: (i) recommendation systems to support collaborative maintenance of software systems; (ii) methods that support the evaluation of the quality of use of recommendation systems; (iii) new collaboration mechanisms integrated with development environments; (iv) application of advanced artificial intelligence and database techniques to develop recommendation systems that support collaborative maintenance of software systems, and (v) design and evaluation of recommendation systems to support the teaching and learning software maintenance.</p>
-				</div>
-			</div>
-
-			<!-- Dengue -->
-			<div class="research-card">
-				<div class="research-card-header">
-					<div class="research-card-info">
-						<div class="research-card-meta">
-							<span class="research-status-badge research-status-badge--completed">Completed</span>
-							<span class="research-period">2017 – 2018</span>
-						</div>
-						<h3 class="research-card-title">A Software Infrastructure for Promoting Efficient Entomological Monitoring of Dengue Fever</h3>
-						<p class="research-card-coordinator">Coordinators: Prof. Dr. Alessandro Garcia &amp; Prof. Dr. Alexander Romanovsky (<a href="https://www.ncl.ac.uk/" target="_blank" rel="noopener noreferrer">Newcastle University</a>) &middot; Sponsors: British Council &amp; Newton Fund</p>
-						<div class="research-tags">
-							<span class="research-tag">dengue fever</span>
-							<span class="research-tag">healthcare system</span>
-							<span class="research-tag">geo-referenced data</span>
-							<span class="research-tag">social network</span>
-						</div>
-					</div>
-					<button class="research-chevron" aria-label="Expand project details" aria-expanded="false">
-						<i class="icon-chevron-down" aria-hidden="true"></i>
-					</button>
-				</div>
-				<div class="research-card-details">
-					<p>Partners: Federal University of Alagoas (Prof Baldoino Fonseca), Pontifical Catholic University of Rio de Janeiro (Prof Alessandro Garcia) and Fundacao Oswaldo Cruz - Fiocruz (Dr Oswado Cruz), Brazil. <a href="https://gtr.ukri.org/projects?ref=MR%2FM026388%2F1" target="_blank" rel="noopener noreferrer">UKRI project page</a>.</p>
-					<p>Dengue is an endemic problem in many areas where public health services assistance is inefficient, and sometimes it is not even there. The Brazilian public health system cannot meet the demands of these areas due to the scarcity of resources available and the number of risk areas that requires monitoring. To make the matters worse, it is very difficult to identify and control dengue outbreaks in their initial stages. Therefore, it needs to notify focus of dengue mosquito in order to make it easier preventing dengue epidemic and to take the best actions. To assist the surveillance and detection of dengue mosquito and outbreaks, we propose an integrated platform for population to act as an etymological surveillance agent. The goal is to collect and transmit geo-referenced data, providing information to assist in entomological surveillance of dengue. To accomplish the aforementioned goal, we developed (i) mobile applications to collect data, (ii) a web portal for centralizing data and (iii) social media mining to extract data and to monitor dengue outbreaks.</p>
-				</div>
-			</div>
-
+			{% endfor %}
 		</div>
 
 	</div>

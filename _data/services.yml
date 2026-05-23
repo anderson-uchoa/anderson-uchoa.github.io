@@ -1,0 +1,71 @@
+# role values: pc | aec | shadow | co | ideas | showcase | chair
+
+organization:
+  - year: 2025
+    name: "19th Brazilian Symposium on Software Components, Architectures, and Reuse (SBCARS) — CBSoft 2025"
+    role: chair
+  - year: 2024
+    name: "12th Workshop on Software Visualization, Evolution and Maintenance (VEM) — CBSoft 2024"
+    role: chair
+
+conferences:
+  international:
+    - year: 2025
+      name: "19th International Conference on Cooperative and Human Aspects of Software Engineering (CHASE)"
+      role: pc
+    - year: 2024
+      name: "46th International Conference on Software Engineering (ICSE)"
+      role: aec
+    - year: 2023
+      name: "20th International Conference on Mining Software Repositories (MSR)"
+      role: showcase
+    - year: 2022
+      name: "15th ACM SIGPLAN International Conference on Software Language Engineering (SLE)"
+      role: aec
+    - year: 2022
+      name: "17th European Conference on Computer Systems (EuroSys)"
+      role: aec
+    - year: 2022
+      name: "18th IEEE/ACM International Conference on Mining Software Repositories (MSR)"
+      role: shadow
+    - year: 2020
+      name: "27th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE)"
+      role: co
+    - year: 2020
+      name: "42nd International Conference on Software Engineering (ICSE)"
+      role: co
+    - year: 2019
+      name: "13th International Symposium on Empirical Software Engineering and Measurement (ESEM)"
+      role: co
+    - year: 2018
+      name: "40th International Conference on Software Engineering: New Ideas and Emerging Results Track (ICSE-NIER)"
+      role: co
+
+  brazilian:
+    - year: 2024
+      name: "9th Workshop on Social, Human and Economic Aspects of Software (WHASES)"
+      role: pc
+    - year: 2024
+      name: "18th Brazilian Symposium on Software Components, Architectures, and Reuse (SBCARS)"
+      role: pc
+    - year: 2024
+      name: "XII Escola Regional de Computação do Ceará, Maranhão e Piauí (ERCEMAPI)"
+      role: pc
+    - year: 2023
+      name: "11th Workshop on Software Visualization, Evolution and Maintenance (VEM)"
+      role: pc
+    - year: 2023
+      name: "XI Escola Regional de Computação do Ceará, Maranhão e Piauí (ERCEMAPI)"
+      role: pc
+    - year: 2023
+      name: "37th Brazilian Symposium on Software Engineering (SBES)"
+      role: ideas
+    - year: 2022
+      name: "X Escola Regional de Computação do Ceará, Maranhão e Piauí (ERCEMAPI)"
+      role: pc
+
+journals:
+  - "Empirical Software Engineering (EMSE)"
+  - "Journal of Systems and Software (JSS)"
+  - "Software Quality Journal (SQJ)"
+  - "Journal of Software Engineering Research and Development (JSERD)"

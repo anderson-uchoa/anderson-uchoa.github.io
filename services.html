@@ -18,154 +18,75 @@ active: services
 			<p>My contribution history to the software engineering research community.</p>
 		</section>
 
-		<!-- Summary -->
 		<div class="award-summary">
 			<div class="award-summary-item">
 				<span class="award-summary-icon">🌐</span>
-				<span class="award-summary-count">10</span>
+				<span class="award-summary-count">{{ site.data.services.conferences.international | size }}</span>
 				<span class="award-summary-label">International Venues</span>
 			</div>
 			<div class="award-summary-item">
 				<span class="award-summary-icon">🇧🇷</span>
-				<span class="award-summary-count">7</span>
+				<span class="award-summary-count">{{ site.data.services.conferences.brazilian | size }}</span>
 				<span class="award-summary-label">Brazilian Venues</span>
 			</div>
 			<div class="award-summary-item">
 				<span class="award-summary-icon">📰</span>
-				<span class="award-summary-count">4</span>
+				<span class="award-summary-count">{{ site.data.services.journals | size }}</span>
 				<span class="award-summary-label">Journals</span>
 			</div>
 			<div class="award-summary-item">
 				<span class="award-summary-icon">🏛️</span>
-				<span class="award-summary-count">2</span>
+				<span class="award-summary-count">{{ site.data.services.organization | size }}</span>
 				<span class="award-summary-label">Event Organizer</span>
 			</div>
 		</div>
 
-		<!-- Events Organization -->
 		<div class="content-section">
 			<h2 class="section-title"><i class="icon-calendar" aria-hidden="true"></i> Events Organization</h2>
 			<p style="font-size:13.5px;color:#555;margin-bottom:14px;">TPC Chair of the following events:</p>
 			<ul class="service-list">
+				{% for item in site.data.services.organization %}
 				<li class="service-item">
-					<span class="service-year">2025</span>
-					<span class="service-name">19th Brazilian Symposium on Software Components, Architectures, and Reuse (SBCARS) — CBSoft 2025</span>
+					<span class="service-year">{{ item.year }}</span>
+					<span class="service-name">{{ item.name | escape }}</span>
 					<span class="srv-role srv-role--chair">TPC Chair</span>
 				</li>
-				<li class="service-item">
-					<span class="service-year">2024</span>
-					<span class="service-name">12th Workshop on Software Visualization, Evolution and Maintenance (VEM) — CBSoft 2024</span>
-					<span class="srv-role srv-role--chair">TPC Chair</span>
-				</li>
+				{% endfor %}
 			</ul>
 		</div>
 
-		<!-- Conferences -->
 		<div class="content-section">
 			<h2 class="section-title"><i class="icon-group" aria-hidden="true"></i> Conferences &amp; Workshops</h2>
 
 			<h3 class="service-subsection-title">🌐 International</h3>
 			<ul class="service-list">
+				{% for item in site.data.services.conferences.international %}
 				<li class="service-item">
-					<span class="service-year">2025</span>
-					<span class="service-name">19th International Conference on Cooperative and Human Aspects of Software Engineering (CHASE)</span>
-					<span class="srv-role srv-role--pc">PC Member</span>
+					<span class="service-year">{{ item.year }}</span>
+					<span class="service-name">{{ item.name | escape }}</span>
+					<span class="srv-role srv-role--{{ item.role }}">{% include role_label.html role=item.role %}</span>
 				</li>
-				<li class="service-item">
-					<span class="service-year">2024</span>
-					<span class="service-name">46th International Conference on Software Engineering (ICSE)</span>
-					<span class="srv-role srv-role--aec">Artifact Evaluation</span>
-				</li>
-				<li class="service-item">
-					<span class="service-year">2023</span>
-					<span class="service-name">20th International Conference on Mining Software Repositories (MSR)</span>
-					<span class="srv-role srv-role--showcase">Data &amp; Tool Showcase</span>
-				</li>
-				<li class="service-item">
-					<span class="service-year">2022</span>
-					<span class="service-name">15th ACM SIGPLAN International Conference on Software Language Engineering (SLE)</span>
-					<span class="srv-role srv-role--aec">Artifact Evaluation</span>
-				</li>
-				<li class="service-item">
-					<span class="service-year">2022</span>
-					<span class="service-name">17th European Conference on Computer Systems (EuroSys)</span>
-					<span class="srv-role srv-role--aec">Artifact Evaluation</span>
-				</li>
-				<li class="service-item">
-					<span class="service-year">2022</span>
-					<span class="service-name">18th IEEE/ACM International Conference on Mining Software Repositories (MSR)</span>
-					<span class="srv-role srv-role--shadow">Shadow PC</span>
-				</li>
-				<li class="service-item">
-					<span class="service-year">2020</span>
-					<span class="service-name">27th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE)</span>
-					<span class="srv-role srv-role--co">co-reviewer</span>
-				</li>
-				<li class="service-item">
-					<span class="service-year">2020</span>
-					<span class="service-name">42nd International Conference on Software Engineering (ICSE)</span>
-					<span class="srv-role srv-role--co">co-reviewer</span>
-				</li>
-				<li class="service-item">
-					<span class="service-year">2019</span>
-					<span class="service-name">13th International Symposium on Empirical Software Engineering and Measurement (ESEM)</span>
-					<span class="srv-role srv-role--co">co-reviewer</span>
-				</li>
-				<li class="service-item">
-					<span class="service-year">2018</span>
-					<span class="service-name">40th International Conference on Software Engineering: New Ideas and Emerging Results Track (ICSE-NIER)</span>
-					<span class="srv-role srv-role--co">co-reviewer</span>
-				</li>
+				{% endfor %}
 			</ul>
 
 			<h3 class="service-subsection-title" style="margin-top:24px;">🇧🇷 Brazilian Venues</h3>
 			<ul class="service-list">
+				{% for item in site.data.services.conferences.brazilian %}
 				<li class="service-item">
-					<span class="service-year">2024</span>
-					<span class="service-name">9th Workshop on Social, Human and Economic Aspects of Software (WHASES)</span>
-					<span class="srv-role srv-role--pc">PC Member</span>
+					<span class="service-year">{{ item.year }}</span>
+					<span class="service-name">{{ item.name | escape }}</span>
+					<span class="srv-role srv-role--{{ item.role }}">{% include role_label.html role=item.role %}</span>
 				</li>
-				<li class="service-item">
-					<span class="service-year">2024</span>
-					<span class="service-name">18th Brazilian Symposium on Software Components, Architectures, and Reuse (SBCARS)</span>
-					<span class="srv-role srv-role--pc">PC Member</span>
-				</li>
-				<li class="service-item">
-					<span class="service-year">2024</span>
-					<span class="service-name">XII Escola Regional de Computação do Ceará, Maranhão e Piauí (ERCEMAPI)</span>
-					<span class="srv-role srv-role--pc">PC Member</span>
-				</li>
-				<li class="service-item">
-					<span class="service-year">2023</span>
-					<span class="service-name">11th Workshop on Software Visualization, Evolution and Maintenance (VEM)</span>
-					<span class="srv-role srv-role--pc">PC Member</span>
-				</li>
-				<li class="service-item">
-					<span class="service-year">2023</span>
-					<span class="service-name">XI Escola Regional de Computação do Ceará, Maranhão e Piauí (ERCEMAPI)</span>
-					<span class="srv-role srv-role--pc">PC Member</span>
-				</li>
-				<li class="service-item">
-					<span class="service-year">2023</span>
-					<span class="service-name">37th Brazilian Symposium on Software Engineering (SBES)</span>
-					<span class="srv-role srv-role--ideas">Insightful Ideas</span>
-				</li>
-				<li class="service-item">
-					<span class="service-year">2022</span>
-					<span class="service-name">X Escola Regional de Computação do Ceará, Maranhão e Piauí (ERCEMAPI)</span>
-					<span class="srv-role srv-role--pc">PC Member</span>
-				</li>
+				{% endfor %}
 			</ul>
 		</div>
 
-		<!-- Journals -->
 		<div class="content-section">
 			<h2 class="section-title"><i class="icon-book" aria-hidden="true"></i> Journals</h2>
 			<div class="journal-tags">
-				<span class="journal-tag">Empirical Software Engineering (EMSE)</span>
-				<span class="journal-tag">Journal of Systems and Software (JSS)</span>
-				<span class="journal-tag">Software Quality Journal (SQJ)</span>
-				<span class="journal-tag">Journal of Software Engineering Research and Development (JSERD)</span>
+				{% for journal in site.data.services.journals %}
+				<span class="journal-tag">{{ journal | escape }}</span>
+				{% endfor %}
 			</div>
 		</div>
 

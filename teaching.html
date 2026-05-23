@@ -10,6 +10,16 @@ twitter_description: "Teaching activities of Anderson Uchôa at the Federal Univ
 active: teaching
 ---
 
+{% assign institutions = site.data.teaching.institutions %}
+{% assign total_courses = 0 %}
+{% assign active_courses = 0 %}
+{% for inst in institutions %}
+  {% assign total_courses = total_courses | plus: inst.courses.size %}
+  {% for course in inst.courses %}
+    {% if course.active %}{% assign active_courses = active_courses | plus: 1 %}{% endif %}
+  {% endfor %}
+{% endfor %}
+
 <main class="site-main">
 	<div class="site-container">
 
@@ -21,147 +31,47 @@ active: teaching
 			</p>
 		</section>
 
-		<!-- Summary -->
 		<div class="award-summary">
 			<div class="award-summary-item">
 				<span class="award-summary-icon">📚</span>
-				<span class="award-summary-count">8</span>
+				<span class="award-summary-count">{{ total_courses }}</span>
 				<span class="award-summary-label">Unique Courses</span>
 			</div>
 			<div class="award-summary-item">
 				<span class="award-summary-icon">🏛️</span>
-				<span class="award-summary-count">3</span>
+				<span class="award-summary-count">{{ institutions | size }}</span>
 				<span class="award-summary-label">Institutions</span>
 			</div>
 			<div class="award-summary-item">
 				<span class="award-summary-icon">🟢</span>
-				<span class="award-summary-count">3</span>
+				<span class="award-summary-count">{{ active_courses }}</span>
 				<span class="award-summary-label">Currently Teaching</span>
 			</div>
 		</div>
 
-		<!-- UFC -->
+		{% for inst in institutions %}
 		<div class="content-section">
-			<h2 class="section-title"><i class="icon-graduation-cap" aria-hidden="true"></i> Federal University of Ceará (UFC) — Campus de Itapajé</h2>
+			<h2 class="section-title"><i class="icon-graduation-cap" aria-hidden="true"></i> {{ inst.name | escape }}</h2>
 			<div class="teaching-grid">
-
-			<div class="teaching-card">
-				<div class="teaching-card-top">
-					<span class="teaching-code">IT0062</span>
-					<span class="teaching-active-badge">🟢 Active</span>
+				{% for course in inst.courses %}
+				<div class="teaching-card{% unless course.active %} teaching-card--past{% endunless %}">
+					<div class="teaching-card-top">
+						<span class="teaching-code">{{ course.code | escape }}</span>
+						{% if course.active %}<span class="teaching-active-badge">🟢 Active</span>{% endif %}
+					</div>
+					<h3 class="teaching-card-title">{{ course.title | escape }}</h3>
+					<p class="teaching-card-level">{{ course.level | escape }}</p>
+					<div class="teaching-semesters">
+						<span class="teaching-sem">Offered:</span>
+						{% for sem in course.semesters %}
+						<span class="teaching-sem-badge{% if sem.current %} teaching-sem-badge--current{% endif %}">{{ sem.label | escape }}</span>
+						{% endfor %}
+					</div>
 				</div>
-				<h3 class="teaching-card-title">Software Engineering I</h3>
-				<p class="teaching-card-level">B.Sc. in Computer Engineering</p>
-				<div class="teaching-semesters">
-					<span class="teaching-sem">Offered:</span>
-					<span class="teaching-sem-badge teaching-sem-badge--current">2022.2–Present</span>
-					<span class="teaching-sem-badge">2022.1</span>
-				</div>
+				{% endfor %}
 			</div>
-
-			<div class="teaching-card">
-				<div class="teaching-card-top">
-					<span class="teaching-code">IT0064 · IT0010</span>
-					<span class="teaching-active-badge">🟢 Active</span>
-				</div>
-				<h3 class="teaching-card-title">Object Oriented Programming</h3>
-				<p class="teaching-card-level">B.Sc. in Computer Engineering</p>
-				<div class="teaching-semesters">
-					<span class="teaching-sem">Offered:</span>
-					<span class="teaching-sem-badge teaching-sem-badge--current">2022.2–Present</span>
-					<span class="teaching-sem-badge">2022.1</span>
-				</div>
-			</div>
-
-			<div class="teaching-card">
-				<div class="teaching-card-top">
-					<span class="teaching-code">IT0072</span>
-					<span class="teaching-active-badge">🟢 Active</span>
-				</div>
-				<h3 class="teaching-card-title">Systems Analysis and Design</h3>
-				<p class="teaching-card-level">B.Sc. in Computer Engineering</p>
-				<div class="teaching-semesters">
-					<span class="teaching-sem">Offered:</span>
-					<span class="teaching-sem-badge teaching-sem-badge--current">2022.2–Present</span>
-				</div>
-			</div>
-
-			<div class="teaching-card teaching-card--past">
-				<div class="teaching-card-top">
-					<span class="teaching-code">IT0055 · IT0004</span>
-				</div>
-				<h3 class="teaching-card-title">Programming Fundamentals</h3>
-				<p class="teaching-card-level">B.Sc. in Computer Engineering</p>
-				<div class="teaching-semesters">
-					<span class="teaching-sem">Offered:</span>
-					<span class="teaching-sem-badge">2021.2</span>
-				</div>
-			</div>
-
-			<div class="teaching-card teaching-card--past">
-				<div class="teaching-card-top">
-					<span class="teaching-code">IT0061</span>
-				</div>
-				<h3 class="teaching-card-title">Introduction to Computing</h3>
-				<p class="teaching-card-level">B.Sc. in Computer Engineering</p>
-				<div class="teaching-semesters">
-					<span class="teaching-sem">Offered:</span>
-					<span class="teaching-sem-badge">2021.2</span>
-				</div>
-			</div>
-			</div><!-- /teaching-grid -->
 		</div>
-
-		<!-- UFRJ -->
-		<div class="content-section">
-			<h2 class="section-title"><i class="icon-graduation-cap" aria-hidden="true"></i> Federal University of Rio de Janeiro (UFRJ)</h2>
-			<div class="teaching-grid">
-
-			<div class="teaching-card teaching-card--past">
-				<div class="teaching-card-top">
-					<span class="teaching-code">MAB240</span>
-				</div>
-				<h3 class="teaching-card-title">Computing II</h3>
-				<p class="teaching-card-level">B.Sc. level</p>
-				<div class="teaching-semesters">
-					<span class="teaching-sem">Offered:</span>
-					<span class="teaching-sem-badge">2021.2</span>
-				</div>
-			</div>
-
-			<div class="teaching-card teaching-card--past">
-				<div class="teaching-card-top">
-					<span class="teaching-code">CMT012</span>
-				</div>
-				<h3 class="teaching-card-title">Introduction to C/C++ Programming</h3>
-				<p class="teaching-card-level">B.Sc. level</p>
-				<div class="teaching-semesters">
-					<span class="teaching-sem">Offered:</span>
-					<span class="teaching-sem-badge">2021.2</span>
-				</div>
-			</div>
-			</div><!-- /teaching-grid -->
-		</div>
-
-		<!-- PUC-Rio -->
-		<div class="content-section">
-			<h2 class="section-title"><i class="icon-graduation-cap" aria-hidden="true"></i> Pontifical Catholic University of Rio de Janeiro (PUC-Rio)</h2>
-			<div class="teaching-grid">
-
-			<div class="teaching-card teaching-card--past">
-				<div class="teaching-card-top">
-					<span class="teaching-code">INF1028</span>
-				</div>
-				<h3 class="teaching-card-title">Systems Design and Construction</h3>
-				<p class="teaching-card-level">B.Sc. level</p>
-				<div class="teaching-semesters">
-					<span class="teaching-sem">Offered:</span>
-					<span class="teaching-sem-badge">2021.1</span>
-				</div>
-			</div>
-
-			</div><!-- /teaching-grid -->
-		</div>
+		{% endfor %}
 
 	</div>
 </main>
