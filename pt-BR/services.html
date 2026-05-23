@@ -1,0 +1,95 @@
+---
+layout: default
+title: "Services — Anderson Uchôa | UFC & NC State"
+description: "Community services by Anderson Uchôa including program committee memberships at ICSE, MSR, ICSME, ESEC/FSE, and journal reviewing for EMSE, JSS, SQJ."
+keywords: "anderson uchoa services, anderson uchôa, program committee, ICSE, MSR, EMSE, JSS, software engineering reviewer"
+canonical: "https://anderson-uchoa.github.io/services.html"
+og_title: "Services — Anderson Uchôa"
+og_description: "Community services by Anderson Uchôa: PC member at ICSE, MSR, and more; journal reviewer for EMSE, JSS, SQJ."
+twitter_description: "Community services by Anderson Uchôa: PC memberships at ICSE, MSR, and journal reviewing."
+active: services
+lang: pt-BR
+---
+
+<main class="site-main">
+	<div class="site-container">
+
+		<section class="page-header-section">
+			<h1>Services for the Community</h1>
+			<p>My contribution history to the software engineering research community.</p>
+		</section>
+
+		<div class="award-summary">
+			<div class="award-summary-item">
+				<span class="award-summary-icon">🌐</span>
+				<span class="award-summary-count">{{ site.data.services.conferences.international | size }}</span>
+				<span class="award-summary-label">International Venues</span>
+			</div>
+			<div class="award-summary-item">
+				<span class="award-summary-icon">🇧🇷</span>
+				<span class="award-summary-count">{{ site.data.services.conferences.brazilian | size }}</span>
+				<span class="award-summary-label">Brazilian Venues</span>
+			</div>
+			<div class="award-summary-item">
+				<span class="award-summary-icon">📰</span>
+				<span class="award-summary-count">{{ site.data.services.journals | size }}</span>
+				<span class="award-summary-label">Journals</span>
+			</div>
+			<div class="award-summary-item">
+				<span class="award-summary-icon">🏛️</span>
+				<span class="award-summary-count">{{ site.data.services.organization | size }}</span>
+				<span class="award-summary-label">Event Organizer</span>
+			</div>
+		</div>
+
+		<div class="content-section">
+			<h2 class="section-title"><i class="icon-calendar" aria-hidden="true"></i> Events Organization</h2>
+			<p style="font-size:13.5px;color:#555;margin-bottom:14px;">TPC Chair of the following events:</p>
+			<ul class="service-list">
+				{% for item in site.data.services.organization %}
+				<li class="service-item">
+					<span class="service-year">{{ item.year }}</span>
+					<span class="service-name">{{ item.name | escape }}</span>
+					<span class="srv-role srv-role--chair">TPC Chair</span>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+
+		<div class="content-section">
+			<h2 class="section-title"><i class="icon-group" aria-hidden="true"></i> Conferences &amp; Workshops</h2>
+
+			<h3 class="service-subsection-title">🌐 International</h3>
+			<ul class="service-list">
+				{% for item in site.data.services.conferences.international %}
+				<li class="service-item">
+					<span class="service-year">{{ item.year }}</span>
+					<span class="service-name">{{ item.name | escape }}</span>
+					<span class="srv-role srv-role--{{ item.role }}">{% include role_label.html role=item.role %}</span>
+				</li>
+				{% endfor %}
+			</ul>
+
+			<h3 class="service-subsection-title" style="margin-top:24px;">🇧🇷 Brazilian Venues</h3>
+			<ul class="service-list">
+				{% for item in site.data.services.conferences.brazilian %}
+				<li class="service-item">
+					<span class="service-year">{{ item.year }}</span>
+					<span class="service-name">{{ item.name | escape }}</span>
+					<span class="srv-role srv-role--{{ item.role }}">{% include role_label.html role=item.role %}</span>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+
+		<div class="content-section">
+			<h2 class="section-title"><i class="icon-book" aria-hidden="true"></i> Journals</h2>
+			<div class="journal-tags">
+				{% for journal in site.data.services.journals %}
+				<span class="journal-tag">{{ journal | escape }}</span>
+				{% endfor %}
+			</div>
+		</div>
+
+	</div>
+</main>

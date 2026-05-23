@@ -1,0 +1,135 @@
+---
+layout: default
+title: "Research — Anderson Uchôa | UFC & NC State"
+description: "Research experiences and projects by Anderson Uchôa, covering empirical software engineering, software evolution, CI/CD security, and AI-assisted development."
+keywords: "anderson uchoa research, anderson uchôa, empirical software engineering, software evolution, RESET Lab, ufc, nc state"
+canonical: "https://anderson-uchoa.github.io/research.html"
+og_title: "Research — Anderson Uchôa"
+og_description: "Research experiences and projects by Anderson Uchôa in empirical software engineering, software evolution, and AI-assisted development."
+twitter_description: "Research experiences and projects by Anderson Uchôa in empirical software engineering and AI-assisted development."
+active: research
+lang: pt-BR
+---
+
+{% assign ongoing   = site.data.research | where: "status", "ongoing" %}
+{% assign completed = site.data.research | where: "status", "completed" %}
+
+<main class="site-main">
+	<div class="site-container">
+
+		<section class="page-header-section">
+			<h1>Research</h1>
+			<p>Current and past research projects. Click on a card to expand its full description.</p>
+		</section>
+
+		<div class="award-summary">
+			<div class="award-summary-item">
+				<span class="award-summary-icon">🔬</span>
+				<span class="award-summary-count">{{ site.data.research | size }}</span>
+				<span class="award-summary-label">Research Projects</span>
+			</div>
+			<div class="award-summary-item">
+				<span class="award-summary-icon">🟢</span>
+				<span class="award-summary-count">{{ ongoing | size }}</span>
+				<span class="award-summary-label">Ongoing</span>
+			</div>
+			<div class="award-summary-item">
+				<span class="award-summary-icon">✅</span>
+				<span class="award-summary-count">{{ completed | size }}</span>
+				<span class="award-summary-label">Completed</span>
+			</div>
+		</div>
+
+		<div class="content-section">
+			<h2 class="section-title"><i class="icon-beaker" aria-hidden="true"></i> Ongoing Research Projects</h2>
+
+			{% for project in ongoing %}
+			<div class="research-card">
+				<div class="research-card-header">
+					<div class="research-card-info">
+						<div class="research-card-meta">
+							<span class="research-status-badge research-status-badge--ongoing">Ongoing</span>
+							<span class="research-period">{{ project.period }}</span>
+						</div>
+						<h3 class="research-card-title">{{ project.title | escape }}</h3>
+						<p class="research-card-coordinator">
+							{% if project.coordinator contains '&' %}Coordinators{% else %}Coordinator{% endif %}:
+							{% if project.coordinator_url %}
+								{{ project.coordinator | escape }} (<a href="{{ project.coordinator_url }}" target="_blank" rel="noopener noreferrer">{{ project.coordinator_institution }}</a>)
+							{% else %}
+								{{ project.coordinator | escape }}
+							{% endif %}
+							&middot;
+							{% if project.sponsor contains '&' %}Sponsors{% else %}Sponsor{% endif %}: {{ project.sponsor | escape }}
+						</p>
+						<div class="research-tags">
+							{% for tag in project.tags %}<span class="research-tag">{{ tag }}</span>{% endfor %}
+						</div>
+					</div>
+					<button class="research-chevron" aria-label="Expand project details" aria-expanded="false">
+						<i class="icon-chevron-down" aria-hidden="true"></i>
+					</button>
+				</div>
+				<div class="research-card-details">
+					<p>Partners: {{ project.partners | escape }}{% if project.partners_link %} <a href="{{ project.partners_link }}" target="_blank" rel="noopener noreferrer">{{ project.partners_link_text }}</a>.{% endif %}</p>
+					{% for para in project.description %}<p>{{ para | escape }}</p>{% endfor %}
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+
+		<div class="content-section">
+			<h2 class="section-title"><i class="icon-ok-circle" aria-hidden="true"></i> Completed Research Projects</h2>
+
+			{% for project in completed %}
+			<div class="research-card">
+				<div class="research-card-header">
+					<div class="research-card-info">
+						<div class="research-card-meta">
+							<span class="research-status-badge research-status-badge--completed">Completed</span>
+							<span class="research-period">{{ project.period }}</span>
+						</div>
+						<h3 class="research-card-title">{{ project.title | escape }}</h3>
+						<p class="research-card-coordinator">
+							{% if project.coordinator contains '&' %}Coordinators{% else %}Coordinator{% endif %}:
+							{% if project.coordinator_url %}
+								{{ project.coordinator | escape }} (<a href="{{ project.coordinator_url }}" target="_blank" rel="noopener noreferrer">{{ project.coordinator_institution }}</a>)
+							{% else %}
+								{{ project.coordinator | escape }}
+							{% endif %}
+							&middot;
+							{% if project.sponsor contains '&' %}Sponsors{% else %}Sponsor{% endif %}: {{ project.sponsor | escape }}
+						</p>
+						<div class="research-tags">
+							{% for tag in project.tags %}<span class="research-tag">{{ tag }}</span>{% endfor %}
+						</div>
+					</div>
+					<button class="research-chevron" aria-label="Expand project details" aria-expanded="false">
+						<i class="icon-chevron-down" aria-hidden="true"></i>
+					</button>
+				</div>
+				<div class="research-card-details">
+					<p>Partners: {{ project.partners | escape }}{% if project.partners_link %} <a href="{{ project.partners_link }}" target="_blank" rel="noopener noreferrer">{{ project.partners_link_text }}</a>.{% endif %}</p>
+					{% for para in project.description %}<p>{{ para | escape }}</p>{% endfor %}
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+
+	</div>
+</main>
+
+<script>
+(function () {
+	document.querySelectorAll('.research-card-header').forEach(function (header) {
+		header.addEventListener('click', function (e) {
+			if (e.target.closest('a')) return;
+			var card = header.closest('.research-card');
+			var isOpen = card.classList.contains('open');
+			card.classList.toggle('open', !isOpen);
+			var btn = card.querySelector('.research-chevron');
+			if (btn) btn.setAttribute('aria-expanded', String(!isOpen));
+		});
+	});
+}());
+</script>

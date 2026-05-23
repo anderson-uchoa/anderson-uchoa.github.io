@@ -8,7 +8,9 @@ og_title: "Anderson Uchôa — Software Engineering Researcher"
 og_description: "Professor at UFC (Brazil) and Postdoctoral Researcher at NC State. Head of the RESET Lab. Research: empirical SE, software evolution, AI-assisted development."
 twitter_description: "Professor at UFC (Brazil) and Postdoctoral Researcher at NC State. Head of the RESET Lab."
 active: about
+lang: en
 ---
+{% assign t = site.data.i18n["en"] %}
 
 <main class="site-main">
 	<div class="site-container">
@@ -59,52 +61,32 @@ active: about
 						</a>
 					</div>
 					<a href="404.html" class="about-cv-btn">
-						<i class="icon-file-text" aria-hidden="true"></i> Download CV
+						<i class="icon-file-text" aria-hidden="true"></i> {{ t.index.download_cv }}
 					</a>
-					<div class="about-cta">
-						If you are interested in collaborating on <strong>Empirical Software Engineering</strong> and/or <strong>AI-assisted Development</strong> projects, please <a href="mailto:andersonuchoa@ufc.br">get in touch</a>.
-					</div>
-					<p class="about-lastupdated"><strong>Last Updated:</strong> <em>May 2026</em></p>
+					<div class="about-cta">{{ t.index.cta }}</div>
+					<p class="about-lastupdated"><strong>{{ t.index.last_updated }}:</strong> <em>May 2026</em></p>
 				</div>
 
 				<!-- Right: bio + research interests + news -->
 				<div class="col-md-8 col-sm-7 about-right">
 
-					<h2 class="section-title">About Me</h2>
+					<h2 class="section-title">{{ t.index.about_title }}</h2>
+					<p style="text-align:justify">{{ t.index.bio_1 }}</p>
 					<p style="text-align:justify">
-						I am a Software Engineering researcher and Professor at the
-						<a href="https://www.ufc.br/" target="_blank" rel="noopener noreferrer">Federal University of Ceará (UFC)</a>, Brazil,
-						and Head of the <a href="https://reset-ufc.github.io/" target="_blank" rel="noopener noreferrer">RESET Lab</a>.
-						My research focuses on empirical software engineering, software evolution and maintenance, human factors, intelligent development tools, and the interplay between software systems and data-intensive environments.
-						I earned my PhD in Software Engineering from <a href="https://www.puc-rio.br" target="_blank" rel="noopener noreferrer">PUC-Rio</a> (2021),
-						following my MSc (2019), and hold a BSc in Software Engineering from UFC (2016),
-						developed in cooperation with <a href="https://www.di.uniroma1.it/" target="_blank" rel="noopener noreferrer">Sapienza University of Rome</a>, Italy.
+						{{ t.index.bio_2 }}
+						{{ t.index.pub_link }} <a href="publication.html">{{ t.index.pub_link_here }}</a>.
 					</p>
-					<p style="text-align:justify">
-						My work investigates how developers interact with evolving systems,
-						automation pipelines, security practices, and emerging AI-based tools.
-						I lead and collaborate on research initiatives involving large-scale mining of software repositories,
-						CI/CD security automation, software quality improvement, and AI-assisted development workflows.
-						My research has been published in premier international venues, including ICSE, ICSME, and MSR.
-						I actively collaborate with researchers across Brazil and internationally, including partnerships in the United Kingdom and ongoing research engagement with U.S. institutions.
-					</p>
-					<p style="text-align:justify">
-						I welcome international research collaborations, visiting opportunities,
-						and joint projects in empirical software engineering and AI-supported development.
-						My publications are available <a href="publication.html">here</a>.
-					</p>
-					<p><strong>Languages:</strong> Portuguese (native), Italian (fluent), English (professional).</p>
 
-					<h2 class="section-title" style="margin-top:32px">Research Interests</h2>
+					<h2 class="section-title" style="margin-top:20px">{{ t.index.research_interests }}</h2>
 					<div class="research-tags">
 						{% for interest in site.data.profile.interests %}
 						<span class="research-tag">{{ interest | escape }}</span>
 						{% endfor %}
 					</div>
 
-					<h2 class="section-title" style="margin-top:32px">Recent News</h2>
+					<h2 class="section-title" style="margin-top:12px">{{ t.index.recent_news }}</h2>
 					<ul class="news-list">
-						{% for item in site.data.news %}
+  					{% for item in site.data.news limit: 3 %}
 						<li class="news-item">
 							<span class="news-date">{{ item.date | escape }}</span>
 							<span class="news-text">{{ item.text }}{% if item.link %} <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.link_text | escape }}</a>{% endif %}</span>
@@ -119,7 +101,7 @@ active: about
 		<!-- Academic Positions + Education -->
 		<div class="row" id="academic-background">
 			<div class="col-md-6">
-				<h2 class="section-title">Academic Positions</h2>
+				<h2 class="section-title">{{ t.index.positions }}</h2>
 				<div class="exp-cards">
 					{% for pos in site.data.profile.positions %}
 					<div class="exp-card">
@@ -138,7 +120,7 @@ active: about
 			</div>
 
 			<div class="col-md-6">
-				<h2 class="section-title">Education</h2>
+				<h2 class="section-title">{{ t.index.education }}</h2>
 				<div class="exp-cards">
 					{% for edu in site.data.profile.education %}
 					<div class="exp-card">
@@ -151,8 +133,8 @@ active: about
 								<span class="exp-degree-badge exp-degree-badge--{{ edu.degree }}">{{ edu.degree | upcase }}</span>
 							</div>
 							<p class="exp-card-title">{{ edu.field | escape }}</p>
-							<p class="exp-card-institution">{{ edu.institution | escape }} · GPA {{ edu.gpa }}</p>
-							<p class="exp-card-sub">Advisor: <a href="{{ edu.advisor_url }}" target="_blank" rel="noopener noreferrer">{{ edu.advisor_name | escape }}</a></p>
+							<p class="exp-card-institution">{{ edu.institution | escape }} · {{ t.index.gpa }} {{ edu.gpa }}</p>
+							<p class="exp-card-sub">{{ t.index.advisor }} <a href="{{ edu.advisor_url }}" target="_blank" rel="noopener noreferrer">{{ edu.advisor_name | escape }}</a></p>
 						</div>
 					</div>
 					{% endfor %}

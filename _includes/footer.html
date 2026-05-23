@@ -1,11 +1,15 @@
+{% assign t = site.data.i18n[site.active_lang] | default: site.data.i18n["en"] %}
+{% assign cur_lang = site.active_lang | default: "en" %}
+{% if cur_lang == "en" %}{% assign other_prefix = "" %}{% else %}{% assign other_prefix = "/pt-BR" %}{% endif %}
+
 <footer id="site-footer">
 	<div class="footer-inner">
 
 		<div class="footer-left">
 			<p class="footer-name">Anderson Uchôa</p>
 			<p class="footer-role">
-				Postdoctoral Researcher · <a href="https://www.ncsu.edu/" target="_blank" rel="noopener noreferrer">NC State University</a><br>
-				Professor of Software Engineering · <a href="https://www.ufc.br/" target="_blank" rel="noopener noreferrer">UFC</a>
+				{{ t.footer.role_postdoc }} · <a href="https://www.ncsu.edu/" target="_blank" rel="noopener noreferrer">NC State University</a><br>
+				{{ t.footer.role_prof }} · <a href="https://www.ufc.br/" target="_blank" rel="noopener noreferrer">UFC</a>
 			</p>
 			<p class="footer-lab">Head of <a href="https://reset-ufc.github.io/" target="_blank" rel="noopener noreferrer">RESET Lab</a></p>
 			<p class="footer-contact">
@@ -19,19 +23,19 @@
 		<div class="footer-right">
 			<div class="footer-right-inner">
 				<div class="footer-nav">
-					<p class="footer-heading">Pages</p>
+					<p class="footer-heading">{{ t.footer.pages }}</p>
 					<ul class="footer-links">
-						<li><a href="index.html">About</a></li>
-						<li><a href="publication.html">Publications</a></li>
-						<li><a href="awards.html">Awards</a></li>
-						<li><a href="research.html">Research</a></li>
-						<li><a href="teaching.html">Teaching</a></li>
-						<li><a href="services.html">Services</a></li>
+						<li><a href="{{ other_prefix }}/index.html">{{ t.nav.about }}</a></li>
+						<li><a href="{{ other_prefix }}/publication.html">{{ t.nav.publications }}</a></li>
+						<li><a href="{{ other_prefix }}/awards.html">{{ t.nav.awards }}</a></li>
+						<li><a href="{{ other_prefix }}/research.html">{{ t.nav.research }}</a></li>
+						<li><a href="{{ other_prefix }}/teaching.html">{{ t.nav.teaching }}</a></li>
+						<li><a href="{{ other_prefix }}/services.html">{{ t.nav.services }}</a></li>
 					</ul>
 				</div>
 
 				<div class="footer-social">
-					<p class="footer-heading">Links</p>
+					<p class="footer-heading">{{ t.footer.links }}</p>
 					<div class="footer-social-links">
 						<a href="https://scholar.google.com.br/citations?user=_bwg28kAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="footer-social-link">Scholar</a>
 						<a href="https://orcid.org/0000-0002-6847-5569" target="_blank" rel="noopener noreferrer" class="footer-social-link">ORCID</a>
@@ -48,7 +52,7 @@
 
 	<div class="footer-bottom">
 		&copy; {{ site.time | date: "%Y" }} Anderson Uchôa &middot;
-		Built with <a href="https://jekyllrb.com" target="_blank" rel="noopener noreferrer">Jekyll</a> &middot;
-		Hosted on <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+		{{ t.footer.built_with }} <a href="https://jekyllrb.com" target="_blank" rel="noopener noreferrer">Jekyll</a> &middot;
+		{{ t.footer.hosted_on }} <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
 	</div>
 </footer>

@@ -1,0 +1,60 @@
+---
+layout: default
+title: "Publicações — Anderson Uchôa | UFC & NC State"
+description: "Publicações de Anderson Uchôa em engenharia de software empírica, mineração de repositórios e desenvolvimento assistido por IA. ICSE, ICSME, MSR e outros."
+canonical: "https://anderson-uchoa.github.io/pt-BR/publication.html"
+active: publications
+lang: pt-BR
+---
+{% assign t = site.data.i18n["pt-BR"] %}
+
+<main class="site-main">
+	<div class="site-container">
+
+		<section class="page-header-section">
+			<h1>{{ t.publication.title }} <span class="pub-count-badge">51</span></h1>
+			<p>{{ t.publication.subtitle }}</p>
+			<div class="pub-profile-links">
+				<a href="https://scholar.google.com.br/citations?user=_bwg28kAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="hero-social-badge">
+					<i class="icon-graduation-cap" aria-hidden="true"></i> Google Scholar
+				</a>
+				<a href="https://dblp.uni-trier.de/search/publ?q=author:Anderson_G._Uch%C3%B4a:" target="_blank" rel="noopener noreferrer" class="hero-social-badge">
+					<i class="icon-book" aria-hidden="true"></i> DBLP
+				</a>
+				<a href="https://www.researchgate.net/profile/Anderson_Uchoa" target="_blank" rel="noopener noreferrer" class="hero-social-badge">
+					<i class="icon-group" aria-hidden="true"></i> ResearchGate
+				</a>
+				<a href="https://orcid.org/0000-0002-6847-5569" target="_blank" rel="noopener noreferrer" class="hero-social-badge">
+					<span class="orcid-social">iD</span> ORCID
+				</a>
+				<a href="https://lattes.cnpq.br/3740664626762609" target="_blank" rel="noopener noreferrer" class="hero-social-badge">
+					<i class="icon-external-link" aria-hidden="true"></i> Lattes
+				</a>
+			</div>
+		</section>
+
+		<div class="content-section" id="pub-container">
+			<div id="pub-loading" class="pub-loading">
+				<span class="pub-spinner"></span>
+				<span>Carregando publicações&hellip;</span>
+			</div>
+			<script src="https://bibbase.org/show?bib=https%3A%2F%2Fanderson-uchoa.github.io%2Fpublications%2FUchoaPapers.bib&jsonp=1"></script>
+		</div>
+		<script>
+		(function () {
+			var loading = document.getElementById('pub-loading');
+			var container = document.getElementById('pub-container');
+			if (!loading || !container) return;
+			var hide = function () { loading.style.display = 'none'; };
+			var observer = new MutationObserver(function (mutations, obs) {
+				for (var i = 0; i < mutations.length; i++) {
+					if (mutations[i].addedNodes.length) { hide(); obs.disconnect(); return; }
+				}
+			});
+			observer.observe(container, { childList: true, subtree: true });
+			setTimeout(function () { hide(); observer.disconnect(); }, 10000);
+		}());
+		</script>
+
+	</div>
+</main>

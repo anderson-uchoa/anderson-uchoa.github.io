@@ -1541,6 +1541,26 @@ body {
 #nav-links li a:hover    { color: #fff; background: rgba(255,255,255,0.12); }
 #nav-links li.active > a { color: #fff; font-weight: 700; border-bottom: 2px solid #fff; border-radius: 0; }
 
+.lang-switcher {
+	display: inline-flex;
+	align-items: center;
+	margin-left: 8px;
+	padding: 3px 10px;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	color: rgba(255,255,255,0.75);
+	border: 1px solid rgba(255,255,255,0.35);
+	border-radius: 4px;
+	text-decoration: none;
+	white-space: nowrap;
+	transition: color 0.18s, border-color 0.18s, background 0.18s;
+	flex-shrink: 0;
+}
+.lang-switcher:hover { color: #fff; border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.1); text-decoration: none; }
+html.dark-mode .lang-switcher { border-color: rgba(255,255,255,0.25); color: rgba(255,255,255,0.6); }
+html.dark-mode .lang-switcher:hover { color: #fff; border-color: rgba(255,255,255,0.5); }
+
 #mobile-nav-toggle {
 	display: none;
 	background: none;
@@ -1582,7 +1602,7 @@ body {
 .site-container {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 16px 48px 64px;
+	padding: 16px 48px 0;
 }
 
 /* ---- Hero (index.html) ---- */
@@ -1694,6 +1714,21 @@ body {
 	margin: 0;
 }
 
+.pub-count-badge {
+	display: inline-block;
+	background: #3b82f6;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1;
+	padding: 4px 10px;
+	border-radius: 12px;
+	vertical-align: middle;
+	margin-left: 8px;
+	letter-spacing: 0;
+}
+html.dark-mode .pub-count-badge { background: #2563eb; }
+
 /* ---- Generic content section spacing ---- */
 .content-section { margin-bottom: 44px; }
 
@@ -1769,6 +1804,10 @@ html.dark-mode .contact-block          { color: #aaa; }
 html.dark-mode .contact-block a        { color: #5b9bd5; }
 
 /* ── Experience / Education cards ────────────────────────────────────────── */
+#academic-background {
+	scroll-margin-top: 76px;
+}
+
 .exp-cards {
 	display: flex;
 	flex-direction: column;
@@ -2104,37 +2143,37 @@ html.dark-mode #scroll-indicator { color: rgba(255,255,255,0.45); }
 
 /* ── About (Joanna-style) two-column layout ───────────────────────────────── */
 .about-section {
-	padding: 16px 0 24px;
+	padding: 12px 0 12px;
 	border-bottom: 1px solid #e8e8e8;
-	margin-bottom: 36px;
+	margin-bottom: 28px;
 }
 .about-left {
 	text-align: center;
-	padding: 0 24px 24px;
+	padding: 0 24px 16px;
 }
 .about-photo {
-	width: 200px;
-	height: 200px;
+	width: 180px;
+	height: 180px;
 	border-radius: 50%;
 	object-fit: cover;
 	display: block;
-	margin: 0 auto 16px;
+	margin: 0 auto 10px;
 	border: 4px solid #e8e8e8;
 	box-shadow: 0 6px 28px rgba(0,0,0,0.14);
 }
 .about-name {
 	font-family: 'Raleway', sans-serif;
-	font-size: 28px;
+	font-size: 26px;
 	font-weight: 800;
 	color: #1a1a1a;
-	margin: 0 0 8px;
+	margin: 0 0 5px;
 	line-height: 1.15;
 }
 .about-title {
-	font-size: 13px;
+	font-size: 12.5px;
 	color: #444;
-	margin: 0 0 3px;
-	line-height: 1.6;
+	margin: 0 0 2px;
+	line-height: 1.5;
 }
 .about-title strong {
 	font-weight: 700;
@@ -2143,32 +2182,32 @@ html.dark-mode #scroll-indicator { color: rgba(255,255,255,0.45); }
 .about-affil {
 	font-size: 12px;
 	color: #888;
-	margin: 6px 0 8px;
-	line-height: 1.6;
+	margin: 4px 0 6px;
+	line-height: 1.5;
 }
 .about-email {
 	font-size: 12px;
 	font-weight: 600;
 	color: #1a2744;
-	margin-bottom: 12px;
+	margin-bottom: 8px;
 }
 .about-social {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 6px;
+	gap: 5px;
 	margin-bottom: 0;
 }
 .about-cta {
 	display: block !important;
-	margin-top: 14px;
-	padding: 10px 14px;
+	margin-top: 10px;
+	padding: 8px 12px;
 	background: #fde8e8 !important;
 	border: 1.5px solid #c97070 !important;
 	border-radius: 8px;
-	font-size: 13px;
+	font-size: 12.5px;
 	color: #7a1a1a !important;
-	line-height: 1.7;
+	line-height: 1.6;
 	text-align: center;
 }
 .about-cta a {
@@ -2179,7 +2218,7 @@ html.dark-mode #scroll-indicator { color: rgba(255,255,255,0.45); }
 .about-cta a:hover { color: #6a1010 !important; }
 
 .about-lastupdated {
-	margin-top: 8px;
+	margin-top: 6px;
 	font-size: 12px;
 	color: #888;
 	text-align: center;
@@ -2190,8 +2229,8 @@ html.dark-mode #scroll-indicator { color: rgba(255,255,255,0.45); }
 	align-items: center;
 	justify-content: center;
 	gap: 7px;
-	margin: 14px 0 10px;
-	padding: 9px 20px;
+	margin: 10px 0 8px;
+	padding: 7px 20px;
 	background: #1a2744;
 	color: #fff;
 	font-size: 13px;
@@ -2209,6 +2248,9 @@ html.dark-mode .about-cv-btn:hover { background: #344a7a; }
 }
 .about-right h2.section-title:first-child {
 	margin-top: 0;
+}
+.about-right h2.section-title {
+	margin-bottom: 14px;
 }
 
 /* dark mode for about layout */
@@ -2581,10 +2623,10 @@ html.dark-mode .journal-tag          { background: #1e2a40; border-color: #2a3a5
 	display: flex;
 	gap: 14px;
 	align-items: baseline;
-	padding: 9px 0;
+	padding: 4px 0;
 	border-bottom: 1px solid #edf1f7;
-	font-size: 13.5px;
-	line-height: 1.55;
+	font-size: 13px;
+	line-height: 1.45;
 }
 .news-item:last-child { border-bottom: none; }
 .news-date {

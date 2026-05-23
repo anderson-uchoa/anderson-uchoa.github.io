@@ -3,7 +3,15 @@ url: "https://anderson-uchoa.github.io"
 baseurl: ""
 markdown: kramdown
 plugins:
+  - jekyll-polyglot
   - jekyll-sitemap
+
+# Multilingual (jekyll-polyglot)
+languages: ["en", "pt-BR"]
+default_lang: "en"
+exclude_from_localization: ["img", "css", "js", "publications", "font", "robots.txt", "sitemap.xml"]
+parallel_localization: false
+
 exclude:
   - README.md
   - Gemfile

@@ -1,0 +1,80 @@
+nav:
+  about: Sobre
+  publications: Publicações
+  awards: Prêmios
+  research: Pesquisa
+  teaching: Ensino
+  services: Serviços
+  cv: CV Lattes
+
+lang_switcher:
+  label: "EN"
+  title: "Switch to English"
+
+footer:
+  pages: Páginas
+  links: Links
+  role_postdoc: "Pesquisador de Pós-Doutorado"
+  role_prof: "Professor de Engenharia de Software"
+  built_with: "Construído com"
+  hosted_on: "Hospedado no"
+
+index:
+  about_title: Sobre Mim
+  research_interests: Interesses de Pesquisa
+  recent_news: Notícias Recentes
+  positions: Posições Acadêmicas
+  education: Formação
+  download_cv: Baixar CV
+  last_updated: Última Atualização
+  advisor: "Orientador:"
+  gpa: "Média"
+  cta: >
+    Se você tem interesse em colaborar em projetos de <strong>Engenharia de Software</strong>
+    e/ou <strong>Desenvolvimento Assistido por IA</strong>, entre em
+    <a href="mailto:andersonuchoa@ufc.br">contato</a>.
+  pub_link: "Minhas publicações estão disponíveis"
+  pub_link_here: "aqui"
+  bio_1: >
+    Sou pesquisador e Professor de Engenharia de Software na
+    <a href="https://www.ufc.br/" target="_blank" rel="noopener noreferrer">Universidade Federal do Ceará (UFC)</a>, Brasil,
+    e coordenador do <a href="https://reset-ufc.github.io/" target="_blank" rel="noopener noreferrer">RESET Lab</a>.
+    Minha pesquisa foca em engenharia de software empírica, evolução e manutenção de software,
+    fatores humanos, ferramentas de desenvolvimento inteligentes e a interação entre sistemas de software
+    e ambientes intensivos em dados.
+    Obtive meu Doutorado em Engenharia de Software pela <a href="https://www.puc-rio.br" target="_blank" rel="noopener noreferrer">PUC-Rio</a> (2021),
+    precedido pelo Mestrado (2019), e sou graduado em Engenharia de Software pela UFC (2016),
+    desenvolvido em cooperação com a <a href="https://www.di.uniroma1.it/" target="_blank" rel="noopener noreferrer">Sapienza University of Rome</a>, Itália.
+  bio_2: >
+    Meu trabalho investiga como desenvolvedores interagem com sistemas em evolução,
+    pipelines de automação, práticas de segurança e ferramentas emergentes baseadas em IA.
+    Lidero e colaboro em iniciativas de pesquisa envolvendo mineração em larga escala de repositórios de software,
+    automação de segurança em CI/CD, melhoria da qualidade de software e fluxos de desenvolvimento assistidos por IA.
+    Colaboro ativamente com pesquisadores do Brasil e do exterior,
+    incluindo parcerias no Reino Unido e engajamento contínuo com instituições nos EUA.
+    Tenho interesse em colaborações internacionais de pesquisa, oportunidades de visita
+    e projetos conjuntos em engenharia de software e desenvolvimento assistido por IA.
+
+publication:
+  title: Publicações
+  subtitle: Lista completa das minhas publicações com resumos e links de DOI.
+
+awards:
+  title: Prêmios
+  subtitle: Reconhecimentos ao longo da minha carreira acadêmica.
+
+research:
+  title: Pesquisa
+  subtitle: Experiências e projetos de pesquisa.
+  ongoing: Projetos em Andamento
+  completed: Projetos Concluídos
+
+teaching:
+  title: Ensino
+  subtitle: Disciplinas ministradas na Universidade Federal do Ceará (UFC).
+
+services:
+  title: Serviços
+  subtitle: Serviços à comunidade, comitês de programa e revisão de periódicos.
+  pc_member: Membro de PC
+  reviewer: Revisor

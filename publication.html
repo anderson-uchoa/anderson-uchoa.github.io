@@ -8,14 +8,18 @@ og_title: "Publications — Anderson Uchôa"
 og_description: "Publications by Anderson Uchôa in empirical software engineering, mining software repositories, and AI-assisted development."
 twitter_description: "Publications by Anderson Uchôa in empirical software engineering, mining software repositories, and AI-assisted development."
 active: publications
+lang: en
 ---
+{% assign t = site.data.i18n["en"] %}
 
 <main class="site-main">
 	<div class="site-container">
 
+		{% capture bib_raw %}{% include_relative publications/UchoaPapers.bib %}{% endcapture %}
+		{% assign pub_count = bib_raw | split: '@' | size | minus: 1 %}
 		<section class="page-header-section">
-			<h1>Publications</h1>
-			<p>A complete list of my publications with abstracts and DOI links.</p>
+			<h1>{{ t.publication.title }} <span class="pub-count-badge">{{ pub_count }}</span></h1>
+			<p>{{ t.publication.subtitle }}</p>
 			<div class="pub-profile-links">
 				<a href="https://scholar.google.com.br/citations?user=_bwg28kAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="hero-social-badge">
 					<i class="icon-graduation-cap" aria-hidden="true"></i> Google Scholar

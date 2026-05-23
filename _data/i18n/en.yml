@@ -1,0 +1,80 @@
+nav:
+  about: About
+  publications: Publications
+  awards: Awards
+  research: Research
+  teaching: Teaching
+  services: Services
+  cv: CV Lattes
+
+lang_switcher:
+  label: "PT-BR"
+  title: "Ver em Português"
+
+footer:
+  pages: Pages
+  links: Links
+  role_postdoc: "Postdoctoral Researcher"
+  role_prof: "Professor of Software Engineering"
+  built_with: "Built with"
+  hosted_on: "Hosted on"
+
+index:
+  about_title: About Me
+  research_interests: Research Interests
+  recent_news: Recent News
+  positions: Academic Positions
+  education: Education
+  download_cv: Download CV
+  last_updated: Last Updated
+  advisor: "Advisor:"
+  gpa: "GPA"
+  cta: >
+    If you are interested in collaborating on <strong>Software Engineering</strong>
+    and/or <strong>AI-assisted Development</strong> projects, please
+    <a href="mailto:andersonuchoa@ufc.br">get in touch</a>.
+  pub_link: "My publications are available"
+  pub_link_here: "here"
+  bio_1: >
+    I am a Software Engineering researcher and Professor at the
+    <a href="https://www.ufc.br/" target="_blank" rel="noopener noreferrer">Federal University of Ceará (UFC)</a>, Brazil,
+    and Head of the <a href="https://reset-ufc.github.io/" target="_blank" rel="noopener noreferrer">RESET Lab</a>.
+    My research focuses on empirical software engineering, software evolution and maintenance,
+    human factors, intelligent development tools, and the interplay between software systems
+    and data-intensive environments.
+    I earned my PhD in Software Engineering from <a href="https://www.puc-rio.br" target="_blank" rel="noopener noreferrer">PUC-Rio</a> (2021),
+    following my MSc (2019), and hold a BSc in Software Engineering from UFC (2016),
+    developed in cooperation with <a href="https://www.di.uniroma1.it/" target="_blank" rel="noopener noreferrer">Sapienza University of Rome</a>, Italy.
+  bio_2: >
+    My work investigates how developers interact with evolving systems,
+    automation pipelines, security practices, and emerging AI-based tools.
+    I lead and collaborate on research initiatives involving large-scale mining of software repositories,
+    CI/CD security automation, software quality improvement, and AI-assisted development workflows.
+    I actively collaborate with researchers across Brazil and internationally,
+    including partnerships in the United Kingdom and ongoing research engagement with U.S. institutions.
+    I welcome international research collaborations, visiting opportunities,
+    and joint projects in software engineering and AI-supported development.
+
+publication:
+  title: Publications
+  subtitle: A complete list of my publications with abstracts and DOI links.
+
+awards:
+  title: Awards
+  subtitle: Recognition received throughout my academic career.
+
+research:
+  title: Research
+  subtitle: Research experiences and projects.
+  ongoing: Ongoing Projects
+  completed: Completed Projects
+
+teaching:
+  title: Teaching
+  subtitle: Courses taught at the Federal University of Ceará (UFC).
+
+services:
+  title: Services
+  subtitle: Community services, program committees, and journal reviewing.
+  pc_member: PC Member
+  reviewer: Reviewer
