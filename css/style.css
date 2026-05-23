@@ -2143,37 +2143,41 @@ html.dark-mode #scroll-indicator { color: rgba(255,255,255,0.45); }
 
 /* ── About (Joanna-style) two-column layout ───────────────────────────────── */
 .about-section {
-	padding: 12px 0 12px;
-	border-bottom: 1px solid #e8e8e8;
-	margin-bottom: 28px;
+	padding: 32px 0 28px;
+	border-bottom: 1px solid #e0e8f4;
+	margin-bottom: 36px;
+	background: linear-gradient(135deg, #f4f7fc 0%, #ffffff 60%);
+	border-radius: 16px;
+	margin-top: 8px;
 }
 .about-left {
 	text-align: center;
-	padding: 0 24px 16px;
+	padding: 8px 28px 16px;
 }
 .about-photo {
-	width: 180px;
-	height: 180px;
+	width: 210px;
+	height: 210px;
 	border-radius: 50%;
 	object-fit: cover;
 	display: block;
-	margin: 0 auto 10px;
-	border: 4px solid #e8e8e8;
-	box-shadow: 0 6px 28px rgba(0,0,0,0.14);
+	margin: 0 auto 14px;
+	border: 4px solid #fff;
+	box-shadow: 0 8px 36px rgba(26,39,68,0.18);
+	outline: 3px solid #d4e0f5;
 }
 .about-name {
 	font-family: 'Raleway', sans-serif;
-	font-size: 26px;
+	font-size: 27px;
 	font-weight: 800;
 	color: #1a1a1a;
-	margin: 0 0 5px;
+	margin: 0 0 6px;
 	line-height: 1.15;
 }
 .about-title {
-	font-size: 12.5px;
+	font-size: 13px;
 	color: #444;
-	margin: 0 0 2px;
-	line-height: 1.5;
+	margin: 0 0 3px;
+	line-height: 1.55;
 }
 .about-title strong {
 	font-weight: 700;
@@ -2182,14 +2186,14 @@ html.dark-mode #scroll-indicator { color: rgba(255,255,255,0.45); }
 .about-affil {
 	font-size: 12px;
 	color: #888;
-	margin: 4px 0 6px;
+	margin: 6px 0 8px;
 	line-height: 1.5;
 }
 .about-email {
-	font-size: 12px;
+	font-size: 12.5px;
 	font-weight: 600;
 	color: #1a2744;
-	margin-bottom: 8px;
+	margin-bottom: 10px;
 }
 .about-social {
 	display: flex;
@@ -2200,8 +2204,8 @@ html.dark-mode #scroll-indicator { color: rgba(255,255,255,0.45); }
 }
 .about-cta {
 	display: block !important;
-	margin-top: 10px;
-	padding: 8px 12px;
+	margin-top: 12px;
+	padding: 9px 14px;
 	background: #fde8e8 !important;
 	border: 1.5px solid #c97070 !important;
 	border-radius: 8px;
@@ -2218,9 +2222,9 @@ html.dark-mode #scroll-indicator { color: rgba(255,255,255,0.45); }
 .about-cta a:hover { color: #6a1010 !important; }
 
 .about-lastupdated {
-	margin-top: 6px;
-	font-size: 12px;
-	color: #888;
+	margin-top: 8px;
+	font-size: 11.5px;
+	color: #aaa;
 	text-align: center;
 }
 
@@ -2229,8 +2233,8 @@ html.dark-mode #scroll-indicator { color: rgba(255,255,255,0.45); }
 	align-items: center;
 	justify-content: center;
 	gap: 7px;
-	margin: 10px 0 8px;
-	padding: 7px 20px;
+	margin: 12px 0 8px;
+	padding: 8px 22px;
 	background: #1a2744;
 	color: #fff;
 	font-size: 13px;
@@ -2244,30 +2248,34 @@ html.dark-mode .about-cv-btn { background: #2a3a60; }
 html.dark-mode .about-cv-btn:hover { background: #344a7a; }
 
 .about-right {
-	padding-left: 16px;
+	padding-left: 20px;
+	padding-top: 8px;
 }
 .about-right h2.section-title:first-child {
 	margin-top: 0;
 }
 .about-right h2.section-title {
-	margin-bottom: 14px;
+	margin-top: 28px;
+	margin-bottom: 12px;
 }
 
 /* dark mode for about layout */
+html.dark-mode .about-section         { background: linear-gradient(135deg, #161e2e 0%, #1a1f2e 60%); border-bottom-color: #2a3550; }
 html.dark-mode .about-cta             { background: #2a1a1a; border-color: #6a3030; color: #e8a0a0; }
 html.dark-mode .about-cta a           { color: #e8a0a0; }
-html.dark-mode .about-lastupdated     { color: #666; }
-html.dark-mode .about-section         { border-bottom-color: #2a3550; }
+html.dark-mode .about-lastupdated     { color: #555; }
 html.dark-mode .about-name            { color: #e8e8e8; }
 html.dark-mode .about-title           { color: #bbb; }
 html.dark-mode .about-title strong    { color: #93b4e6; }
 html.dark-mode .about-affil           { color: #888; }
 html.dark-mode .about-email           { color: #93b4e6; }
+html.dark-mode .about-photo           { border-color: #2a3550; outline-color: #2a3a60; }
 
 @media (max-width: 767px) {
+	.about-section { border-radius: 10px; padding: 20px 0 16px; }
 	.about-left  { padding-bottom: 28px; }
-	.about-right { padding-left: 0; }
-	.about-photo { width: 150px; height: 150px; }
+	.about-right { padding-left: 0; padding-top: 0; }
+	.about-photo { width: 160px; height: 160px; }
 }
 /* ================================================
    Research cards
