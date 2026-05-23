@@ -2056,9 +2056,10 @@ html.dark-mode .award-badge--green     { background: #0f2a1a; color: #50c080; }
 html.dark-mode .award-badge--purple    { background: #1e1535; color: #b080f0; }
 
 @media (max-width: 767px) {
-	.award-summary  { flex-direction: column; }
-	.award-grid     { flex-direction: column; }
-	.award-card-sq  { flex: 1 1 100%; }
+	.award-summary      { flex-wrap: wrap; gap: 10px; }
+	.award-summary-item { flex: 1 1 calc(50% - 5px); min-width: calc(50% - 5px); max-width: calc(50% - 5px); }
+	.award-grid         { flex-direction: column; }
+	.award-card-sq      { flex: 1 1 100%; }
 }
 
 /* ── Copy email button ────────────────────────────────────────────────────── */
