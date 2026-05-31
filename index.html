@@ -15,106 +15,137 @@ lang: en
 <main class="site-main">
 	<div class="site-container">
 
-		<!-- About: Joanna-style two-column -->
-		<section class="about-section">
-			<div class="row">
+		<!-- ── Hero ──────────────────────────────────────────────────────── -->
+		<section class="home-hero">
+			<div class="row home-hero-row">
 
-				<!-- Left: photo + identity + contact + social -->
-				<div class="col-md-4 col-sm-5 about-left">
-					<img src="/img/personal/me.jpeg" alt="Anderson Uchôa" class="about-photo">
-					<h1 class="about-name">Anderson Uchôa</h1>
-					<p class="about-title">
-						<strong>Postdoctoral Researcher</strong><br>
-						<a href="https://www.ncsu.edu/" target="_blank" rel="noopener noreferrer">NC State University</a>
-					</p>
-					<p class="about-title">
-						<strong>Professor of Software Engineering</strong><br>
-						<a href="https://www.ufc.br/" target="_blank" rel="noopener noreferrer">Federal University of Ceará (UFC)</a>
-					</p>
-					<p class="about-title">
-						Head of <a href="https://reset-ufc.github.io/" target="_blank" rel="noopener noreferrer">RESET Lab</a>
-					</p>
-					<p class="about-affil">
-						Campus de Itapajé – Jardins de Anita<br>
-						Itapajé, CE, Brazil
-					</p>
-					<p class="about-email">
-						<i class="icon-envelope" aria-hidden="true"></i>&nbsp;
-						andersonuchoa [at] ufc.br
-						<button class="copy-email-btn" data-email="andersonuchoa@ufc.br" title="Copy email" aria-label="Copy email to clipboard">&#x2398;</button>
-					</p>
-					<div class="about-social">
-						<a href="https://scholar.google.com.br/citations?user=_bwg28kAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="hero-social-badge" aria-label="Google Scholar">
-							<i class="icon-graduation-cap" aria-hidden="true"></i> Scholar
-						</a>
-						<a href="https://orcid.org/0000-0002-6847-5569" target="_blank" rel="noopener noreferrer" class="hero-social-badge" aria-label="ORCID">
-							<span class="orcid-social">iD</span> ORCID
-						</a>
-						<a href="https://dblp.uni-trier.de/search/publ?q=author:Anderson_G._Uch%C3%B4a:" target="_blank" rel="noopener noreferrer" class="hero-social-badge" aria-label="DBLP">
-							<i class="icon-book" aria-hidden="true"></i> DBLP
-						</a>
-						<a href="https://www.linkedin.com/in/andersongnuchoa/" target="_blank" rel="noopener noreferrer" class="hero-social-badge" aria-label="LinkedIn">
-							<i class="icon-linkedin" aria-hidden="true"></i> LinkedIn
-						</a>
-						<a href="https://twitter.com/andersonguchoa" target="_blank" rel="noopener noreferrer" class="hero-social-badge" aria-label="Twitter">
-							<i class="icon-twitter" aria-hidden="true"></i> Twitter
-						</a>
+				<!-- Left: identity card -->
+				<div class="col-md-4 col-sm-5 home-hero-left">
+					<div class="home-id-card">
+						<img src="/img/personal/me.jpeg" alt="Anderson Uchôa" class="home-id-photo">
+						<div class="home-id-info">
+							<h1 class="home-id-name">Anderson Uchôa</h1>
+							<p class="home-id-role">
+								<strong>Postdoctoral Researcher</strong><br>
+								<a href="https://www.ncsu.edu/" target="_blank" rel="noopener noreferrer">NC State University</a>
+							</p>
+							<p class="home-id-role">
+								<strong>Professor of Software Engineering</strong><br>
+								<a href="https://www.ufc.br/" target="_blank" rel="noopener noreferrer">Federal University of Ceará (UFC)</a>
+							</p>
+							<p class="home-id-role">
+								Head of <a href="https://reset-ufc.github.io/" target="_blank" rel="noopener noreferrer">RESET Lab</a>
+							</p>
+							<p class="home-id-affil">
+								Campus de Itapajé – Jardins de Anita<br>Itapajé, CE, Brazil
+							</p>
+							<p class="home-id-email">
+								<i class="icon-envelope" aria-hidden="true"></i>&nbsp;andersonuchoa [at] ufc.br
+								<button class="copy-email-btn" data-email="andersonuchoa@ufc.br" title="Copy email" aria-label="Copy email to clipboard">&#x2398;</button>
+							</p>
+							<div class="home-id-social">
+								<a href="https://scholar.google.com.br/citations?user=_bwg28kAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="hero-social-badge" aria-label="Google Scholar"><i class="icon-graduation-cap" aria-hidden="true"></i> Scholar</a>
+								<a href="https://orcid.org/0000-0002-6847-5569" target="_blank" rel="noopener noreferrer" class="hero-social-badge" aria-label="ORCID"><span class="orcid-social">iD</span> ORCID</a>
+								<a href="https://dblp.uni-trier.de/search/publ?q=author:Anderson_G._Uch%C3%B4a:" target="_blank" rel="noopener noreferrer" class="hero-social-badge" aria-label="DBLP"><i class="icon-book" aria-hidden="true"></i> DBLP</a>
+								<a href="https://www.linkedin.com/in/andersongnuchoa/" target="_blank" rel="noopener noreferrer" class="hero-social-badge" aria-label="LinkedIn"><i class="icon-linkedin" aria-hidden="true"></i> LinkedIn</a>
+								<a href="https://twitter.com/andersonguchoa" target="_blank" rel="noopener noreferrer" class="hero-social-badge" aria-label="Twitter"><i class="icon-twitter" aria-hidden="true"></i> Twitter</a>
+							</div>
+							<!-- TODO: uncomment when CV is ready
+							<a href="#" class="home-cv-link">
+								<i class="icon-download" aria-hidden="true"></i> {{ t.index.download_cv }} (PDF)
+							</a>
+							-->
+						</div>
 					</div>
-					<!-- TODO: uncomment when CV is ready
-					<a href="404.html" class="about-cv-btn">
-						<i class="icon-file-text" aria-hidden="true"></i> {{ t.index.download_cv }}
-					</a>
-					-->
-					<div class="about-cta">{{ t.index.cta }}</div>
-					<p class="about-lastupdated"><strong>{{ t.index.last_updated }}:</strong> <em>May 2026</em></p>
 				</div>
 
-				<!-- Right: bio + research interests + news -->
-				<div class="col-md-8 col-sm-7 about-right">
-
-					<h2 class="section-title">{{ t.index.about_title }}</h2>
-					<p class="about-bio">{{ t.index.bio_1 }}</p>
-					<p class="about-bio">
-						{{ t.index.bio_2 }}
-						{{ t.index.pub_link }} <a href="publication.html">{{ t.index.pub_link_here }}</a>.
+				<!-- Right: tagline + bio -->
+				<div class="col-md-8 col-sm-7 home-hero-right">
+					<p class="home-about-label">
+						<i class="icon-user" aria-hidden="true"></i> {{ t.index.about_label }}
 					</p>
+					<h2 class="home-tagline">{{ t.index.tagline }}</h2>
+					<div class="home-tagline-rule"></div>
+					<p class="home-bio">{{ t.index.bio_1 }}</p>
+					<p class="home-bio">{{ t.index.bio_2 }}</p>
+					<p class="home-bio">{{ t.index.bio_3 }}</p>
+				</div>
+			</div>
+		</section>
 
-					<h2 class="section-title" style="margin-top:20px">{{ t.index.research_interests }}</h2>
+		<!-- ── Research Interests + Highlights ───────────────────────────── -->
+		<div class="row home-mid-row">
+			<div class="col-md-7 col-sm-12">
+				<div class="home-card">
+					<h2 class="home-card-title">
+						<i class="icon-beaker" aria-hidden="true"></i> {{ t.index.research_interests }}
+					</h2>
 					<div class="research-tags">
 						{% for interest in site.data.profile.interests %}
 						<span class="research-tag">{{ interest | escape }}</span>
 						{% endfor %}
 					</div>
-
-					<h2 class="section-title" style="margin-top:12px">{{ t.index.recent_news }}</h2>
-					<ul class="news-list">
-  					{% for item in site.data.news limit: 3 %}
-						<li class="news-item">
-							<span class="news-date">{{ item.date | escape }}</span>
-							<span class="news-text">{{ item.text }}{% if item.link %} <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.link_text | escape }}</a>{% endif %}</span>
-						</li>
-						{% endfor %}
-					</ul>
-
 				</div>
+			</div>
+			<div class="col-md-5 col-sm-12">
+				<div class="home-card">
+					<h2 class="home-card-title">
+						<i class="icon-star" aria-hidden="true"></i> {{ t.index.highlights_title }}
+					</h2>
+					{% for item in site.data.profile.highlights %}
+					<div class="highlight-item">
+						<span class="highlight-icon">{{ item.icon }}</span>
+						<div class="highlight-body">
+							<p class="highlight-title">{{ item.title }}{% if item.link %} <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.link_text | escape }}</a>{% endif %}</p>
+							<p class="highlight-sub">{{ item.sub | escape }}</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+
+		<!-- ── Selected Publications ─────────────────────────────────────── -->
+		<section class="home-pubs-section">
+			<div class="home-pubs-header">
+				<h2 class="home-pubs-title">
+					<i class="icon-file-text" aria-hidden="true"></i> {{ t.index.selected_pubs }}
+				</h2>
+				<a href="publication.html" class="home-pubs-all-link">{{ t.index.view_all_pubs }} &rarr;</a>
+			</div>
+			<div class="home-pubs-grid">
+				{% for pub in site.data.featured_publications %}
+				<div class="home-pub-card">
+					<span class="home-pub-year">{{ pub.year | escape }}</span>
+					<p class="home-pub-title">{{ pub.title | escape }}</p>
+					<p class="home-pub-venue">{{ pub.venue | escape }}</p>
+					<p class="home-pub-authors">{{ t.index.pubs_with }} {{ pub.authors | escape }}</p>
+				</div>
+				{% endfor %}
+			</div>
+			<div class="home-pubs-footer">
+				<a href="publication.html" class="home-pubs-all-link">{{ t.index.view_all_pubs }} &rarr;</a>
 			</div>
 		</section>
 
-		<!-- Academic Positions + Education -->
-		<div class="row" id="academic-background">
+		<!-- ── Academic Positions + Education (timeline) ─────────────────── -->
+		<div class="row home-timeline-row" id="academic-background">
 			<div class="col-md-6">
-				<h2 class="section-title">{{ t.index.positions }}</h2>
-				<div class="exp-cards">
+				<h2 class="section-title"><i class="icon-briefcase" aria-hidden="true"></i> {{ t.index.positions }}</h2>
+				<div class="home-timeline">
 					{% for pos in site.data.profile.positions %}
-					<div class="exp-card">
-						<div class="exp-card-logo">
+					<div class="home-tl-item">
+						<div class="home-tl-left">
+							<span class="home-tl-period">{{ pos.period | escape }}</span>
+							<span class="home-tl-dot"></span>
+						</div>
+						<div class="home-tl-logo">
 							<img src="{{ pos.logo }}" alt="{{ pos.logo_alt | escape }}">
 						</div>
-						<div class="exp-card-body">
-							<div class="exp-card-meta"><span class="exp-card-period">{{ pos.period | escape }}</span></div>
-							<p class="exp-card-title">{{ pos.title | escape }}</p>
-							<p class="exp-card-institution">{{ pos.institution | escape }}</p>
-							<p class="exp-card-sub">{{ pos.department | escape }} · {{ pos.location | escape }}</p>
+						<div class="home-tl-body">
+							<p class="home-tl-title">{{ pos.title | escape }}</p>
+							<p class="home-tl-inst">{{ pos.institution | escape }}</p>
+							<p class="home-tl-sub">{{ pos.department | escape }} &middot; {{ pos.location | escape }}</p>
 						</div>
 					</div>
 					{% endfor %}
@@ -122,21 +153,22 @@ lang: en
 			</div>
 
 			<div class="col-md-6">
-				<h2 class="section-title">{{ t.index.education }}</h2>
-				<div class="exp-cards">
+				<h2 class="section-title"><i class="icon-graduation-cap" aria-hidden="true"></i> {{ t.index.education }}</h2>
+				<div class="home-timeline">
 					{% for edu in site.data.profile.education %}
-					<div class="exp-card">
-						<div class="exp-card-logo">
+					<div class="home-tl-item">
+						<div class="home-tl-left">
+							<span class="home-tl-period">{{ edu.period | escape }}</span>
+							<span class="home-tl-dot"></span>
+						</div>
+						<div class="home-tl-logo">
 							<img src="{{ edu.logo }}" alt="{{ edu.logo_alt | escape }}">
 						</div>
-						<div class="exp-card-body">
-							<div class="exp-card-meta">
-								<span class="exp-card-period">{{ edu.period | escape }}</span>
-								<span class="exp-degree-badge exp-degree-badge--{{ edu.degree }}">{{ edu.degree | upcase }}</span>
-							</div>
-							<p class="exp-card-title">{{ edu.field | escape }}</p>
-							<p class="exp-card-institution">{{ edu.institution | escape }} · {{ t.index.gpa }} {{ edu.gpa }}</p>
-							<p class="exp-card-sub">{{ t.index.advisor }} <a href="{{ edu.advisor_url }}" target="_blank" rel="noopener noreferrer">{{ edu.advisor_name | escape }}</a></p>
+						<div class="home-tl-body">
+							<span class="exp-degree-badge exp-degree-badge--{{ edu.degree }}">{{ edu.degree | upcase }}</span>
+							<p class="home-tl-title">{{ edu.field | escape }}</p>
+							<p class="home-tl-inst">{{ edu.institution | escape }} &middot; {{ t.index.gpa }} {{ edu.gpa }}</p>
+							<p class="home-tl-sub">{{ t.index.advisor }} <a href="{{ edu.advisor_url }}" target="_blank" rel="noopener noreferrer">{{ edu.advisor_name | escape }}</a></p>
 						</div>
 					</div>
 					{% endfor %}

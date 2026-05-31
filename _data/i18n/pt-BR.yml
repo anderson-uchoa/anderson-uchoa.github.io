@@ -14,42 +14,39 @@ lang_switcher:
 footer:
   pages: Páginas
   links: Links
+  get_in_touch: "Entre em Contato"
+  academic_profiles: "Perfis Acadêmicos"
+  navigation: "Navegação"
   role_postdoc: "Pesquisador de Pós-Doutorado"
   role_prof: "Professor de Engenharia de Software"
   built_with: "Construído com"
   hosted_on: "Hospedado no"
 
 index:
-  about_title: Sobre Mim
+  about_label: "Sobre Mim"
+  tagline: "Estudo como o software evolui e como as pessoas desenvolvem software melhor—juntas, com ferramentas inteligentes."
   research_interests: Interesses de Pesquisa
-  recent_news: Notícias Recentes
+  highlights_title: Destaques
+  selected_pubs: "Publicações Selecionadas"
+  view_all_pubs: "Ver todas as publicações"
+  pubs_with: "com"
   positions: Posições Acadêmicas
   education: Formação
   download_cv: Baixar CV
-  last_updated: Última Atualização
   advisor: "Orientador:"
   gpa: "Média"
-  cta: >
-    Se você tem interesse em colaborar em projetos de <strong>Engenharia de Software</strong>
-    e/ou <strong>Desenvolvimento Assistido por IA</strong>, entre em
-    <a href="mailto:andersonuchoa@ufc.br">contato</a>.
-  pub_link: "Minhas publicações estão disponíveis"
-  pub_link_here: "aqui"
   bio_1: >
     Sou pesquisador e Professor de Engenharia de Software na
     <a href="https://www.ufc.br/" target="_blank" rel="noopener noreferrer">Universidade Federal do Ceará (UFC)</a>, Brasil,
     e coordenador do <a href="https://reset-ufc.github.io/" target="_blank" rel="noopener noreferrer">RESET Lab</a>.
+  bio_2: >
     Minha pesquisa foca em engenharia de software empírica, evolução e manutenção de software,
     fatores humanos, ferramentas de desenvolvimento inteligentes e a interação entre sistemas de software
     e ambientes intensivos em dados.
     Obtive meu Doutorado em Engenharia de Software pela <a href="https://www.puc-rio.br" target="_blank" rel="noopener noreferrer">PUC-Rio</a> (2021),
-    precedido pelo Mestrado (2019), e sou graduado em Engenharia de Software pela UFC (2016),
+    meu Mestrado pela <a href="https://www.ufc.br/" target="_blank" rel="noopener noreferrer">UFC</a> (2016),
     desenvolvido em cooperação com a <a href="https://www.di.uniroma1.it/" target="_blank" rel="noopener noreferrer">Sapienza University of Rome</a>, Itália.
-  bio_2: >
-    Meu trabalho investiga como desenvolvedores interagem com sistemas em evolução,
-    pipelines de automação, práticas de segurança e ferramentas emergentes baseadas em IA.
-    Lidero e colaboro em iniciativas de pesquisa envolvendo mineração em larga escala de repositórios de software,
-    automação de segurança em CI/CD, melhoria da qualidade de software e fluxos de desenvolvimento assistidos por IA.
+  bio_3: >
     Colaboro ativamente com pesquisadores do Brasil e do exterior,
     incluindo parcerias no Reino Unido e engajamento contínuo com instituições nos EUA.
     Tenho interesse em colaborações internacionais de pesquisa, oportunidades de visita

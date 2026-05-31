@@ -1,3 +1,20 @@
+highlights:
+  - icon: "🎓"
+    title: "Postdoctoral Researcher"
+    link: "https://www.ncsu.edu/"
+    link_text: "NC State University"
+    sub: "Started Jan 2026"
+  - icon: "🏆"
+    title: "Best Paper Award at"
+    link: "awards.html"
+    link_text: "SBCARS 2022"
+    sub: "For work on trivial refactorings and their impact on software quality"
+  - icon: "👨‍🏫"
+    title: "Professor of Software Engineering at"
+    link: "https://www.ufc.br/"
+    link_text: "UFC"
+    sub: "Joined UFC in Mar 2021"
+
 interests:
   - "Empirical Software Engineering"
   - "Software Evolution & Maintenance"

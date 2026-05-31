@@ -1,0 +1,14 @@
+- year: "2024"
+  title: "An Empirical Study on Trivial Refactorings and Their Impact on Code Smells"
+  venue: "Journal of Systems and Software"
+  authors: "G. H. de Lima, D. S. Nunes, et al."
+
+- year: "2023"
+  title: "On the Usage of AI-based Code Suggestions in Real-world Projects"
+  venue: "Empirical Software Engineering"
+  authors: "F. A. Fontenele, G. H. de Lima, et al."
+
+- year: "2022"
+  title: "A Large-scale Study on the Impact of CI/CD Pipelines on Code Quality"
+  venue: "Information and Software Technology"
+  authors: "D. S. Nunes, F. A. Fontenele, et al."
