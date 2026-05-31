@@ -2037,6 +2037,7 @@ html.dark-mode .exp-degree-badge--bsc   { background: #2a1500; color: #e08040; }
 
 .award-badge--gold   { background: #fff5d6; color: #8a6000; }
 .award-badge--silver { background: #f0f0f4; color: #505060; }
+.award-badge--bronze { background: #fdf0e6; color: #7a4010; }
 .award-badge--blue   { background: #e8f0fe; color: #1a56a0; }
 .award-badge--green  { background: #e6f4ea; color: #1a7a40; }
 .award-badge--purple { background: #f0ebff; color: #6a35c0; }
@@ -2053,6 +2054,7 @@ html.dark-mode .award-sq-venue         { color: #888; }
 html.dark-mode .award-sq-paper         { color: #777; }
 html.dark-mode .award-badge--gold      { background: #2a1e00; color: #d4a020; }
 html.dark-mode .award-badge--silver    { background: #1e1e28; color: #a0a0c0; }
+html.dark-mode .award-badge--bronze    { background: #2a1800; color: #c07840; }
 html.dark-mode .award-badge--blue      { background: #1a2a40; color: #7ab0e8; }
 html.dark-mode .award-badge--green     { background: #0f2a1a; color: #50c080; }
 html.dark-mode .award-badge--purple    { background: #1e1535; color: #b080f0; }

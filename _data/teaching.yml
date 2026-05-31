@@ -7,40 +7,90 @@ institutions:
     courses:
       - code: "IT0062"
         title: "Software Engineering I"
-        level: "B.Sc. in Computer Engineering"
-        active: true
+        level: "B.Sc. level"
+        active: false
         semesters:
-          - label: "2022.2–Present"
-            current: true
+          - label: "2025.2"
+          - label: "2024.2"
+          - label: "2023.2"
+          - label: "2022.2"
           - label: "2022.1"
 
       - code: "IT0064 · IT0010"
         title: "Object Oriented Programming"
-        level: "B.Sc. in Computer Engineering"
-        active: true
+        level: "B.Sc. level"
+        active: false
         semesters:
-          - label: "2022.2–Present"
-            current: true
+          - label: "2025.2"
+          - label: "2023.2"
+          - label: "2022.2"
           - label: "2022.1"
 
       - code: "IT0072"
         title: "Systems Analysis and Design"
-        level: "B.Sc. in Computer Engineering"
-        active: true
+        level: "B.Sc. level"
+        active: false
         semesters:
-          - label: "2022.2–Present"
-            current: true
+          - label: "2025.2"
+          - label: "2024.1"
+          - label: "2022.2"
+
+      - code: "IT0088"
+        title: "Software Quality"
+        level: "B.Sc. level"
+        active: false
+        semesters:
+          - label: "2025.1"
+          - label: "2024.1"
+          - label: "2023.2"
+
+      - code: "IT0092"
+        title: "Software Engineering II"
+        level: "B.Sc. level"
+        active: false
+        semesters:
+          - label: "2024.2"
+          - label: "2024.1"
+
+      - code: "IT0065"
+        title: "Capstone Project I"
+        level: "B.Sc. level"
+        active: false
+        semesters:
+          - label: "2025.1"
+          - label: "2023.1"
+
+      - code: "IT0076"
+        title: "Capstone Project II"
+        level: "B.Sc. level"
+        active: false
+        semesters:
+          - label: "2024.1"
+
+      - code: "IT0071"
+        title: "Web Programming"
+        level: "B.Sc. level"
+        active: false
+        semesters:
+          - label: "2023.1"
+
+      - code: "IT0054"
+        title: "Scientific Research Methodology"
+        level: "B.Sc. level"
+        active: false
+        semesters:
+          - label: "2023.1"
 
       - code: "IT0055 · IT0004"
         title: "Programming Fundamentals"
-        level: "B.Sc. in Computer Engineering"
+        level: "B.Sc. level"
         active: false
         semesters:
           - label: "2021.2"
 
       - code: "IT0061"
         title: "Introduction to Computing"
-        level: "B.Sc. in Computer Engineering"
+        level: "B.Sc. level"
         active: false
         semesters:
           - label: "2021.2"

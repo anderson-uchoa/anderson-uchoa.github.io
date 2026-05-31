@@ -52,7 +52,7 @@ lang: en
 
 		{% for inst in institutions %}
 		<div class="content-section">
-			<h2 class="section-title"><i class="icon-graduation-cap" aria-hidden="true"></i> {{ inst.name | escape }}</h2>
+			<h2 class="section-title"><i class="icon-book" aria-hidden="true"></i> {{ inst.name | escape }}</h2>
 			<div class="teaching-grid">
 				{% for course in inst.courses %}
 				<div class="teaching-card{% unless course.active %} teaching-card--past{% endunless %}">

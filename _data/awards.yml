@@ -1,8 +1,27 @@
-# badge_type for best_papers: gold | silver
+# badge_type for best_papers: gold | silver | artifact
+# badge_type for competitions: gold | silver | bronze
 # badge_type for grants: travel | scholarship
 # paper: optional — title of the awarded paper (without quotes, added by template)
 
 best_papers:
+  - image: "/img/personal/cbsoft_2025.png"
+    image_alt: "CBSoft 2025"
+    badge_type: gold
+    title: "SBES 2025"
+    venue: "Brazilian Symposium on Software Engineering"
+    paper: "Diversity Matters: Perceived Inclusion and Discrimination by Brazilian Tech Professionals"
+    year: 2025
+    location: "Recife, Brazil"
+
+  - image: "/img/personal/cbsoft_2025.png"
+    image_alt: "CBSoft 2025"
+    badge_type: artifact
+    title: "CBSoft 2025"
+    venue: "Brazilian Conference on Software: Practice and Theory"
+    paper: "404: Civility Not Found? Evaluating the Effectiveness of Small Language Models in Detecting Incivility in GitHub Conversations"
+    year: 2025
+    location: "Recife, Brazil"
+
   - image: "/img/personal/cbsoft_2022.png"
     image_alt: "CBSoft 2022"
     badge_type: gold
@@ -29,7 +48,60 @@ best_papers:
     year: 2016
     location: "Natal, Brazil"
 
+competitions:
+  - image: "/img/personal/sbsi_2026.svg"
+    image_alt: "SBSI 2026"
+    badge_type: gold
+    title: "CTCCSI 2026"
+    venue: "VIII Undergraduate Thesis Contest in Information Systems (SBSI)"
+    paper: "Data Privacy in Software Practice: Brazilian Developers' Perspectives"
+    year: 2026
+    location: "Vitória, Brazil"
+
+  - image: "/img/personal/cbsoft_2025.png"
+    image_alt: "CBSoft 2025"
+    badge_type: gold
+    title: "CTD-ES 2025"
+    venue: "Software Engineering Doctoral & Master Theses Competition (CBSoft)"
+    paper: "Measuring Trivial and Non-Trivial Refactoring: A Predictive Analysis and Index Proposal (Co-Advisor)"
+    year: 2025
+    location: "Recife, Brazil"
+
+  - image: "/img/personal/sbqs_2025.png"
+    image_alt: "SBQS 2025"
+    badge_type: silver
+    title: "CTICQS 2025"
+    venue: "Software Quality Scientific Initiation Contest (SBQS)"
+    paper: "Exploring Code Clone Behavior in Modern Code Review"
+    year: 2025
+    location: "São José dos Campos, Brazil"
+
+  - image: "/img/personal/cbsoft_2025.png"
+    image_alt: "CBSoft 2025"
+    badge_type: bronze
+    title: "CTIC-ES 2025"
+    venue: "6th Undergraduate Research Competition at SBES (CBSoft)"
+    paper: "Unconscious Bias and Perceived Discrimination by Tech Professionals in Brazil"
+    year: 2025
+    location: "Recife, Brazil"
+
 grants:
+  - image: "/img/personal/funcap.png"
+    image_alt: "FUNCAP"
+    badge_type: scholarship
+    title: "FUNCAP Research Productivity Grant (BPI)"
+    project: "SP4Dev: Segurança e Privacidade em Software: Estratégias de Automação e Práticas de Desenvolvimento"
+    year: 2025
+    period: "2025 – Present"
+
+  - image: "/img/personal/funcap.png"
+    image_alt: "FUNCAP"
+    badge_type: scholarship
+    title: "FUNCAP Research Productivity Grant (BPI)"
+    project: "Modernização de Sistemas Legados: Suporte (Semi-)Automatizado e Práticas de Desenvolvimento"
+    year: 2023
+    period: "2023 – 2024"
+
   - image: "/img/personal/acm-sigsoft.jpg"
     image_alt: "ACM SIGSOFT"
     badge_type: travel
@@ -37,6 +109,13 @@ grants:
     venue: "Association for Computing Machinery (ACM)"
     year: 2019
     context: "ICSE 2019"
+
+  - image: "/img/personal/cnpq.png"
+    image_alt: "CNPq"
+    badge_type: scholarship
+    title: "CNPq Postdoctoral Fellowship Abroad"
+    venue: "National Council for Scientific and Technological Development"
+    period: "2026 – Present"
 
   - image: "/img/personal/cnpq.png"
     image_alt: "CNPq"

@@ -27,6 +27,11 @@ lang: en
 				<span class="award-summary-label">{{ t.awards.summary_papers }}</span>
 			</div>
 			<div class="award-summary-item">
+				<span class="award-summary-icon">🥇</span>
+				<span class="award-summary-count">{{ site.data.awards.competitions | size }}</span>
+				<span class="award-summary-label">{{ t.awards.summary_competitions }}</span>
+			</div>
+			<div class="award-summary-item">
 				<span class="award-summary-icon">💰</span>
 				<span class="award-summary-count">{{ site.data.awards.grants | size }}</span>
 				<span class="award-summary-label">{{ t.awards.summary_grants }}</span>
@@ -50,6 +55,8 @@ lang: en
 					<span class="award-badge award-badge--gold">{{ t.awards.badge_best }}</span>
 					{% elsif award.badge_type == 'silver' %}
 					<span class="award-badge award-badge--silver">{{ t.awards.badge_second }}</span>
+					{% elsif award.badge_type == 'artifact' %}
+					<span class="award-badge award-badge--gold">{{ t.awards.badge_artifact }}</span>
 					{% endif %}
 					<p class="award-sq-title">{{ award.title | escape }}</p>
 					<p class="award-sq-venue">{{ award.venue | escape }}</p>
@@ -59,6 +66,34 @@ lang: en
 					<p class="award-sq-paper"></p>
 					{% endif %}
 					<span class="award-sq-year">{{ award.year }} · {{ award.location | escape }}</span>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+
+		<div class="content-section">
+			<h2 class="section-title"><i class="icon-trophy" aria-hidden="true"></i> {{ t.awards.section_competitions }}</h2>
+			<div class="award-grid">
+				{% for comp in site.data.awards.competitions %}
+				<div class="award-card-sq">
+					<div class="award-card-sq-logo">
+						<img src="{{ comp.image }}" alt="{{ comp.image_alt | escape }}">
+					</div>
+					{% if comp.badge_type == 'gold' %}
+					<span class="award-badge award-badge--gold">{{ t.awards.badge_first_place }}</span>
+					{% elsif comp.badge_type == 'silver' %}
+					<span class="award-badge award-badge--silver">{{ t.awards.badge_second_place }}</span>
+					{% elsif comp.badge_type == 'bronze' %}
+					<span class="award-badge award-badge--bronze">{{ t.awards.badge_third_place }}</span>
+					{% endif %}
+					<p class="award-sq-title">{{ comp.title | escape }}</p>
+					<p class="award-sq-venue">{{ comp.venue | escape }}</p>
+					{% if comp.paper %}
+					<p class="award-sq-paper"><em>"{{ comp.paper | escape }}"</em></p>
+					{% else %}
+					<p class="award-sq-paper"></p>
+					{% endif %}
+					<span class="award-sq-year">{{ comp.year }} · {{ comp.location | escape }}</span>
 				</div>
 				{% endfor %}
 			</div>
@@ -78,9 +113,17 @@ lang: en
 					<span class="award-badge award-badge--green">{{ t.awards.badge_scholarship }}</span>
 					{% endif %}
 					<p class="award-sq-title">{{ grant.title | escape }}</p>
-					<p class="award-sq-venue">{{ grant.venue | escape }}</p>
+					{% if grant.venue %}<p class="award-sq-venue">{{ grant.venue | escape }}</p>{% endif %}
+					{% if grant.project %}
+					<p class="award-sq-paper"><em>"{{ grant.project | escape }}"</em></p>
+					{% else %}
 					<p class="award-sq-paper"></p>
+					{% endif %}
+					{% if grant.period %}
+					<span class="award-sq-year">{{ grant.period | escape }}</span>
+					{% else %}
 					<span class="award-sq-year">{{ grant.year }} · {{ grant.context | escape }}</span>
+					{% endif %}
 				</div>
 				{% endfor %}
 			</div>
