@@ -57,6 +57,8 @@ lang: en
 					<span class="award-badge award-badge--silver">{{ t.awards.badge_second }}</span>
 					{% elsif award.badge_type == 'artifact' %}
 					<span class="award-badge award-badge--gold">{{ t.awards.badge_artifact }}</span>
+					{% elsif award.badge_type == 'reviewer' %}
+					<span class="award-badge award-badge--purple">{{ t.awards.badge_reviewer }}</span>
 					{% endif %}
 					<p class="award-sq-title">{{ award.title | escape }}</p>
 					<p class="award-sq-venue">{{ award.venue | escape }}</p>
