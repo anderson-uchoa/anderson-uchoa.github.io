@@ -59,7 +59,7 @@ lang: en
 					</div>
 				</div>
 
-				<!-- Right: tagline + bio -->
+				<!-- Right: tagline + bio + interests + highlights -->
 				<div class="col-md-8 col-sm-7 home-hero-right">
 					<p class="home-about-label">
 						<i class="icon-user" aria-hidden="true"></i> {{ t.index.about_label }}
@@ -69,44 +69,34 @@ lang: en
 					<p class="home-bio">{{ t.index.bio_1 }}</p>
 					<p class="home-bio">{{ t.index.bio_2 }}</p>
 					<p class="home-bio">{{ t.index.bio_3 }}</p>
+					<div class="hero-sections-row">
+						<div class="hero-section-col">
+							<h3 class="hero-section-label"><i class="icon-beaker" aria-hidden="true"></i> {{ t.index.research_interests }}</h3>
+							<div class="research-tags">
+								{% for interest in site.data.profile.interests %}
+								<span class="research-tag">{{ interest | escape }}</span>
+								{% endfor %}
+							</div>
+						</div>
+						<div class="hero-section-col">
+							<h3 class="hero-section-label"><i class="icon-star" aria-hidden="true"></i> {{ t.index.highlights_title }}</h3>
+							{% for item in site.data.profile.highlights %}
+							<div class="highlight-item">
+								<span class="highlight-icon">{{ item.icon }}</span>
+								<div class="highlight-body">
+									<p class="highlight-title">{{ item.title }}{% if item.link %} <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.link_text | escape }}</a>{% endif %}</p>
+									<p class="highlight-sub">{{ item.sub | escape }}</p>
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- ── Research Interests + Highlights ───────────────────────────── -->
-		<div class="row home-mid-row">
-			<div class="col-md-7 col-sm-12">
-				<div class="home-card">
-					<h2 class="home-card-title">
-						<i class="icon-beaker" aria-hidden="true"></i> {{ t.index.research_interests }}
-					</h2>
-					<div class="research-tags">
-						{% for interest in site.data.profile.interests %}
-						<span class="research-tag">{{ interest | escape }}</span>
-						{% endfor %}
-					</div>
-				</div>
-			</div>
-			<div class="col-md-5 col-sm-12">
-				<div class="home-card">
-					<h2 class="home-card-title">
-						<i class="icon-star" aria-hidden="true"></i> {{ t.index.highlights_title }}
-					</h2>
-					{% for item in site.data.profile.highlights %}
-					<div class="highlight-item">
-						<span class="highlight-icon">{{ item.icon }}</span>
-						<div class="highlight-body">
-							<p class="highlight-title">{{ item.title }}{% if item.link %} <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.link_text | escape }}</a>{% endif %}</p>
-							<p class="highlight-sub">{{ item.sub | escape }}</p>
-						</div>
-					</div>
-					{% endfor %}
-				</div>
-			</div>
-		</div>
-
 		<!-- ── Selected Publications ─────────────────────────────────────── -->
-		<section class="home-pubs-section">
+		<section class="home-pubs-section" id="home-pubs-section">
 			<div class="home-pubs-header">
 				<h2 class="home-pubs-title">
 					<i class="icon-file-text" aria-hidden="true"></i> {{ t.index.selected_pubs }}
@@ -116,36 +106,42 @@ lang: en
 			<div class="home-pubs-grid">
 				{% for pub in site.data.featured_publications %}
 				<div class="home-pub-card">
-					<span class="home-pub-year">{{ pub.year | escape }}</span>
-					<p class="home-pub-title">{{ pub.title | escape }}</p>
+					<div class="home-pub-card-top">
+						<span class="home-pub-year">{{ pub.year | escape }}</span>
+						{% if pub.type == 'journal' %}
+						<span class="pub-badge pub-badge--journal">Journal</span>
+						{% elsif pub.type == 'conference' %}
+						<span class="pub-badge pub-badge--conf">Conference</span>
+						{% endif %}
+					</div>
+					<p class="home-pub-title">
+						{% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener noreferrer">{{ pub.title | escape }}</a>{% else %}{{ pub.title | escape }}{% endif %}
+					</p>
 					<p class="home-pub-venue">{{ pub.venue | escape }}</p>
 					<p class="home-pub-authors">{{ t.index.pubs_with }} {{ pub.authors | escape }}</p>
+					{% if pub.award %}
+					<p class="home-pub-award">🏆 {{ pub.award | escape }}</p>
+					{% endif %}
 				</div>
 				{% endfor %}
 			</div>
-			<div class="home-pubs-footer">
-				<a href="publication.html" class="home-pubs-all-link">{{ t.index.view_all_pubs }} &rarr;</a>
-			</div>
 		</section>
 
-		<!-- ── Academic Positions + Education (timeline) ─────────────────── -->
+		<!-- ── Academic Positions + Education (cards) ───────────────────── -->
 		<div class="row home-timeline-row" id="academic-background">
 			<div class="col-md-6">
 				<h2 class="section-title"><i class="icon-briefcase" aria-hidden="true"></i> {{ t.index.positions }}</h2>
-				<div class="home-timeline">
+				<div class="exp-cards">
 					{% for pos in site.data.profile.positions %}
-					<div class="home-tl-item">
-						<div class="home-tl-left">
-							<span class="home-tl-period">{{ pos.period | escape }}</span>
-							<span class="home-tl-dot"></span>
-						</div>
-						<div class="home-tl-logo">
+					<div class="exp-card">
+						<div class="exp-card-logo">
 							<img src="{{ pos.logo }}" alt="{{ pos.logo_alt | escape }}">
 						</div>
-						<div class="home-tl-body">
-							<p class="home-tl-title">{{ pos.title | escape }}</p>
-							<p class="home-tl-inst">{{ pos.institution | escape }}</p>
-							<p class="home-tl-sub">{{ pos.department | escape }} &middot; {{ pos.location | escape }}</p>
+						<div class="exp-card-body">
+							<div class="exp-card-meta"><span class="exp-card-period">{{ pos.period | escape }}</span></div>
+							<p class="exp-card-title">{{ pos.title | escape }}</p>
+							<p class="exp-card-institution">{{ pos.institution | escape }}</p>
+							<p class="exp-card-sub">{{ pos.department | escape }} &middot; {{ pos.location | escape }}</p>
 						</div>
 					</div>
 					{% endfor %}
@@ -154,21 +150,20 @@ lang: en
 
 			<div class="col-md-6">
 				<h2 class="section-title"><i class="icon-graduation-cap" aria-hidden="true"></i> {{ t.index.education }}</h2>
-				<div class="home-timeline">
+				<div class="exp-cards">
 					{% for edu in site.data.profile.education %}
-					<div class="home-tl-item">
-						<div class="home-tl-left">
-							<span class="home-tl-period">{{ edu.period | escape }}</span>
-							<span class="home-tl-dot"></span>
-						</div>
-						<div class="home-tl-logo">
+					<div class="exp-card">
+						<div class="exp-card-logo">
 							<img src="{{ edu.logo }}" alt="{{ edu.logo_alt | escape }}">
 						</div>
-						<div class="home-tl-body">
-							<span class="exp-degree-badge exp-degree-badge--{{ edu.degree }}">{{ edu.degree | upcase }}</span>
-							<p class="home-tl-title">{{ edu.field | escape }}</p>
-							<p class="home-tl-inst">{{ edu.institution | escape }} &middot; {{ t.index.gpa }} {{ edu.gpa }}</p>
-							<p class="home-tl-sub">{{ t.index.advisor }} <a href="{{ edu.advisor_url }}" target="_blank" rel="noopener noreferrer">{{ edu.advisor_name | escape }}</a></p>
+						<div class="exp-card-body">
+							<div class="exp-card-meta">
+								<span class="exp-card-period">{{ edu.period | escape }}</span>
+								<span class="exp-degree-badge exp-degree-badge--{{ edu.degree }}">{{ edu.degree | upcase }}</span>
+							</div>
+							<p class="exp-card-title">{{ edu.field | escape }}</p>
+							<p class="exp-card-institution">{{ edu.institution | escape }} &middot; {{ t.index.gpa }} {{ edu.gpa }}</p>
+							<p class="exp-card-sub">{{ t.index.advisor }} <a href="{{ edu.advisor_url }}" target="_blank" rel="noopener noreferrer">{{ edu.advisor_name | escape }}</a></p>
 						</div>
 					</div>
 					{% endfor %}
@@ -176,20 +171,44 @@ lang: en
 			</div>
 		</div>
 
+		<!-- ── CTA ───────────────────────────────────────────────────────── -->
+		<div class="collab-banner">
+			<div class="collab-banner-left">
+				<i class="icon-group collab-banner-icon" aria-hidden="true"></i>
+				<div>
+					<p class="collab-banner-title">{{ t.index.collab_title }}</p>
+					<p class="collab-banner-text">{{ t.index.collab_text }}</p>
+				</div>
+			</div>
+			<a href="mailto:andersonuchoa@ufc.br" class="collab-banner-btn">
+				<i class="icon-envelope" aria-hidden="true"></i> {{ t.index.collab_btn }}
+			</a>
+		</div>
+
 	</div>
 </main>
 
-<a href="#academic-background" id="scroll-indicator" aria-label="Scroll down">
+<a href="#home-pubs-section" id="scroll-indicator" aria-label="Scroll down">
 	<i class="icon-chevron-down" aria-hidden="true"></i>
 </a>
 
 <script>
 (function () {
 	var indicator = document.getElementById('scroll-indicator');
-	if (indicator) {
-		window.addEventListener('scroll', function () {
-			indicator.classList.toggle('hidden', window.scrollY > 80);
-		}, { passive: true });
+	var pubs = document.getElementById('home-pubs-section');
+	if (indicator && pubs) {
+		indicator.addEventListener('click', function (e) {
+			e.preventDefault();
+			pubs.scrollIntoView({ behavior: 'smooth' });
+		});
+		function updateArrow() {
+			if (window.scrollY < 50) {
+				indicator.classList.remove('hidden');
+			} else {
+				indicator.classList.toggle('hidden', pubs.getBoundingClientRect().top <= window.innerHeight * 0.9);
+			}
+		}
+		window.addEventListener('scroll', updateArrow, { passive: true });
 	}
 	document.querySelectorAll('.copy-email-btn').forEach(function (btn) {
 		btn.addEventListener('click', function () {

@@ -21,12 +21,16 @@ footer:
   get_in_touch: "Get in Touch"
   academic_profiles: "Academic Profiles"
   navigation: "Navigation"
+  tagline: "Software Engineering Researcher · UFC & NC State"
 
 index:
   about_label: "About Me"
-  tagline: "I study how software evolves and how people build better software—together with intelligent tools."
+  tagline: "I investigate how software systems evolve and how developers build better software with intelligent tools."
   research_interests: Research Interests
   highlights_title: Highlights
+  collab_title: "Let's collaborate!"
+  collab_text: "I am always interested in new research collaborations, visiting opportunities, and joint projects in Software Engineering and AI-assisted Development."
+  collab_btn: "Get in touch"
   selected_pubs: "Selected Publications"
   view_all_pubs: "View all publications"
   pubs_with: "with"
@@ -39,18 +43,17 @@ index:
     I am a Software Engineering researcher and Professor at the
     <a href="https://www.ufc.br/" target="_blank" rel="noopener noreferrer">Federal University of Ceará (UFC)</a>, Brazil,
     and Head of the <a href="https://reset-ufc.github.io/" target="_blank" rel="noopener noreferrer">RESET Lab</a>.
+    I am currently a Postdoctoral Researcher at <a href="https://www.ncsu.edu/" target="_blank" rel="noopener noreferrer">North Carolina State University</a>.
   bio_2: >
     My research focuses on empirical software engineering, software evolution and maintenance,
-    human factors, intelligent development tools, and the interplay between software systems
-    and data-intensive environments.
-    I earned my PhD in Software Engineering from <a href="https://www.puc-rio.br" target="_blank" rel="noopener noreferrer">PUC-Rio</a> (2021),
-    my MSc in Software Engineering from <a href="https://www.ufc.br/" target="_blank" rel="noopener noreferrer">UFC</a> (2016),
-    developed in cooperation with <a href="https://www.di.uniroma1.it/" target="_blank" rel="noopener noreferrer">Sapienza University of Rome</a>, Italy.
+    human factors, CI/CD security automation, and AI-assisted development.
+    I design empirical studies and tools to improve software quality, maintenance, and developer productivity.
   bio_3: >
-    I collaborate with researchers across Brazil and internationally,
-    including partnerships in the United Kingdom and ongoing research engagement with U.S. institutions.
-    I welcome international research collaborations, visiting opportunities,
-    and joint projects in software engineering and AI-supported development.
+    I hold a PhD and MSc in Software Engineering from the
+    <a href="https://www.puc-rio.br" target="_blank" rel="noopener noreferrer">Pontifical Catholic University of Rio de Janeiro</a>
+    and a BSc in Software Engineering from the
+    <a href="https://www.ufc.br/" target="_blank" rel="noopener noreferrer">Federal University of Ceará</a>,
+    developed in cooperation with <a href="https://www.di.uniroma1.it/" target="_blank" rel="noopener noreferrer">Sapienza University of Rome</a>, Italy.
 
 publication:
   title: Publications

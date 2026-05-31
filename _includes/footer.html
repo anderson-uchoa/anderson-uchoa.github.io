@@ -5,8 +5,16 @@
 <footer id="site-footer">
 	<div class="footer-inner">
 
-		<div class="footer-col">
-			<p class="footer-heading">{{ t.footer.get_in_touch }}</p>
+		<div class="footer-col footer-col--brand">
+			<p class="footer-name">Anderson Uchôa</p>
+			<p class="footer-tagline">{{ t.footer.tagline }}</p>
+			<p class="footer-inst-line">
+				<a href="https://reset-ufc.github.io/" target="_blank" rel="noopener noreferrer">RESET Lab</a>
+				&middot;
+				<a href="https://www.ufc.br/" target="_blank" rel="noopener noreferrer">UFC</a>
+				&middot;
+				<a href="https://www.ncsu.edu/" target="_blank" rel="noopener noreferrer">NC State</a>
+			</p>
 			<p class="footer-contact-item">
 				<i class="icon-envelope" aria-hidden="true"></i>&nbsp;andersonuchoa [at] ufc.br
 			</p>
@@ -16,30 +24,39 @@
 		</div>
 
 		<div class="footer-col">
-			<p class="footer-heading">{{ t.footer.academic_profiles }}</p>
+			<p class="footer-heading">{{ t.footer.navigation }}</p>
 			<div class="footer-badges">
-				<a href="https://scholar.google.com.br/citations?user=_bwg28kAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="footer-badge">Scholar</a>
-				<a href="https://orcid.org/0000-0002-6847-5569" target="_blank" rel="noopener noreferrer" class="footer-badge">ORCID</a>
-				<a href="https://dblp.uni-trier.de/search/publ?q=author:Anderson_G._Uch%C3%B4a:" target="_blank" rel="noopener noreferrer" class="footer-badge">DBLP</a>
-				<a href="https://www.linkedin.com/in/andersongnuchoa/" target="_blank" rel="noopener noreferrer" class="footer-badge">LinkedIn</a>
-				<a href="https://twitter.com/andersonguchoa" target="_blank" rel="noopener noreferrer" class="footer-badge">Twitter</a>
+				<a href="{{ cur_prefix }}/index.html" class="footer-badge"><i class="icon-home" aria-hidden="true"></i> {{ t.nav.about }}</a>
+				<a href="{{ cur_prefix }}/publication.html" class="footer-badge"><i class="icon-file-text" aria-hidden="true"></i> {{ t.nav.publications }}</a>
+				<a href="{{ cur_prefix }}/awards.html" class="footer-badge"><i class="icon-trophy" aria-hidden="true"></i> {{ t.nav.awards }}</a>
+				<a href="{{ cur_prefix }}/research.html" class="footer-badge"><i class="icon-beaker" aria-hidden="true"></i> {{ t.nav.research }}</a>
+				<a href="{{ cur_prefix }}/teaching.html" class="footer-badge"><i class="icon-book" aria-hidden="true"></i> {{ t.nav.teaching }}</a>
+				<a href="{{ cur_prefix }}/services.html" class="footer-badge"><i class="icon-group" aria-hidden="true"></i> {{ t.nav.services }}</a>
+				<a href="http://lattes.cnpq.br/3740664626762609" target="_blank" rel="noopener noreferrer" class="footer-badge"><i class="icon-external-link" aria-hidden="true"></i> {{ t.nav.cv }}</a>
 			</div>
 		</div>
 
 		<div class="footer-col">
-			<p class="footer-heading">{{ t.footer.navigation }}</p>
-			<div class="footer-nav-grid">
-				<ul class="footer-nav-list">
-					<li><a href="{{ cur_prefix }}/index.html">{{ t.nav.about }}</a></li>
-					<li><a href="{{ cur_prefix }}/publication.html">{{ t.nav.publications }}</a></li>
-					<li><a href="{{ cur_prefix }}/awards.html">{{ t.nav.awards }}</a></li>
-				</ul>
-				<ul class="footer-nav-list">
-					<li><a href="{{ cur_prefix }}/research.html">{{ t.nav.research }}</a></li>
-					<li><a href="{{ cur_prefix }}/teaching.html">{{ t.nav.teaching }}</a></li>
-					<li><a href="{{ cur_prefix }}/services.html">{{ t.nav.services }}</a></li>
-					<li><a href="http://lattes.cnpq.br/3740664626762609" target="_blank" rel="noopener noreferrer">{{ t.nav.cv }}</a></li>
-				</ul>
+			<p class="footer-heading">{{ t.footer.academic_profiles }}</p>
+			<div class="footer-badges">
+				<a href="https://scholar.google.com.br/citations?user=_bwg28kAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="footer-badge">
+					<i class="icon-star" aria-hidden="true"></i> Scholar
+				</a>
+				<a href="https://orcid.org/0000-0002-6847-5569" target="_blank" rel="noopener noreferrer" class="footer-badge">
+					<span class="orcid-social" style="font-size:10px;">iD</span> ORCID
+				</a>
+				<a href="https://dblp.uni-trier.de/search/publ?q=author:Anderson_G._Uch%C3%B4a:" target="_blank" rel="noopener noreferrer" class="footer-badge">
+					<i class="icon-book" aria-hidden="true"></i> DBLP
+				</a>
+				<a href="https://www.linkedin.com/in/andersongnuchoa/" target="_blank" rel="noopener noreferrer" class="footer-badge">
+					<i class="icon-linkedin" aria-hidden="true"></i> LinkedIn
+				</a>
+				<a href="https://twitter.com/andersonguchoa" target="_blank" rel="noopener noreferrer" class="footer-badge">
+					<i class="icon-twitter" aria-hidden="true"></i> Twitter
+				</a>
+				<a href="https://www.researchgate.net/profile/Anderson_Uchoa" target="_blank" rel="noopener noreferrer" class="footer-badge">
+					<i class="icon-group" aria-hidden="true"></i> ResearchGate
+				</a>
 			</div>
 		</div>
 

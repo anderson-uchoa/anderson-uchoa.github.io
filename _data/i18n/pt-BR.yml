@@ -21,12 +21,16 @@ footer:
   role_prof: "Professor de Engenharia de Software"
   built_with: "Construído com"
   hosted_on: "Hospedado no"
+  tagline: "Pesquisador em Engenharia de Software · UFC & NC State"
 
 index:
   about_label: "Sobre Mim"
-  tagline: "Estudo como o software evolui e como as pessoas desenvolvem software melhor—juntas, com ferramentas inteligentes."
+  tagline: "Investigo como o software evolui e como os desenvolvedores constroem sistemas melhores com ferramentas inteligentes."
   research_interests: Interesses de Pesquisa
   highlights_title: Destaques
+  collab_title: "Vamos colaborar!"
+  collab_text: "Estou sempre aberto a novas colaborações de pesquisa, oportunidades de visita e projetos conjuntos em Engenharia de Software e Desenvolvimento Assistido por IA."
+  collab_btn: "Entre em contato"
   selected_pubs: "Publicações Selecionadas"
   view_all_pubs: "Ver todas as publicações"
   pubs_with: "com"
