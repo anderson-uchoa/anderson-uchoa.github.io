@@ -6,6 +6,8 @@ nav:
   teaching: Ensino
   services: Serviços
   cv: CV Lattes
+  join: "Junte-se"
+  students: "Alunos"
 
 lang_switcher:
   label: "EN"

@@ -6,6 +6,8 @@ nav:
   teaching: Teaching
   services: Services
   cv: CV Lattes
+  join: "Join"
+  students: "Students"
 
 lang_switcher:
   label: "PT-BR"
