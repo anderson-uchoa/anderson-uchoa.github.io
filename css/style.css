@@ -1510,9 +1510,9 @@ body {
 }
 
 .nav-logo img {
-	height: 38px;
+	height: 36px;
 	width: auto;
-	filter: invert(1);
+	filter: invert(1) saturate(0) brightness(1.4);
 	mix-blend-mode: screen;
 	opacity: 0.9;
 }
