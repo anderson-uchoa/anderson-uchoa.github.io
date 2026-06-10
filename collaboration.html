@@ -1,0 +1,769 @@
+---
+layout: default
+title: "Collaboration Network — Anderson Uchôa | UFC & NC State"
+description: "Interactive co-authorship network built dynamically from Anderson Uchôa's publication list."
+keywords: "collaboration network, co-authorship, anderson uchoa, software engineering"
+canonical: "https://anderson-uchoa.github.io/collaboration.html"
+og_title: "Collaboration Network — Anderson Uchôa"
+og_description: "Interactive co-authorship graph built dynamically from the publications list."
+active: collaboration
+lang: en
+---
+{% assign _lang = page.lang | default: "en" %}{% assign t = site.data.i18n[_lang] %}
+
+<style>
+/* ── Collaboration Network page ─────────────────────────────────────────── */
+.collab-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0 16px;
+  flex-wrap: wrap;
+}
+.collab-control-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #555;
+}
+.collab-control-label input[type="range"] {
+  width: 120px;
+  accent-color: #1a56a0;
+}
+.collab-summary {
+  font-size: 13px;
+  color: #888;
+  flex: 1;
+  text-align: right;
+}
+#collab-wrapper {
+  position: relative;
+  background: #f5f8fd;
+  border: 1px solid #dce8f5;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  height: 620px;
+  margin-bottom: 18px;
+}
+#collab-svg { display: block; width: 100%; height: 100%; }
+.collab-link  { pointer-events: none; }
+.collab-node  { cursor: pointer; }
+.collab-node text { pointer-events: none; user-select: none; }
+
+/* Tooltip */
+#collab-tooltip {
+  position: absolute;
+  background: rgba(18,28,48,0.93);
+  color: #fff;
+  padding: 7px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.12s;
+  max-width: 260px;
+  line-height: 1.45;
+  z-index: 20;
+  white-space: nowrap;
+}
+#collab-tooltip strong { display: block; margin-bottom: 2px; }
+
+/* Details panel */
+#collab-details {
+  background: #f5f8fd;
+  border: 1px solid #d5e4f5;
+  border-radius: 8px;
+  padding: 16px 22px 18px;
+  margin-bottom: 20px;
+  display: none;
+}
+#collab-details.visible { display: block; }
+.detail-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  gap: 12px;
+}
+.detail-name { font-size: 17px; font-weight: 600; color: #1a2744; margin: 0; }
+.detail-close-btn {
+  background: none; border: none; font-size: 20px;
+  color: #aaa; cursor: pointer; padding: 0 2px; line-height: 1; flex-shrink: 0;
+}
+.detail-close-btn:hover { color: #333; }
+.detail-meta  { font-size: 13px; color: #666; margin: 0 0 10px; }
+.detail-papers {
+  list-style: none; padding: 0; margin: 0;
+  max-height: 220px; overflow-y: auto;
+}
+.detail-papers li {
+  padding: 5px 0; border-bottom: 1px solid #e4edf8;
+  font-size: 13px; color: #333; line-height: 1.45;
+}
+.detail-papers li:last-child { border-bottom: none; }
+.detail-year  { color: #999; font-size: 11px; margin-right: 6px; flex-shrink: 0; }
+.detail-title { color: #1a2744; font-weight: 500; }
+a.detail-title { color: #1a56a0; text-decoration: none; }
+a.detail-title:hover { text-decoration: underline; }
+.detail-venue {
+  font-size: 11.5px; color: #888; margin-top: 2px; padding-left: 2px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+/* Legend */
+.collab-legend { font-size: 13px; color: #666; padding: 10px 0 6px; }
+.legend-color-row {
+  display: flex; flex-wrap: wrap; gap: 16px;
+  align-items: center; margin-bottom: 14px;
+}
+.legend-item { display: flex; align-items: center; gap: 0; }
+.legend-dot {
+  display: inline-block; width: 11px; height: 11px;
+  border-radius: 50%; margin-right: 5px; flex-shrink: 0;
+}
+.legend-line-s {
+  display: inline-block; width: 22px; height: 3px;
+  background: #9ab3cc; border-radius: 2px;
+  margin-right: 5px; flex-shrink: 0; opacity: 0.75;
+}
+.legend-scale-row {
+  display: flex; flex-wrap: wrap; gap: 28px;
+  align-items: flex-end; border-top: 1px solid #e8eef6;
+  padding-top: 12px;
+}
+.legend-scale-block { }
+.legend-scale-label {
+  font-size: 11.5px; color: #888; margin-bottom: 2px;
+}
+.legend-scale-svg { display: block; overflow: visible; }
+.legend-hint {
+  font-size: 11.5px; color: #aaa; align-self: center; margin-left: auto;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #collab-wrapper { height: 440px; }
+  .collab-summary  { text-align: left; }
+}
+
+/* Dark mode */
+html.dark-mode #collab-wrapper   { background: #111c2c; border-color: #253448; }
+html.dark-mode #collab-details   { background: #141e2e; border-color: #253448; }
+html.dark-mode .detail-name      { color: #c8d8f0; }
+html.dark-mode .detail-meta      { color: #7a8faa; }
+html.dark-mode .detail-papers li { color: #b0c4dd; border-bottom-color: #1e2e44; }
+html.dark-mode .detail-year      { color: #607080; }
+html.dark-mode .detail-title     { color: #b8c8e0; }
+html.dark-mode a.detail-title    { color: #6898d0; }
+html.dark-mode .detail-venue     { color: #4a5e70; }
+html.dark-mode .collab-control-label { color: #aaa; }
+html.dark-mode .collab-summary   { color: #556; }
+html.dark-mode .collab-legend    { color: #778; }
+html.dark-mode .legend-scale-row  { border-top-color: #253448; }
+html.dark-mode .legend-scale-label { color: #556; }
+html.dark-mode .legend-hint       { color: #445; }
+html.dark-mode .legend-scale-svg text { fill: #778 !important; }
+</style>
+
+<main class="site-main">
+  <div class="site-container">
+
+    <section class="page-header-section">
+      <h1>{{ t.collaboration.title | default: "Collaboration Network" }}</h1>
+      <p>{{ t.collaboration.subtitle | default: "Co-authorship graph built dynamically from the publications list. Each node is a researcher; edges connect co-authors." }}</p>
+    </section>
+
+    <div class="content-section">
+
+      <!-- Loading -->
+      <div class="pub-loading" id="collab-loading">
+        <span class="pub-spinner"></span>
+        <span>{{ t.collaboration.loading | default: "Building network from publications&hellip;" }}</span>
+      </div>
+
+      <!-- Controls (shown after load) -->
+      <div class="collab-controls" id="collab-controls" style="display:none">
+        <label class="collab-control-label">
+          {{ t.collaboration.min_label | default: "Min. joint papers:" }}
+          <input type="range" id="min-collab-slider" min="1" max="10" value="1">
+          <strong id="min-collab-val">1</strong>
+        </label>
+        <span class="collab-summary" id="collab-summary"></span>
+      </div>
+
+      <!-- Graph -->
+      <div id="collab-wrapper">
+        <svg id="collab-svg"></svg>
+        <div id="collab-tooltip"></div>
+      </div>
+
+      <!-- Details panel (click a node) -->
+      <div id="collab-details">
+        <div class="detail-header">
+          <h3 class="detail-name" id="detail-name"></h3>
+          <button class="detail-close-btn" id="detail-close" aria-label="Close">×</button>
+        </div>
+        <p class="detail-meta" id="detail-meta"></p>
+        <ul class="detail-papers" id="detail-papers"></ul>
+      </div>
+
+      <!-- Legend -->
+      <div class="collab-legend">
+        <!-- Row 1 – colours -->
+        <div class="legend-color-row">
+          <div class="legend-item"><span class="legend-dot" style="background:#e05438;"></span>Anderson Uchôa</div>
+          <div class="legend-item"><span class="legend-dot" style="background:#1a56a0;"></span>{{ t.collaboration.legend_high | default: "≥10 papers" }}</div>
+          <div class="legend-item"><span class="legend-dot" style="background:#4a90d9;"></span>{{ t.collaboration.legend_mid | default: "3–9 papers" }}</div>
+          <div class="legend-item"><span class="legend-dot" style="background:#8eb8e5;"></span>{{ t.collaboration.legend_low | default: "1–2 papers" }}</div>
+          <div class="legend-item"><span class="legend-line-s"></span>{{ t.collaboration.legend_edge | default: "Co-authorship" }}</div>
+        </div>
+        <!-- Row 2 – visual scales -->
+        <div class="legend-scale-row">
+          <!-- Node size scale -->
+          <div class="legend-scale-block">
+            <div class="legend-scale-label">{{ t.collaboration.scale_size | default: "Node size = total papers" }}</div>
+            <svg class="legend-scale-svg" width="200" height="52" viewBox="0 0 200 52">
+              <circle cx="14"  cy="36" r="7"  fill="#8eb8e5" stroke="white" stroke-width="1.5"/>
+              <text   x="14"  y="50" text-anchor="middle" font-size="9" fill="#888" font-family="Lato,sans-serif">1–2</text>
+              <circle cx="52"  cy="31" r="11" fill="#4a90d9" stroke="white" stroke-width="1.5"/>
+              <text   x="52"  y="50" text-anchor="middle" font-size="9" fill="#888" font-family="Lato,sans-serif">3–9</text>
+              <circle cx="98"  cy="27" r="15" fill="#1a56a0" stroke="white" stroke-width="1.5"/>
+              <text   x="98"  y="50" text-anchor="middle" font-size="9" fill="#888" font-family="Lato,sans-serif">≥10</text>
+              <circle cx="152" cy="18" r="24" fill="#1a56a0" stroke="white" stroke-width="1.5" opacity="0.6"/>
+              <text   x="152" y="50" text-anchor="middle" font-size="9" fill="#888" font-family="Lato,sans-serif">max</text>
+            </svg>
+          </div>
+          <!-- Edge thickness scale -->
+          <div class="legend-scale-block">
+            <div class="legend-scale-label">{{ t.collaboration.scale_edge | default: "Line thickness = joint papers" }}</div>
+            <svg class="legend-scale-svg" width="175" height="52" viewBox="0 0 175 52">
+              <line x1="5"   y1="22" x2="48"  y2="22" stroke="#9ab3cc" stroke-width="1.9" stroke-linecap="round" opacity="0.75"/>
+              <text x="26"  y="40"  text-anchor="middle" font-size="9" fill="#888" font-family="Lato,sans-serif">1</text>
+              <line x1="68"  y1="22" x2="111" y2="22" stroke="#9ab3cc" stroke-width="3.3" stroke-linecap="round" opacity="0.75"/>
+              <text x="90"  y="40"  text-anchor="middle" font-size="9" fill="#888" font-family="Lato,sans-serif">3</text>
+              <line x1="131" y1="22" x2="174" y2="22" stroke="#9ab3cc" stroke-width="5.4" stroke-linecap="round" opacity="0.75"/>
+              <text x="153" y="40"  text-anchor="middle" font-size="9" fill="#888" font-family="Lato,sans-serif">8+</text>
+            </svg>
+          </div>
+          <!-- Interaction hint -->
+          <div class="legend-hint">{{ t.collaboration.hint | default: "Drag nodes · Scroll to zoom<br>Click a node for details" }}</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script>
+(function () {
+'use strict';
+
+/* ── LaTeX / BibTeX utilities ─────────────────────────────────────────────── */
+
+function decodeLatex(s) {
+  if (!s) return '';
+  // Handle {\^o}, {\'e}, {\"u}, {\~a}, {\`e}
+  s = s.replace(/\{\\([`'^"~])([a-zA-Z])\}/g, function (_, acc, c) {
+    var map = {"'": '́', '`': '̀', '^': '̂', '"': '̈', '~': '̃'};
+    return (c + (map[acc] || '')).normalize('NFC');
+  });
+  // Handle {\c{c}} (cedilla)
+  s = s.replace(/\{\\c\{([a-zA-Z])\}\}/g, function (_, c) {
+    return (c + '̧').normalize('NFC');
+  });
+  s = s.replace(/\\c\{([a-zA-Z])\}/g, function (_, c) {
+    return (c + '̧').normalize('NFC');
+  });
+  // Strip remaining LaTeX commands with braces
+  s = s.replace(/\\[a-zA-Z]+\{([^}]*)\}/g, '$1');
+  // Remove stray braces and backslashes
+  s = s.replace(/[{}\\]/g, '');
+  return s;
+}
+
+function extractField(entry, name) {
+  var re = new RegExp('\\b' + name + '\\s*=\\s*', 'i');
+  var m = re.exec(entry);
+  if (!m) return null;
+  var rest = entry.slice(m.index + m[0].length).trimStart();
+  if (rest[0] === '{') {
+    var depth = 0, out = '';
+    for (var i = 0; i < rest.length; i++) {
+      if (rest[i] === '{') depth++;
+      else if (rest[i] === '}') { depth--; if (depth === 0) break; }
+      if (depth > 0 && i > 0) out += rest[i];
+    }
+    return out;
+  }
+  if (rest[0] === '"') {
+    var end = rest.indexOf('"', 1);
+    return end > 0 ? rest.slice(1, end) : null;
+  }
+  var plain = rest.match(/^(\d+)/);
+  return plain ? plain[1] : null;
+}
+
+function parseBib(text) {
+  var entries = [];
+  var chunks = text.split(/(?=@\w+\s*[{(])/);
+  for (var i = 0; i < chunks.length; i++) {
+    var c = chunks[i].trim();
+    if (!c.startsWith('@')) continue;
+    if (/^@(comment|preamble|string)\b/i.test(c)) continue;
+    var aStr = extractField(c, 'author');
+    if (!aStr) continue;
+    var authors = aStr.split(/\s+and\s+/i)
+      .map(function (a) { return a.trim(); })
+      .filter(Boolean);
+    if (authors.length < 2) continue;
+    var title  = decodeLatex(extractField(c, 'title') || '').replace(/[{}]/g, '').trim();
+    var year   = parseInt(extractField(c, 'year') || '0', 10) || 0;
+    var venue  = decodeLatex(
+      (extractField(c, 'booktitle') || extractField(c, 'journal') || '')
+    ).replace(/[{}]/g, '').trim();
+    var rawUrl = (extractField(c, 'url') || '').replace(/[{}]/g, '').trim();
+    var rawDoi = (extractField(c, 'doi') || '').replace(/[{}]/g, '').trim();
+    var link   = rawUrl || (rawDoi ? (rawDoi.startsWith('http') ? rawDoi : 'https://doi.org/' + rawDoi) : '');
+    entries.push({ authors: authors, title: title, year: year, venue: venue, link: link });
+  }
+  return entries;
+}
+
+/* ── Name normalisation ───────────────────────────────────────────────────── */
+
+function normalizeAuthor(raw) {
+  var s = decodeLatex(raw).trim();
+  if (s.indexOf(',') !== -1) {
+    var parts = s.split(',');
+    s = parts.slice(1).join(' ').trim() + ' ' + parts[0].trim();
+  }
+  return s.replace(/\s+/g, ' ').trim();
+}
+
+function stripDiacritics(s) {
+  return s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, '');
+}
+
+function authorKey(display) {
+  var parts    = display.split(/\s+/);
+  var last     = stripDiacritics(parts[parts.length - 1].toLowerCase());
+  var first    = stripDiacritics(parts[0].replace(/\./g, '').toLowerCase());
+  return last + '_' + (first || '?');
+}
+
+function nameScore(n) {
+  var parts     = n.split(/\s+/);
+  var fullWords = parts.filter(function (p) { return p.length > 2 && !p.endsWith('.'); }).length;
+  var initials  = parts.filter(function (p) { return p.endsWith('.') || p.length === 1; }).length;
+  return fullWords * 10 - initials;
+}
+
+/* ── Graph building ───────────────────────────────────────────────────────── */
+
+function buildGraph(entries) {
+  var nodeMap = {}, edgeMap = {}, papers = [], usedTitles = {};
+
+  entries.forEach(function (entry) {
+    if (!entry.title || usedTitles[entry.title]) return;
+    usedTitles[entry.title] = true;
+
+    var pi = papers.length;
+    papers.push({ title: entry.title, year: entry.year, venue: entry.venue, link: entry.link });
+
+    var keys = [];
+    entry.authors.forEach(function (raw) {
+      var display = normalizeAuthor(raw);
+      var key     = authorKey(display);
+      if (!nodeMap[key]) {
+        nodeMap[key] = { id: key, display: display, paperIndices: [] };
+      } else {
+        var ex = nodeMap[key];
+        if (nameScore(display) > nameScore(ex.display) ||
+            (nameScore(display) === nameScore(ex.display) && display.length > ex.display.length)) {
+          ex.display = display;
+        }
+      }
+      nodeMap[key].paperIndices.push(pi);
+      keys.push(key);
+    });
+
+    for (var a = 0; a < keys.length; a++) {
+      for (var b = a + 1; b < keys.length; b++) {
+        var ek = [keys[a], keys[b]].sort().join('|');
+        if (!edgeMap[ek]) edgeMap[ek] = { sourceId: keys[a], targetId: keys[b], paperIndices: [] };
+        edgeMap[ek].paperIndices.push(pi);
+      }
+    }
+  });
+
+  // ── Merge initial-only nodes (e.g. "A. Garcia") into full-name nodes ──
+  var toMerge = {};
+  Object.keys(nodeMap).forEach(function (k) {
+    var sep   = k.indexOf('_');
+    var last  = k.slice(0, sep);
+    var first = k.slice(sep + 1);
+    if (first.length !== 1) return;          // not a single-letter key
+    Object.keys(nodeMap).some(function (fk) {
+      if (fk === k) return false;
+      var fsep = fk.indexOf('_');
+      if (fk.slice(0, fsep) !== last) return false;
+      var ff = fk.slice(fsep + 1);
+      if (ff.length > 1 && ff.charAt(0) === first) { toMerge[k] = fk; return true; }
+      return false;
+    });
+  });
+  Object.keys(toMerge).forEach(function (initKey) {
+    var fullKey  = toMerge[initKey];
+    if (!nodeMap[initKey] || !nodeMap[fullKey]) return;
+    var initNode = nodeMap[initKey];
+    var fullNode = nodeMap[fullKey];
+    initNode.paperIndices.forEach(function (pi) {
+      if (fullNode.paperIndices.indexOf(pi) < 0) fullNode.paperIndices.push(pi);
+    });
+    Object.keys(edgeMap).slice().forEach(function (ek) {
+      var e = edgeMap[ek];
+      if (e.sourceId !== initKey && e.targetId !== initKey) return;
+      var src = e.sourceId === initKey ? fullKey : e.sourceId;
+      var tgt = e.targetId === initKey ? fullKey : e.targetId;
+      delete edgeMap[ek];
+      if (src === tgt) return;
+      var nk = [src, tgt].sort().join('|');
+      if (!edgeMap[nk]) {
+        edgeMap[nk] = { sourceId: src, targetId: tgt, paperIndices: e.paperIndices.slice() };
+      } else {
+        e.paperIndices.forEach(function (pi) {
+          if (edgeMap[nk].paperIndices.indexOf(pi) < 0) edgeMap[nk].paperIndices.push(pi);
+        });
+      }
+    });
+    delete nodeMap[initKey];
+  });
+
+  // Deduplicate paper indices
+  function dedup(arr) { return arr.filter(function (v, i) { return arr.indexOf(v) === i; }); }
+  Object.keys(nodeMap).forEach(function (k) { nodeMap[k].paperIndices = dedup(nodeMap[k].paperIndices); });
+  Object.keys(edgeMap).forEach(function (k) { edgeMap[k].paperIndices = dedup(edgeMap[k].paperIndices); });
+
+  return {
+    nodes: Object.values(nodeMap),
+    edges: Object.values(edgeMap),
+    papers: papers
+  };
+}
+
+/* ── D3 visualisation ────────────────────────────────────────────────────── */
+
+var MAIN_KEY  = authorKey('Anderson Uchôa');
+var graph     = null;
+var sim       = null;
+var svgEl, gContainer, gLinks, gNodes;
+var savedPos  = {};
+
+function nRadius(d) { return Math.max(7, Math.min(24, Math.sqrt(d.paperIndices.length) * 4.8)); }
+
+function nColor(d) {
+  if (d.id === MAIN_KEY) return '#e05438';
+  var n = d.paperIndices.length;
+  if (n >= 10) return '#1a56a0';
+  if (n >= 3)  return '#4a90d9';
+  return '#8eb8e5';
+}
+
+function initSvg() {
+  var wrap = document.getElementById('collab-wrapper');
+  var W = wrap.clientWidth  || 900;
+  var H = wrap.clientHeight || 620;
+
+  svgEl = d3.select('#collab-svg').attr('viewBox', '0 0 ' + W + ' ' + H);
+
+  var zoom = d3.zoom().scaleExtent([0.1, 8]).on('zoom', function (ev) {
+    gContainer.attr('transform', ev.transform);
+  });
+  svgEl.call(zoom);
+
+  gContainer = svgEl.append('g');
+  gLinks     = gContainer.append('g').attr('class', 'link-layer');
+  gNodes     = gContainer.append('g').attr('class', 'node-layer');
+
+  sim = d3.forceSimulation()
+    .force('link',    d3.forceLink().id(function (d) { return d.id; }).distance(85))
+    .force('charge',  d3.forceManyBody().strength(-280))
+    .force('center',  d3.forceCenter(W / 2, H / 2))
+    .force('collide', d3.forceCollide(function (d) { return nRadius(d) + 9; }));
+}
+
+function updateViz(minCollab) {
+  if (!graph) return;
+
+  var filtEdges = graph.edges.filter(function (e) {
+    return e.paperIndices.length >= minCollab;
+  });
+
+  var activeIds = new Set([MAIN_KEY]);
+  filtEdges.forEach(function (e) { activeIds.add(e.sourceId); activeIds.add(e.targetId); });
+
+  var filtNodes = graph.nodes.filter(function (n) { return activeIds.has(n.id); });
+
+  // Update summary text
+  document.getElementById('collab-summary').textContent =
+    filtNodes.length + ' researchers · ' + filtEdges.length + ' connections';
+
+  // Save current positions from running simulation
+  sim.nodes().forEach(function (n) { savedPos[n.id] = { x: n.x, y: n.y }; });
+
+  // Build working node/edge copies (so D3 can mutate them)
+  var wrap = document.getElementById('collab-wrapper');
+  var W = wrap.clientWidth || 900, H = wrap.clientHeight || 620;
+
+  var wNodes = filtNodes.map(function (n) {
+    var p = savedPos[n.id];
+    return Object.assign({}, n, p
+      ? { x: p.x, y: p.y }
+      : { x: W / 2 + (Math.random() - .5) * 80, y: H / 2 + (Math.random() - .5) * 80 });
+  });
+  var byId = {};
+  wNodes.forEach(function (n) { byId[n.id] = n; });
+
+  var wLinks = filtEdges.map(function (e) {
+    return Object.assign({}, e, { source: byId[e.sourceId] || e.sourceId,
+                                   target: byId[e.targetId] || e.targetId });
+  });
+
+  /* ── links ── */
+  var link = gLinks.selectAll('line.collab-link')
+    .data(wLinks, function (d) { return [d.sourceId, d.targetId].sort().join('|'); });
+  link.exit().remove();
+  link = link.enter().append('line').attr('class', 'collab-link').merge(link)
+    .attr('stroke', '#9ab3cc')
+    .attr('stroke-opacity', 0.55)
+    .attr('stroke-width', function (d) { return Math.max(1, Math.sqrt(d.paperIndices.length) * 1.9); });
+
+  /* ── nodes ── */
+  var node = gNodes.selectAll('g.collab-node')
+    .data(wNodes, function (d) { return d.id; });
+  node.exit().remove();
+
+  var nodeEnter = node.enter().append('g').attr('class', 'collab-node')
+    .call(d3.drag()
+      .on('start', function (ev, d) {
+        if (!ev.active) sim.alphaTarget(0.3).restart();
+        d.fx = d.x; d.fy = d.y;
+      })
+      .on('drag',  function (ev, d) { d.fx = ev.x; d.fy = ev.y; })
+      .on('end',   function (ev, d) {
+        if (!ev.active) sim.alphaTarget(0);
+        d.fx = null; d.fy = null;
+      }))
+    .on('mouseover', onHoverIn)
+    .on('mousemove',  onHoverMove)
+    .on('mouseout',   onHoverOut)
+    .on('click',      onNodeClick);
+
+  nodeEnter.append('circle');
+  nodeEnter.append('text').attr('class', 'nlabel-first');
+  nodeEnter.append('text').attr('class', 'nlabel-last');
+
+  node = nodeEnter.merge(node);
+
+  node.select('circle')
+    .attr('r',            nRadius)
+    .attr('fill',         nColor)
+    .attr('stroke',       '#fff')
+    .attr('stroke-width', function (d) { return d.id === MAIN_KEY ? 2.5 : 1.5; });
+
+  node.select('.nlabel-first')
+    .text(function (d) {
+      var p = d.display.split(' ');
+      return p.length > 1 ? p[0] : '';
+    })
+    .attr('dy',           function (d) { return nRadius(d) + 12; })
+    .attr('text-anchor',  'middle')
+    .attr('font-size',    '9.5px')
+    .attr('fill',         '#445566')
+    .attr('font-family',  'Lato, sans-serif');
+
+  node.select('.nlabel-last')
+    .text(function (d) {
+      var p = d.display.split(' ');
+      return p[p.length - 1];
+    })
+    .attr('dy',           function (d) { return nRadius(d) + 23; })
+    .attr('text-anchor',  'middle')
+    .attr('font-size',    '9.5px')
+    .attr('fill',         '#445566')
+    .attr('font-family',  'Lato, sans-serif');
+
+  /* ── simulation ── */
+  sim.nodes(wNodes);
+  sim.force('link').links(wLinks);
+  sim.alpha(0.4).restart();
+
+  sim.on('tick', function () {
+    link
+      .attr('x1', function (d) { return d.source.x; })
+      .attr('y1', function (d) { return d.source.y; })
+      .attr('x2', function (d) { return d.target.x; })
+      .attr('y2', function (d) { return d.target.y; });
+    node.attr('transform', function (d) {
+      return 'translate(' + d.x + ',' + d.y + ')';
+    });
+  });
+}
+
+/* ── Tooltip ──────────────────────────────────────────────────────────────── */
+
+var tipEl = document.getElementById('collab-tooltip');
+var wrapEl = document.getElementById('collab-wrapper');
+
+function onHoverIn(ev, d) {
+  // Dim everything first
+  gNodes.selectAll('g.collab-node').attr('opacity', 0.25);
+  gLinks.selectAll('line.collab-link').attr('stroke-opacity', 0.08);
+
+  // Brighten this node's neighbours
+  var nbSet = new Set([d.id]);
+  gLinks.selectAll('line.collab-link').each(function (l) {
+    var sId = l.source.id || l.source;
+    var tId = l.target.id || l.target;
+    if (sId === d.id || tId === d.id) {
+      nbSet.add(sId); nbSet.add(tId);
+      d3.select(this).attr('stroke-opacity', 0.7);
+    }
+  });
+  gNodes.selectAll('g.collab-node').filter(function (n) {
+    return nbSet.has(n.id);
+  }).attr('opacity', 1);
+
+  var n = d.paperIndices.length;
+  tipEl.innerHTML = '<strong>' + d.display + '</strong>' +
+    n + ' paper' + (n !== 1 ? 's' : '');
+  tipEl.style.opacity = '1';
+  onHoverMove(ev);
+}
+
+function onHoverMove(ev) {
+  var rect = wrapEl.getBoundingClientRect();
+  tipEl.style.left = (ev.clientX - rect.left + 14) + 'px';
+  tipEl.style.top  = (ev.clientY - rect.top  - 36) + 'px';
+}
+
+function onHoverOut() {
+  tipEl.style.opacity = '0';
+  gNodes.selectAll('g.collab-node').attr('opacity', 1);
+  gLinks.selectAll('line.collab-link').attr('stroke-opacity', 0.55);
+}
+
+/* ── Details panel ────────────────────────────────────────────────────────── */
+
+function onNodeClick(ev, d) {
+  ev.stopPropagation();
+  var panel  = document.getElementById('collab-details');
+  var nameEl = document.getElementById('detail-name');
+  var metaEl = document.getElementById('detail-meta');
+  var listEl = document.getElementById('detail-papers');
+
+  nameEl.textContent = d.display;
+  var n = d.paperIndices.length;
+  var isMain = d.id === MAIN_KEY;
+  metaEl.textContent = isMain
+    ? n + ' publication' + (n !== 1 ? 's' : '') + ' in this list'
+    : n + ' joint paper' + (n !== 1 ? 's' : '') + ' with Anderson Uchôa';
+
+  var sorted = d.paperIndices.slice().sort(function (a, b) {
+    return (graph.papers[b].year || 0) - (graph.papers[a].year || 0);
+  });
+
+  listEl.innerHTML = '';
+  sorted.forEach(function (pi) {
+    var p = graph.papers[pi];
+    if (!p) return;
+    var li = document.createElement('li');
+
+    // Year badge
+    var yr = document.createElement('span');
+    yr.className = 'detail-year';
+    yr.textContent = p.year || '—';
+
+    // Title — link if URL available
+    var titleEl = document.createElement(p.link ? 'a' : 'span');
+    titleEl.className = 'detail-title';
+    titleEl.textContent = p.title;
+    if (p.link) {
+      titleEl.href = p.link;
+      titleEl.target = '_blank';
+      titleEl.rel = 'noopener noreferrer';
+    }
+
+    var firstLine = document.createElement('div');
+    firstLine.style.display = 'flex';
+    firstLine.style.alignItems = 'baseline';
+    firstLine.style.gap = '4px';
+    firstLine.appendChild(yr);
+    firstLine.appendChild(titleEl);
+    li.appendChild(firstLine);
+
+    // Venue
+    if (p.venue) {
+      var venueEl = document.createElement('div');
+      venueEl.className = 'detail-venue';
+      venueEl.textContent = p.venue;
+      li.appendChild(venueEl);
+    }
+
+    listEl.appendChild(li);
+  });
+
+  panel.classList.add('visible');
+  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+document.getElementById('detail-close').addEventListener('click', function () {
+  document.getElementById('collab-details').classList.remove('visible');
+});
+
+/* ── Slider ───────────────────────────────────────────────────────────────── */
+
+var slider    = document.getElementById('min-collab-slider');
+var sliderLbl = document.getElementById('min-collab-val');
+
+slider.addEventListener('input', function () {
+  sliderLbl.textContent = this.value;
+  updateViz(parseInt(this.value, 10));
+});
+
+/* ── Bootstrap ────────────────────────────────────────────────────────────── */
+
+var BIB_URL = '{{ site.baseurl | default: "" }}/publications/UchoaPapers.bib';
+
+fetch(BIB_URL)
+  .then(function (r) {
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.text();
+  })
+  .then(function (text) {
+    var entries = parseBib(text);
+    graph       = buildGraph(entries);
+
+    // Set slider max to the largest edge weight (capped at 15)
+    var maxW = graph.edges.reduce(function (mx, e) {
+      return Math.max(mx, e.paperIndices.length);
+    }, 1);
+    slider.max = Math.min(15, maxW);
+
+    document.getElementById('collab-loading').style.display  = 'none';
+    document.getElementById('collab-controls').style.display = 'flex';
+
+    initSvg();
+    updateViz(1);
+  })
+  .catch(function (err) {
+    document.getElementById('collab-loading').innerHTML =
+      '<span style="color:#c33">Could not load publications: ' + err.message + '</span>';
+  });
+
+}());
+</script>

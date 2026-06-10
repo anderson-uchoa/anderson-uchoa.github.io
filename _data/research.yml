@@ -2,6 +2,222 @@
 # coordinator_url / coordinator_institution: optional link for coordinator's institution
 # partners_link / partners_link_text: optional link appended to the partners paragraph
 
+- title: "Resource Provider Framework"
+  status: ongoing
+  period: "2026 – Present"
+  coordinator: "Dr. Lincoln Rocha (UFC)"
+  sponsor: "DELL Computadores do Brasil"
+  tags: [infrastructure management, resource provider, observability, cloud computing]
+  partners: >-
+    Anderson Uchôa (UFC, Brasil), Lincoln Rocha (UFC, Brasil),
+    Bruno Gois, and Marcos de Oliveira.
+  description:
+    - >-
+      This project aims to research and develop a base framework for a Resource Provider
+      Framework capable of standardizing and orchestrating infrastructure management operations
+      in corporate environments. The proposal seeks to replace the dependency on fragmented scripts
+      with a reusable, scalable, and observable layer that can translate generic management
+      intentions into specific actions on computing, storage, and network resources.
+    - >-
+      The project intends to develop: (i) a base architecture for resource providers with
+      standardized and idempotent operations; (ii) compliance, versioning, and asynchronous
+      execution mechanisms to support long-running tasks; (iii) telemetry and observability
+      interfaces aligned with modern standards; and (iv) an MVP with a simulated provider and
+      demonstration application to validate the proposed model.
+
+- title: "LLM-Assisted Refactoring: A Human-in-the-Loop Approach for Sustainable Software Quality"
+  status: ongoing
+  period: "2026 – Present"
+  coordinator: "Dr. Anderson Uchôa (UFC)"
+  sponsor: "CNPq"
+  tags: [LLMs, refactoring, human-in-the-loop, code quality, AI-assisted development]
+  partners: >-
+    Anderson Uchôa (UFC, Brasil), Rohit Gheyi (UFCG, Brasil),
+    and Wesley K. G. Assunção (NC State, EUA).
+  description:
+    - >-
+      Recent advances in Large Language Models (LLMs) have revolutionized the automation of
+      software engineering tasks, especially in code generation and refactoring suggestions.
+      However, despite their potential, the direct use of these tools in real development
+      workflows still faces important limitations: lack of sensitivity to the architectural
+      context of the system, risks of introducing semantic regressions, and low transparency
+      in model decisions.
+    - >-
+      This project aims to investigate, develop, and evaluate an LLM-assisted refactoring
+      approach centered on Human-in-the-Loop (HITL) cycles, in which the developer acts as a
+      critical validation and refinement agent for automatically generated suggestions. The
+      research includes: (i) mapping existing approaches for LLM-based refactoring and HITL
+      collaborative workflows; (ii) context-sensitive prompt engineering; (iii) development of a
+      functional prototype with IDE integration supporting classic smells such as Long Method,
+      God Class, and Feature Envy; (iv) execution of HITL cycles with structured human feedback
+      collection; and (v) empirical study on open-source repositories comparing generated
+      refactorings with real developer history.
+
+- title: "SP4Dev — Security and Privacy in Software: Automation Strategies and Development Practices"
+  status: ongoing
+  period: "2025 – Present"
+  coordinator: "Dr. Anderson Uchôa (UFC)"
+  sponsor: "FUNCAP"
+  tags: [security, privacy, CI/CD, continuous integration, software development]
+  partners: >-
+    Anderson Uchôa (UFC, Brasil), Alessandro Garcia (PUC-Rio, Brasil),
+    Matheus Paixão (UECE, Brasil), Juliana Alves Pereira (PUC-Rio, Brasil),
+    João Henrique Correa (UFC, Brasil), Edna Dias Canedo (UnB, Brasil),
+    and Sávio Freire (IFCE, Brasil).
+  description:
+    - >-
+      Security in digital public systems is pervasive in the digital transformation and adoption
+      of new technologies. With the growing complexity of these systems, digital security presents
+      itself as a central concern. Legacy systems, frequently based on outdated technologies,
+      make it difficult to adopt modern privacy and security practices. The lack of effective
+      tools to identify and correct vulnerabilities in complex systems puts the integrity and
+      confidentiality of data at risk.
+    - >-
+      The SP4Dev project aims to: (i) survey the most widely used tools for detecting and
+      mitigating vulnerabilities; (ii) investigate security automation in CI pipelines, exploring
+      tool integration and developer perceptions in platforms like Travis CI and GitHub Actions;
+      (iii) understand security practices adopted by developers, identifying challenges and factors
+      influencing their adoption; and (iv) propose an automated technique to recommend security
+      practices in CI configuration files, leveraging GitHub Actions, repository mining, and
+      static analysis.
+
+- title: "Applications of LLMs in Software Engineering"
+  status: ongoing
+  period: "2025 – Present"
+  coordinator: "Dr. Marco Tulio Valente (UFMG)"
+  sponsor: "CNPq"
+  tags: [LLMs, code generation, software modernization, code quality, AI]
+  partners: >-
+    Anderson Uchôa (UFC, Brasil), Carla Bezerra (UFC, Brasil),
+    Marco Tulio de Oliveira Valente (UFMG, Brasil), João Eduardo Montandon de Araujo Filho (UFMG, Brasil),
+    Andre Hora (UFMG, Brasil), Luciana Silva (IFMG, Brasil),
+    Guilherme Avelino (UFPI, Brasil), and Pedro de Alcântara dos Santos Neto (UFPI, Brasil).
+  description:
+    - >-
+      Recent advances in Generative AI and Large Language Models (LLMs) raise important questions
+      about their impact on software engineering. Studies indicate significant adoption of these
+      technologies by software developers, making them no longer a promise but a technology that
+      has rapidly gained practical adoption. However, more sophisticated and advanced use cases
+      where LLMs are applied in software engineering remain less obvious and more challenging.
+    - >-
+      This project explores LLM applications beyond trivial code generation contexts. Specifically,
+      three classic software engineering challenges are investigated: (1) application generation,
+      including full applications from UI to data repositories considering functional and
+      non-functional requirements such as performance, usability, and security; (2) modernization
+      of APIs and programming languages, exploring LLM support for activities that ensure the
+      longevity of software systems; and (3) code quality improvement, applying LLMs to identify
+      and assess design and comprehension problems, including those in domain-specific systems
+      such as functional languages, smart contracts, and AI systems.
+
+- title: "CREPSI — Reference Center in Signal Processing, Information, and Intelligent Systems"
+  status: ongoing
+  period: "2025 – Present"
+  coordinator: "Dr. André Lima Férrer de Almeida (UFC)"
+  sponsor: "MCTI / FINEP"
+  tags: [signal processing, AI, high-performance computing, infrastructure, intelligent systems]
+  partners: >-
+    Anderson Uchôa (UFC, Brasil), João Henrique Correa (UFC, Brasil),
+    André Lima Férrer de Almeida (UFC, Brasil), Charles Casimiro Cavalcante (UFC, Brasil),
+    Francisco Rafael Marques Lima (UFC, Brasil), Guilherme de Alencar Barreto (UFC, Brasil),
+    Kléber Zuza Nóbrega (UFC, Brasil), Francisco Rodrigo Porto Cavalcanti (UFC, Brasil),
+    Rubens Viana Ramos (UFC, Brasil), Tarcisio Ferreira Maciel (UFC, Brasil),
+    Victor Farias Monteiro (UFC, Brasil), Walter da Cruz Freitas Júnior (UFC, Brasil),
+    Yuri Carvalho Barbosa Silva (UFC, Brasil), Eduardo Sávio Passos Rodrigues Martins (UFC, Brasil),
+    and Julio César Santos dos Anjos (UFC, Brasil).
+  description:
+    - >-
+      This project aims to deploy new high-performance computational infrastructure for
+      cutting-edge scientific and technological research at UFC related to signal processing
+      in airborne monitoring, as well as the development of platforms, intelligent systems,
+      radiofrequency systems, and instrumentation, including AI-based applications. It also
+      covers transversal themes such as environmental monitoring and surveillance, enabling
+      scenario simulation and large-scale AI model construction.
+    - >-
+      The project aims to support research development with young faculty researchers at UFC
+      interior campuses, creating an attractive and stimulating environment for faculty and
+      students from undergraduate to graduate levels. Direct results include the qualified
+      training of human resources, young researchers, and entrepreneurs, enabling their
+      retention in the Northern region of Ceará, Piauí, Alagoas, and the Center-West region.
+
+- title: "Learning Software Variability from Software Evolution"
+  status: ongoing
+  period: "2024 – Present"
+  coordinator: "Dr. Juliana Alves Pereira (PUC-Rio)"
+  sponsor: "CAPES / COFECUB"
+  tags: [software variability, machine learning, software evolution, recommendation system]
+  partners: >-
+    Anderson Uchôa (UFC, Brasil), Alessandro Garcia (PUC-Rio, Brasil),
+    Wesley Klewerton Guez Assunção (NC State, EUA), Juliana Alves Pereira (PUC-Rio, Brasil),
+    Eduardo Sany Laber (PUC-Rio, Brasil), Mathieu Acher (Université Rennes, France),
+    Djamel Khelladi (INRIA / Université Rennes, France), and Paul Temple (Université de Namur, Belgium).
+  description:
+    - >-
+      Software variability refers to the ability to customize a software system to meet different
+      usage requirements. However, understanding and managing this variability is challenging due
+      to its dynamic and constantly evolving nature. This project proposes an innovative approach
+      based on machine learning to understand software variability through its evolutionary analysis.
+    - >-
+      Through the collection and analysis of evolutionary data from software systems, the project
+      seeks to identify patterns and trends that can help understand how variability manifests over
+      time. The project involves adapting existing algorithms and methods for variability analysis
+      and aims to build a recommendation system that will provide insights and suggestions to assist
+      developers in decision-making during software maintenance and evolution. An empirical
+      evaluation phase will include controlled experiments to collect quantitative and qualitative
+      data about the proposed solutions.
+
+- title: "Building a Non-Intrusive Bot to Monitor Incivility Traces in Pull Request Conversations"
+  status: ongoing
+  period: "2024 – Present"
+  coordinator: "Dr. Anderson Uchôa (UFC)"
+  sponsor: "FUNCAP / PIBITI"
+  tags: [incivility, pull requests, NLP, LLMs, open source software, bots]
+  partners: >-
+    Anderson Uchôa (UFC, Brasil), Matheus Feitosa de Oliveira Rabelo (UFC, Brasil),
+    José Eric Mesquita Coelho (UFC, Brasil), Carlos Jefté Bastos de Mesquita Freire (UFC, Brasil),
+    Antonio Cruz Gomes (UFC, Brasil), Antonio Lucas Melo de Sousa (UFC, Brasil),
+    Arthur Willame Barroso de Mesquista (UFC, Brasil), Silas Eufrasio da Silva (UFC, Brasil),
+    and Jose Mario Oliveira Patricio (UFC, Brasil).
+  description:
+    - >-
+      In open source software (OSS) development environments such as GitHub, interactions
+      between developers are essential for project progress. These interactions tend to occur
+      through pull request conversations. However, they can be hampered by uncivil behaviors
+      such as disrespectful and offensive comments, which can discourage contributions or even
+      result in code quality deterioration. Currently, there are few automated solutions for
+      dealing with incivility in pull request conversations.
+    - >-
+      This project proposes a non-intrusive and automated bot (The PeacemakerBot) capable of
+      assisting developers and project managers in identifying and moderating uncivil behavior
+      in pull request conversations. The approach uses Natural Language Processing (NLP) and
+      Large Language Models (LLMs) to analyze large volumes of text, understand linguistic
+      patterns, and detect expressions that denote incivility. The project also includes
+      experimental studies to evaluate the effectiveness and effects of moderation on developer
+      interactions, along with guidelines for the responsible use of the bot.
+
+- title: "Investigating Security Automation in Continuous Integration of Machine Learning-Based Systems"
+  status: ongoing
+  period: "2024 – Present"
+  coordinator: "Dr. Anderson Uchôa (UFC)"
+  sponsor: "CNPq / PIBIC"
+  tags: [security automation, continuous integration, machine learning systems, CI/CD, vulnerabilities]
+  partners: >-
+    Anderson Uchôa (UFC, Brasil) and Nelson Felipe Andrade Araújo (UFC, Brasil).
+  description:
+    - >-
+      Machine learning (ML) based systems are widely diffused and of increasing interest in
+      academia and industry. With the popularization of these systems, continuous integration (CI)
+      has become essential for ensuring fast and consistent delivery of new features. However,
+      security is frequently neglected in this process, leaving systems vulnerable to attacks.
+      It is essential to integrate security activities into CI processes, enabling early detection
+      of security vulnerabilities.
+    - >-
+      This project aims to investigate security automation in ML-based systems during the CI
+      process. Selected ML-based systems on GitHub will be analyzed, and CI-related files and
+      logs from services such as Travis CI, Circle CI, and GitHub Actions will be mined and
+      examined to identify and characterize security tools and the prevalence of security
+      activities. Additionally, a questionnaire will be applied to project developers to understand
+      their perception of the importance of security automation in ML-based systems.
+
 - title: "MAINTAIN — Intelligent Maintenance of Software Systems"
   status: ongoing
   period: "2024 – Present"
@@ -12,7 +228,7 @@
     Anderson Uchôa (UFC, Brasil), Matheus Paixão (UECE, Brasil),
     Paulo Henrique Mendes Maia (UECE, Brasil), Jerffeson Teixeira de Souza (UECE, Brasil),
     Ismayle de Sousa Santos (UECE, Brasil), Allysson Allex de Paula Araújo (UFCA, Brasil),
-    Thiago do Nascimento Ferreira (University Of Michigan, EUA), and
+    Thiago do Nascimento Ferreira (University of Michigan-Flint, EUA), and
     Chaiyong Ragkhitwetsagul (Mahidol University, Thailand).
   description:
     - >-
@@ -37,8 +253,8 @@
       technical debt management and code review, for instance.
 
 - title: "Modernization of Legacy Systems: (Semi-)Automated Support and Development Practices"
-  status: ongoing
-  period: "2023 – Present"
+  status: completed
+  period: "2023 – 2024"
   coordinator: "Dr. Anderson Uchôa (UFC)"
   sponsor: "FUNCAP"
   tags: [software modernization, software maintenance, machine learning, development practices]
@@ -59,7 +275,7 @@
     - >-
       The inclusion of new disruptive technologies, such as microservices and Big Data, helps to
       avoid the discontinuation of essential legacy software and offer various other opportunities
-      for organizations. Thus, the project aims to: (i) conduct studies with the legacy systems of
+      for organizations. Thus, the project aimed to: (i) conduct studies with the legacy systems of
       the Ceará industry that are undergoing modernization; (ii) investigate software development
       practices that assist in the identification, application, and restructuring of legacy code;
       (iii) propose and develop a technique that aids in the process of modernizing and evolving
@@ -67,13 +283,15 @@
       proposed by the technique.
 
 - title: "An Exploratory Study on Developers' Perception of Code Smells in AI-Enabled Systems"
-  status: ongoing
-  period: "2022 – Present"
+  status: completed
+  period: "2022 – 2024"
   coordinator: "Dr. Anderson Uchôa (UFC)"
   sponsor: "CNPq / PIBIC"
   tags: [code smells, AI-enabled systems, machine learning, developer survey]
   partners: >-
-    Anderson Uchôa (UFC, Brasil), and Juliana Alves Pereira (PUC-Rio, Brasil).
+    Anderson Uchôa (UFC, Brasil), Pedro Jonnathan Matos de Sousa (UFC, Brasil),
+    Lucas do Nascimento de Sousa (UFC, Brasil), Carlos Eduardo Teles Alencar (UFC, Brasil),
+    and Jose Mario Oliveira Patricio (UFC, Brasil).
   description:
     - >-
       AI-enabled systems are composed of one or more components that learn how to perform a task
@@ -87,25 +305,22 @@
       Our goal is to obtain empirically driven actionable insights for researchers and tool
       builders about the level of knowledge regarding code smells, their perceived criticality,
       and the procedures used by developers to remove or minimize the effects of code smells in
-      AI-enabled systems. We intend to conduct an exploratory survey with developers involved in
-      the development of AI-enabled systems, including frameworks, systems, and machine learning
-      libraries. We will also include developers who have used these frameworks to build their
-      AI-enabled systems.
+      AI-enabled systems. We conducted an exploratory survey with developers involved in the
+      development of AI-enabled systems, including frameworks, systems, and machine learning
+      libraries, as well as developers who used these frameworks to build their AI-enabled systems.
 
 - title: "MAssiSo — Assisted Modernization of Legacy Software for Adoption of Disruptive Technologies"
-  status: ongoing
-  period: "2019 – Present"
+  status: completed
+  period: "2019 – 2025"
   coordinator: "Dr. Alessandro Garcia (PUC-Rio)"
   sponsor: "FAPERJ"
   tags: [modularization, legacy systems, refactoring, recommendation system]
   partners: >-
-    Marcos Kalinowski (PUC-Rio), Thibaut Vidal (PUC-Rio), Leonardo Murta (UFF),
-    Leonardo Tizzei e Renato Cerqueira (IBM Research, Brasil), Gustavo Soares (Microsoft Research, EUA),
-    Diego Cedrim (Amazon, Brasil), Myriung Kim (UCLA, EUA), Nenad Medvidovic (UCLA, EUA),
-    and Jens Krinke (UCL, The United Kingdom).
+    Anderson Uchôa (UFC, Brasil), Alessandro Garcia (PUC-Rio, Brasil),
+    and Marcos Kalinowski (PUC-Rio, Brasil).
   description:
     - >-
-      This project aims to (i) perform studies concerning legacy systems of the industry in
+      This project aimed to (i) perform studies concerning legacy systems of the industry in
       Rio de Janeiro, which are going through the modernization process; (ii) propose and develop
       a recommendation system to assist the refactoring process of legacy code; (iii) investigate
       optimization and recommendation techniques that allow the identification, application, and
@@ -113,19 +328,20 @@
       after the restructuring proposed by the recommender.
 
 - title: "ReSTaurA — Sequential Refactoring: Theory and Automated Support"
-  status: ongoing
-  period: "2018 – Present"
+  status: completed
+  period: "2018 – 2026"
   coordinator: "Dr. Alessandro Garcia (PUC-Rio)"
   sponsor: "CNPq"
   tags: [refactoring, sequential refactoring, recommendation system, conceptual framework]
   partners: >-
-    Microsoft Research (Gustavo Soares), Google (Emerson Murphy-Hill), Amazon (Diego Cedrim),
-    IBM Research (Renato Cerqueira), NCSU (Christopher Parnin), UCLA (Myriung Kim),
-    UCI (Andre van der Hoek), PUC-Rio (Marcos Kalinowski, Carlos J. P. Lucena),
+    Anderson Uchôa (UFC, Brasil) and Alessandro Garcia (PUC-Rio, Brasil).
+    Collaborators include Microsoft Research (Gustavo Soares), Google (Emerson Murphy-Hill),
+    Amazon (Diego Cedrim), IBM Research (Renato Cerqueira), NCSU (Christopher Parnin),
+    UCLA (Myriung Kim), UCI (Andre van der Hoek), PUC-Rio (Marcos Kalinowski, Carlos J. P. Lucena),
     UFCG (Rohit Gheyi), UFAM (Tayana Conte), UFAL (Baldoino F. Neto, Marcio Ribeiro), and others.
   description:
     - >-
-      This project aims to: (i) provide a conceptual framework for sequential refactoring as well
+      This project aimed to: (i) provide a conceptual framework for sequential refactoring as well
       as related concepts; (ii) develop a theory that explains how developers perform sequential
       refactoring in practice; (iii) propose heuristics for automated identification of sequential
       refactoring existing in a program; (iv) assess the quality impact of sequential refactoring;
@@ -164,7 +380,7 @@
 
 - title: "CARECO — Recommendation Systems for Collaborative Software Maintenance"
   status: completed
-  period: "2018"
+  period: "2014 – 2021"
   coordinator: "Dr. Alessandro Garcia & Carlos José Pereira de Lucena (PUC-Rio)"
   sponsor: "CAPES"
   tags: [recommendation system, software maintenance, development environment, collaborative maintenance]
@@ -206,8 +422,8 @@
       of risk areas that requires monitoring. To make the matters worse, it is very difficult to
       identify and control dengue outbreaks in their initial stages.
     - >-
-      To assist the surveillance and detection of dengue mosquito and outbreaks, we propose an
-      integrated platform for population to act as an etymological surveillance agent. The goal is
+      To assist the surveillance and detection of dengue mosquito and outbreaks, we proposed an
+      integrated platform for population to act as an etymological surveillance agent. The goal was
       to collect and transmit geo-referenced data, providing information to assist in entomological
       surveillance of dengue. To accomplish the aforementioned goal, we developed (i) mobile
       applications to collect data, (ii) a web portal for centralizing data and (iii) social media

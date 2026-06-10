@@ -8,6 +8,7 @@ nav:
   cv: CV Lattes
   join: "Junte-se"
   students: "Alunos"
+  collaboration: "Rede"
 
 lang_switcher:
   label: "EN"
@@ -110,6 +111,19 @@ teaching:
   summary_active: "Lecionando Atualmente"
   offered: "Oferecida:"
   badge_active: "🟢 Ativa"
+
+collaboration:
+  title: "Rede de Colaboração"
+  subtitle: "Grafo de coautoria construído dinamicamente a partir da lista de publicações. Cada nó é um pesquisador; as arestas conectam coautores. O tamanho do nó reflete o número de artigos em conjunto."
+  loading: "Construindo a rede a partir das publicações&hellip;"
+  min_label: "Mín. artigos em conjunto:"
+  legend_high: "≥10 artigos"
+  legend_mid: "3–9 artigos"
+  legend_low: "1–2 artigos"
+  legend_edge: "Coautoria"
+  hint: "Arraste · Scroll para zoom · Clique em um nó para detalhes"
+  scale_size: "Tamanho do nó = total de artigos"
+  scale_edge: "Espessura da linha = artigos em conjunto"
 
 services:
   title: "Serviços à Comunidade"

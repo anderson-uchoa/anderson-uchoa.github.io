@@ -8,6 +8,7 @@ nav:
   cv: CV Lattes
   join: "Join"
   students: "Students"
+  collaboration: "Network"
 
 lang_switcher:
   label: "PT-BR"
@@ -109,6 +110,19 @@ teaching:
   summary_active: "Currently Teaching"
   offered: "Offered:"
   badge_active: "🟢 Active"
+
+collaboration:
+  title: "Collaboration Network"
+  subtitle: "Co-authorship graph built dynamically from the publications list. Each node is a researcher; edges connect co-authors. Node size reflects number of joint papers."
+  loading: "Building network from publications&hellip;"
+  min_label: "Min. joint papers:"
+  legend_high: "≥10 papers"
+  legend_mid: "3–9 papers"
+  legend_low: "1–2 papers"
+  legend_edge: "Co-authorship"
+  hint: "Drag nodes · Scroll to zoom · Click a node for details"
+  scale_size: "Node size = total papers"
+  scale_edge: "Line thickness = joint papers"
 
 services:
   title: "Services for the Community"
