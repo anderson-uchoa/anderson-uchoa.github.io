@@ -3,9 +3,11 @@
 {% if cur_lang == "en" %}
   {% assign cur_prefix = "" %}
   {% assign other_prefix = "/pt-BR" %}
+  {% assign other_url = "/pt-BR" | append: page.url %}
 {% else %}
   {% assign cur_prefix = "/pt-BR" %}
   {% assign other_prefix = "" %}
+  {% assign other_url = page.url | remove_first: "/pt-BR" %}
 {% endif %}
 
 <nav id="top-navbar" role="navigation" aria-label="Main navigation">
@@ -25,7 +27,7 @@
 			<li{% if page.active == 'collaboration' %} class="active"{% endif %}><a href="{{ cur_prefix }}/collaboration.html"><i class="icon-sitemap" aria-hidden="true"></i> {{ t.nav.collaboration }}</a></li>
 			<li><a href="http://lattes.cnpq.br/3740664626762609" target="_blank" rel="noopener noreferrer"><i class="icon-external-link" aria-hidden="true"></i> {{ t.nav.cv }}</a></li>
 		</ul>
-		<a href="{{ other_prefix }}/index.html" class="lang-switcher" title="{{ t.lang_switcher.title }}" aria-label="{{ t.lang_switcher.title }}">{{ t.lang_switcher.label }}</a>
+		<a href="{{ other_url }}" class="lang-switcher" title="{{ t.lang_switcher.title }}" aria-label="{{ t.lang_switcher.title }}">{{ t.lang_switcher.label }}</a>
 		<button id="mobile-nav-toggle" aria-label="Open navigation menu">
 			<i class="icon-reorder" aria-hidden="true"></i>
 		</button>
