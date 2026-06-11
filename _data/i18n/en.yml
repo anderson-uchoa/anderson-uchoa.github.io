@@ -124,6 +124,26 @@ collaboration:
   scale_size: "Node size = total papers"
   scale_edge: "Line thickness = joint papers"
 
+students:
+  title: "Students"
+  subtitle: "Current and former students I have supervised or co-supervised at UFC, PUC-Rio, and partner institutions."
+  summary_ongoing: "Ongoing"
+  summary_completed: "Completed"
+  summary_masters: "M.Sc. Dissertations"
+  summary_ic: "Undergrad. Research (IC)"
+  summary_tcc: "Undergrad. Thesis (TCC)"
+  section_ongoing: "Ongoing Supervisions"
+  section_completed: "Completed Supervisions"
+  subsection_masters: "Master's Dissertations"
+  subsection_ic: "Undergraduate Research (IC)"
+  subsection_tcc: "Undergraduate Thesis (TCC)"
+  badge_advisor: "Advisor"
+  badge_coadvisor: "Co-advisor"
+  label_since: "Since"
+  label_tbd: "Title to be defined"
+  label_funding: "Funding"
+  label_with: "with"
+
 services:
   title: "Services for the Community"
   subtitle: "My contribution history to the software engineering research community."

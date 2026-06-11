@@ -1,0 +1,190 @@
+ongoing:
+  masters:
+    - name: "José Mário Oliveira Patrício"
+      year_start: 2026
+      program: "Mestrado em Informática"
+      institution: "Pontifícia Universidade Católica do Rio de Janeiro"
+      funding: "CAPES"
+      role: co-advisor
+      with: "Juliana Alves Pereira"
+
+    - name: "Nelson Felipe Andrade Araújo"
+      year_start: 2026
+      program: "Mestrado em Ciências da Computação"
+      institution: "Universidade Federal do Ceará"
+      funding: "CAPES"
+      role: co-advisor
+      with: "Lincoln Rocha"
+
+    - name: "Jose Eric Mesquita Coelho"
+      year_start: 2025
+      program: "Mestrado em Informática"
+      institution: "Pontifícia Universidade Católica do Rio de Janeiro"
+      role: co-advisor
+      with: "Alessandro Garcia"
+
+    - name: "Matheus Feitosa de Oliveira Rabelo"
+      year_start: 2025
+      program: "Mestrado em Ciências da Computação"
+      institution: "Universidade Federal do Ceará"
+      role: co-advisor
+      with: "Lincoln Rocha"
+
+    - name: "Antonio Lucas Melo de Sousa"
+      year_start: 2025
+      program: "Mestrado em Ciências da Computação"
+      institution: "Universidade Federal do Ceará"
+      role: co-advisor
+      with: "Lincoln Rocha"
+
+    - name: "Joanne Carneiro da Silva Ribeiro"
+      title: "Impact Analysis on DEIA Policies"
+      year_start: 2025
+      program: "Mestrado em Informática"
+      institution: "Pontifícia Universidade Católica do Rio de Janeiro"
+      role: co-advisor
+      with: "Juliana Alves Pereira"
+
+  undergraduate:
+    - name: "Silas Eufrásio da Silva"
+      title: "Promovendo Conversações Civilizadas em Ambientes de Desenvolvimento Colaborativo por Meio de Feedback Individual e Gamificação"
+      year_start: 2025
+      degree: "Graduando em Ciência de Dados"
+      institution: "Universidade Federal do Ceará"
+      funding: "FUNCAP"
+      role: advisor
+
+    - name: "Jhefferson Abrahão Alves Barbosa Souza"
+      title: "Promovendo Conversações Civilizadas em Ambientes de Desenvolvimento Colaborativo por Meio de Feedback Individual e Gamificação"
+      year_start: 2025
+      degree: "Graduando em Análise e Desenvolvimento de Sistemas"
+      institution: "Universidade Federal do Ceará"
+      funding: "FUNCAP"
+      role: advisor
+
+    - name: "Kevin Emmanuel Sousa Pontes"
+      title: "Investigando a Automação de Segurança em Arquivos de Configuração de Integração Contínua em Sistemas Com e Sem Aprendizado de Máquina"
+      year_start: 2025
+      degree: "Graduando em Ciência de Dados"
+      institution: "Universidade Federal do Ceará"
+      funding: "CNPq"
+      role: advisor
+
+    - name: "José Levy Rodrigues da Silva"
+      title: "SP4Dev: Segurança e Privacidade em Software: Estratégias de Automação e Práticas de Desenvolvimento"
+      year_start: 2025
+      degree: "Graduando em Análise e Desenvolvimento de Sistemas"
+      institution: "Universidade Federal do Ceará"
+      funding: "FUNCAP"
+      role: advisor
+
+completed:
+  masters:
+    - name: "Darwin de Oliveira Pinheiro"
+      title: "Measuring Trivial and Non-Trivial Refactorings: A Predictive Analysis and Index Proposal"
+      year: 2024
+      program: "Mestrado em Ciências da Computação"
+      institution: "Universidade Federal do Ceará"
+      role: co-advisor
+      with: "Carla Ilane Moreira Bezerra"
+
+
+  tcc:
+    - name: "Carlos Adriel Sousa Bastos"
+      title: "Caracterização de Práticas de AppSec e da Adoção de Ferramentas Automatizadas de Segurança: Um Questionário Abrangente com Desenvolvedores Brasileiros"
+      year: 2026
+      degree: "Graduação em Segurança da Informação"
+      institution: "Universidade Federal do Ceará"
+      role: advisor
+
+    - name: "Raimundo Rafael Vieira de Brito"
+      title: "Onde os Desenvolvedores Enfrentam Dificuldades com Criptografia? Uma Análise das Discussões em Fóruns Técnicos"
+      year: 2026
+      degree: "Graduação em Segurança da Informação"
+      institution: "Universidade Federal do Ceará"
+      role: advisor
+
+    - name: "Aryely Maria Silva Matos"
+      title: "Privacidade de Dados na Prática de Software: Perspectivas de Desenvolvedores Brasileiros"
+      year: 2025
+      degree: "Graduação em Segurança da Informação"
+      institution: "Universidade Federal do Ceará"
+      role: advisor
+
+    - name: "Taua da Silva Lima"
+      title: "RiskGuard: Um Jogo Sério Baseado em Cartas para Aprimorar o Ensino sobre Padrões de Segurança e Vulnerabilidades de Software em Sistemas Web"
+      year: 2025
+      degree: "Graduação em Segurança da Informação"
+      institution: "Universidade Federal do Ceará"
+      role: advisor
+
+    - name: "Jessica Maria Nunes da Silva"
+      title: "Percepção sobre Requisitos de Qualidade de Dados para Sistemas Baseados em Aprendizado de Máquina: Um Estudo Preliminar"
+      year: 2024
+      degree: "Graduação em Sistema de Informação"
+      institution: "Universidade Federal do Ceará"
+      role: co-advisor
+      with: "Marcelo Martins da Silva"
+
+  undergraduate:
+    - name: "Nelson Felipe Andrade Araújo"
+      title: "Investigando a Automação de Segurança na Integração Contínua de Sistemas Baseados em Aprendizado de Máquina"
+      year: 2024
+      degree: "Graduando em Análise e Desenvolvimento de Sistemas"
+      institution: "Universidade Federal do Ceará"
+      funding: "CNPq"
+      role: advisor
+
+    - name: "Antônio Cruz Gomes"
+      title: "Construção de um bot não-intrusivo para monitorar traços de incivilidade de desenvolvedores em conversações de pull requests"
+      year: 2024
+      degree: "Graduando em Análise e Desenvolvimento de Sistemas"
+      institution: "Universidade Federal do Ceará"
+      funding: "FUNCAP"
+      role: advisor
+
+    - name: "Jose Eric Mesquita Coelho"
+      title: "Modernização de Sistemas Legados: Suporte (Semi-)Automatizado e Práticas de Desenvolvimento"
+      year: 2023
+      degree: "Graduando em Análise e Desenvolvimento de Sistemas"
+      institution: "Universidade Federal do Ceará"
+      funding: "FUNCAP"
+      role: advisor
+
+    - name: "Luan Sales Barroso"
+      title: "Modernização de Sistemas Legados: Suporte (Semi-)Automatizado e Práticas de Desenvolvimento"
+      year: 2023
+      degree: "Graduando em Análise e Desenvolvimento de Sistemas"
+      institution: "Universidade Federal do Ceará"
+      funding: "FUNCAP"
+      role: advisor
+
+    - name: "Eryka Carvalho da Silva"
+      title: "Modernização de Sistemas Legados: Suporte (Semi-)Automatizado e Práticas de Desenvolvimento"
+      year: 2023
+      degree: "Graduando em Ciência de Dados"
+      institution: "Universidade Federal do Ceará"
+      funding: "FUNCAP"
+      role: advisor
+
+    - name: "Esdras Souza dos Santos"
+      title: "Modernização de Sistemas Legados: Suporte (Semi-)Automatizado e Práticas de Desenvolvimento"
+      year: 2023
+      degree: "Graduando em Análise e Desenvolvimento de Sistemas"
+      institution: "Universidade Federal do Ceará"
+      funding: "FUNCAP"
+      role: advisor
+
+    - name: "Pedro Jonnathan Matos de Sousa"
+      title: "Um Estudo Exploratória sobre a Percepção de Desenvolvedores sobre Mal Cheiros de Código em Sistemas Habilitados por Inteligência Artificial"
+      year: 2022
+      degree: "Graduando em Análise e Desenvolvimento de Sistemas"
+      institution: "Universidade Federal do Ceará"
+      role: advisor
+
+    - name: "Carlos Eduardo Teles Alencar"
+      title: "Um Estudo Exploratória sobre a Percepção de Desenvolvedores sobre Mal Cheiros de Código em Sistemas Habilitados por Inteligência Artificial"
+      year: 2022
+      degree: "Graduando em Ciência de Dados"
+      institution: "Universidade Federal do Ceará"
+      role: advisor

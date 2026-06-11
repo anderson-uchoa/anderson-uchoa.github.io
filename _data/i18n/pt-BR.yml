@@ -125,6 +125,26 @@ collaboration:
   scale_size: "Tamanho do nó = total de artigos"
   scale_edge: "Espessura da linha = artigos em conjunto"
 
+students:
+  title: "Alunos"
+  subtitle: "Alunos atuais e ex-alunos que supervisionei ou co-supervisionei na UFC, PUC-Rio e instituições parceiras."
+  summary_ongoing: "Em Andamento"
+  summary_completed: "Concluídas"
+  summary_masters: "Dissertações (M.Sc.)"
+  summary_ic: "Iniciação Científica"
+  summary_tcc: "Trabalhos de Conclusão"
+  section_ongoing: "Orientações em Andamento"
+  section_completed: "Orientações Concluídas"
+  subsection_masters: "Dissertação de Mestrado"
+  subsection_ic: "Iniciação Científica"
+  subsection_tcc: "Trabalho de Conclusão de Curso"
+  badge_advisor: "Orientador"
+  badge_coadvisor: "Coorientador"
+  label_since: "Início"
+  label_tbd: "Título a definir"
+  label_funding: "Financiamento"
+  label_with: "com"
+
 services:
   title: "Serviços à Comunidade"
   subtitle: "Meu histórico de contribuições à comunidade de pesquisa em engenharia de software."

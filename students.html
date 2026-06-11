@@ -1,42 +1,149 @@
 ---
 layout: default
 title: "Students — Anderson Uchôa | UFC"
-description: "Resources and information for students working with Anderson Uchôa at RESET Lab, UFC."
+description: "Current and former students supervised by Anderson Uchôa at RESET Lab, UFC, PUC-Rio, and partner institutions."
 canonical: "https://anderson-uchoa.github.io/students.html"
 og_title: "Students — Anderson Uchôa"
 active: students
 lang: en
 ---
+{% assign _lang = page.lang | default: "en" %}{% assign t = site.data.i18n[_lang] %}
+{% assign s = site.data.students %}
 
 <main class="site-main">
 	<div class="site-container">
-		<div class="nf-wrap">
 
-			<div class="nf-icon-wrap" aria-hidden="true">
-				<i class="icon-wrench nf-bug"></i>
+		<section class="page-header-section">
+			<h1>{{ t.students.title }}</h1>
+			<p>{{ t.students.subtitle }}</p>
+		</section>
+
+		{% assign c_om = s.ongoing.masters | size %}
+		{% assign c_oi = s.ongoing.undergraduate | size %}
+		{% assign c_cm = s.completed.masters | size %}
+		{% assign c_ct = s.completed.tcc | size %}
+		{% assign c_ci = s.completed.undergraduate | size %}
+		{% assign total_ongoing = c_om | plus: c_oi %}
+		{% assign total_completed = c_cm | plus: c_ct | plus: c_ci %}
+		{% assign total_masters = c_om | plus: c_cm %}
+		{% assign total_ic = c_oi | plus: c_ci %}
+
+		<div class="award-summary">
+			<div class="award-summary-item">
+				<span class="award-summary-icon">🎓</span>
+				<span class="award-summary-count">{{ total_ongoing }}</span>
+				<span class="award-summary-label">{{ t.students.summary_ongoing }}</span>
 			</div>
-
-			<div class="nf-terminal" role="region" aria-label="Under construction terminal">
-				<div class="nf-terminal-bar">
-					<span class="nf-dot nf-dot--red"></span>
-					<span class="nf-dot nf-dot--yellow"></span>
-					<span class="nf-dot nf-dot--green"></span>
-					<span class="nf-terminal-title">bash — anderson-uchoa.github.io</span>
-				</div>
-				<div class="nf-terminal-body" dir="ltr">
-					<p class="nf-line"><span class="nf-prompt">~</span><span class="nf-cmd"> curl https://anderson-uchoa.github.io/<span class="nf-arg">students</span></span></p>
-					<p class="nf-line nf-err"><span class="nf-label">Status 🚧:</span> Page under construction</p>
-					<p class="nf-line nf-comment"># This page is being prepared.</p>
-					<p class="nf-line nf-comment"># It will soon include resources and materials for students.</p>
-					<p class="nf-line"><span class="nf-prompt">~</span><span class="nf-cmd"> cd ~/join</span><span class="nf-cursor" aria-hidden="true"></span></p>
-				</div>
+			<div class="award-summary-item">
+				<span class="award-summary-icon">✅</span>
+				<span class="award-summary-count">{{ total_completed }}</span>
+				<span class="award-summary-label">{{ t.students.summary_completed }}</span>
 			</div>
-
-			<p class="nf-msg">The lists of my current and former students will be available here soon.</p>
-			<a href="/join.html" class="nf-btn">
-				<i class="icon-user" aria-hidden="true"></i> Working with Me
-			</a>
-
+			<div class="award-summary-item">
+				<span class="award-summary-icon">📝</span>
+				<span class="award-summary-count">{{ total_masters }}</span>
+				<span class="award-summary-label">{{ t.students.summary_masters }}</span>
+			</div>
+			<div class="award-summary-item">
+				<span class="award-summary-icon">🔬</span>
+				<span class="award-summary-count">{{ total_ic }}</span>
+				<span class="award-summary-label">{{ t.students.summary_ic }}</span>
+			</div>
+			<div class="award-summary-item">
+				<span class="award-summary-icon">📄</span>
+				<span class="award-summary-count">{{ c_ct }}</span>
+				<span class="award-summary-label">{{ t.students.summary_tcc }}</span>
+			</div>
 		</div>
+
+		<!-- Ongoing -->
+		<div class="content-section">
+			<h2 class="section-title"><i class="icon-user" aria-hidden="true"></i> {{ t.students.section_ongoing }}</h2>
+
+			<h3 class="service-subsection-title">{{ t.students.subsection_masters }}</h3>
+			<ul class="service-list">
+				{% for st in s.ongoing.masters %}
+				<li class="service-item">
+					<span class="service-year">{{ st.year_start }}</span>
+					<span class="service-name">
+						<strong>{{ st.name }}</strong>
+						{% if st.title %}<em class="student-title-line">"{{ st.title }}"</em>{% else %}<em class="student-title-line student-title-line--tbd">{{ t.students.label_tbd }}</em>{% endif %}
+						<span class="student-meta-line">{{ st.program }} — {{ st.institution }}{% if st.funding %} · {{ st.funding }}{% endif %}{% if st.with %} · {{ t.students.label_with }} {{ st.with }}{% endif %}</span>
+					</span>
+					<span class="srv-role srv-role--coadvisor">{{ t.students.badge_coadvisor }}</span>
+				</li>
+				{% endfor %}
+			</ul>
+
+			<h3 class="service-subsection-title" style="margin-top:24px;">{{ t.students.subsection_ic }}</h3>
+			<ul class="service-list">
+				{% for st in s.ongoing.undergraduate %}
+				<li class="service-item">
+					<span class="service-year">{{ st.year_start }}</span>
+					<span class="service-name">
+						<strong>{{ st.name }}</strong>
+						{% if st.title %}<em class="student-title-line">"{{ st.title }}"</em>{% endif %}
+						<span class="student-meta-line">{{ st.degree }} — {{ st.institution }}{% if st.funding %} · {{ st.funding }}{% endif %}</span>
+					</span>
+					<span class="srv-role srv-role--advisor">{{ t.students.badge_advisor }}</span>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+
+		<!-- Completed -->
+		<div class="content-section">
+			<h2 class="section-title"><i class="icon-ok-circled" aria-hidden="true"></i> {{ t.students.section_completed }}</h2>
+
+			<h3 class="service-subsection-title">{{ t.students.subsection_masters }}</h3>
+			<ul class="service-list">
+				{% for st in s.completed.masters %}
+				<li class="service-item">
+					<span class="service-year">{{ st.year }}</span>
+					<span class="service-name">
+						<strong>{{ st.name }}</strong>
+						{% if st.title %}<em class="student-title-line">"{{ st.title }}"</em>{% endif %}
+						<span class="student-meta-line">{{ st.program }} — {{ st.institution }}{% if st.funding %} · {{ st.funding }}{% endif %}{% if st.with %} · {{ t.students.label_with }} {{ st.with }}{% endif %}</span>
+					</span>
+					<span class="srv-role srv-role--coadvisor">{{ t.students.badge_coadvisor }}</span>
+				</li>
+				{% endfor %}
+			</ul>
+
+			<h3 class="service-subsection-title" style="margin-top:24px;">{{ t.students.subsection_tcc }}</h3>
+			<ul class="service-list">
+				{% for st in s.completed.tcc %}
+				<li class="service-item">
+					<span class="service-year">{{ st.year }}</span>
+					<span class="service-name">
+						<strong>{{ st.name }}</strong>
+						{% if st.title %}<em class="student-title-line">"{{ st.title }}"</em>{% endif %}
+						<span class="student-meta-line">{{ st.degree }} — {{ st.institution }}{% if st.with %} · {{ t.students.label_with }} {{ st.with }}{% endif %}</span>
+					</span>
+					{% if st.role == 'co-advisor' %}
+					<span class="srv-role srv-role--coadvisor">{{ t.students.badge_coadvisor }}</span>
+					{% else %}
+					<span class="srv-role srv-role--advisor">{{ t.students.badge_advisor }}</span>
+					{% endif %}
+				</li>
+				{% endfor %}
+			</ul>
+
+			<h3 class="service-subsection-title" style="margin-top:24px;">{{ t.students.subsection_ic }}</h3>
+			<ul class="service-list">
+				{% for st in s.completed.undergraduate %}
+				<li class="service-item">
+					<span class="service-year">{{ st.year }}</span>
+					<span class="service-name">
+						<strong>{{ st.name }}</strong>
+						{% if st.title %}<em class="student-title-line">"{{ st.title }}"</em>{% endif %}
+						<span class="student-meta-line">{{ st.degree }} — {{ st.institution }}{% if st.funding %} · {{ st.funding }}{% endif %}</span>
+					</span>
+					<span class="srv-role srv-role--advisor">{{ t.students.badge_advisor }}</span>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+
 	</div>
 </main>

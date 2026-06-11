@@ -3037,6 +3037,44 @@ html.dark-mode .join-subject { background: #111e30; border-color: #2a4060; borde
 	.join-list--two-col { columns: 1; }
 }
 
+/* ── Students page ───────────────────────────────────────────────────────── */
+.service-name strong {
+	display: block;
+	font-size: 13.5px;
+	color: #1a2744;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.student-title-line {
+	display: block;
+	font-size: 12.5px;
+	font-style: italic;
+	color: #555;
+	line-height: 1.4;
+	margin-top: 1px;
+}
+
+.student-title-line--tbd { color: #bbb; font-style: normal; }
+
+.student-meta-line {
+	display: block;
+	font-size: 11.5px;
+	color: #999;
+	margin-top: 2px;
+	line-height: 1.4;
+}
+
+.srv-role--advisor   { background: #dff0e8; color: #1a6640; }
+.srv-role--coadvisor { background: #ede8f8; color: #5a3a9a; }
+
+html.dark-mode .service-name strong      { color: #c8d8f0; }
+html.dark-mode .student-title-line       { color: #8090a8; }
+html.dark-mode .student-title-line--tbd  { color: #3a4a5a; }
+html.dark-mode .student-meta-line        { color: #4a5a6a; }
+html.dark-mode .srv-role--advisor        { background: #163328; color: #5ecb8a; }
+html.dark-mode .srv-role--coadvisor      { background: #261a40; color: #b090e8; }
+
 /* ── Collaborate CTA banner ──────────────────────────────────────────────── */
 .collab-banner {
 	display: flex;
