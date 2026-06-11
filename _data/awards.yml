@@ -11,6 +11,7 @@ best_papers:
     venue: "Artifact Evaluation — ICSE 2026"
     year: 2026
     location: "Rio de Janeiro, Brazil"
+    certificate: "/files/certificates/icse-2026-distinguished-reviewer.pdf"
 
   - image: "/img/personal/cbsoft_2025.png"
     image_alt: "CBSoft 2025"

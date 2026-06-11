@@ -2028,22 +2028,22 @@ html.dark-mode .exp-degree-badge--bsc   { background: #2a1500; color: #e08040; }
 .award-cert-link {
 	display: inline-flex;
 	align-items: center;
-	gap: 4px;
-	margin-top: 8px;
-	font-size: 11px;
-	font-weight: 700;
+	gap: 5px;
+	margin-top: 10px;
+	font-size: 13px;
+	font-weight: 600;
 	color: #3a6eb5;
 	text-decoration: none;
-	padding: 3px 8px;
-	border: 1px solid #c8d8f0;
-	border-radius: 4px;
+	padding: 5px 14px;
+	border: 1.5px solid #b0c8e8;
+	border-radius: 6px;
 	background: #f0f5ff;
-	transition: background 0.15s, color 0.15s;
+	transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
-.award-cert-link:hover { background: #dceaff; color: #1a4a90; text-decoration: none; }
+.award-cert-link:hover { background: #dceaff; border-color: #7aaad8; color: #1a4a90; text-decoration: none; }
 
 html.dark-mode .award-cert-link       { background: #1a2a44; border-color: #2a3a60; color: #7eb5e8; }
-html.dark-mode .award-cert-link:hover { background: #223050; color: #a0c8f8; }
+html.dark-mode .award-cert-link:hover { background: #223050; border-color: #3a5080; color: #a0c8f8; }
 
 /* ── Award badges ─────────────────────────────────────────────────────────── */
 .award-badge {
