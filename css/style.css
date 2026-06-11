@@ -2773,13 +2773,15 @@ html.dark-mode .teaching-sem-badge--current { background: #0e2e1a; color: #5ac47
 	border-radius: 10px;
 	white-space: nowrap;
 }
-.srv-role--pc      { background: #e8f0fe; color: #1a56a0; }
-.srv-role--aec     { background: #fff4e0; color: #8a5000; }
-.srv-role--shadow  { background: #f0ebff; color: #6a35c0; }
-.srv-role--co      { background: #f0f0f4; color: #606070; }
-.srv-role--ideas   { background: #e0f4f4; color: #0e7a7a; }
-.srv-role--showcase{ background: #e0f4f4; color: #0e7a7a; }
-.srv-role--chair   { background: #fff5d6; color: #8a6000; }
+.srv-role--pc       { background: #e8f0fe; color: #1a56a0; }
+.srv-role--aec      { background: #fff4e0; color: #8a5000; }
+.srv-role--shadow   { background: #f0ebff; color: #6a35c0; }
+.srv-role--co       { background: #f0f0f4; color: #606070; }
+.srv-role--ideas    { background: #e0f4f4; color: #0e7a7a; }
+.srv-role--showcase { background: #e0f4f4; color: #0e7a7a; }
+.srv-role--chair    { background: #fff5d6; color: #8a6000; }
+.srv-role--advisor  { background: #dff0e8; color: #1a6640; }
+.srv-role--coadvisor{ background: #ede8f8; color: #5a3a9a; }
 
 .service-subsection-title {
 	font-family: 'Lato', sans-serif;
@@ -2822,6 +2824,8 @@ html.dark-mode .srv-role--co         { background: #1e2030; color: #6070a0; }
 html.dark-mode .srv-role--ideas      { background: #0a1e1e; color: #40a0a0; }
 html.dark-mode .srv-role--showcase   { background: #0a1e1e; color: #40a0a0; }
 html.dark-mode .srv-role--chair      { background: #1e1800; color: #c0a020; }
+html.dark-mode .srv-role--advisor    { background: #163328; color: #5ecb8a; }
+html.dark-mode .srv-role--coadvisor  { background: #261a40; color: #b090e8; }
 html.dark-mode .journal-tag          { background: #1e2a40; border-color: #2a3a58; color: #c0d0e8; }
 
 /* ======================================================
@@ -3065,15 +3069,10 @@ html.dark-mode .join-subject { background: #111e30; border-color: #2a4060; borde
 	line-height: 1.4;
 }
 
-.srv-role--advisor   { background: #dff0e8; color: #1a6640; }
-.srv-role--coadvisor { background: #ede8f8; color: #5a3a9a; }
-
 html.dark-mode .service-name strong      { color: #c8d8f0; }
 html.dark-mode .student-title-line       { color: #8090a8; }
 html.dark-mode .student-title-line--tbd  { color: #3a4a5a; }
 html.dark-mode .student-meta-line        { color: #4a5a6a; }
-html.dark-mode .srv-role--advisor        { background: #163328; color: #5ecb8a; }
-html.dark-mode .srv-role--coadvisor      { background: #261a40; color: #b090e8; }
 
 /* ── Collaborate CTA banner ──────────────────────────────────────────────── */
 .collab-banner {
