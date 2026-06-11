@@ -29,6 +29,7 @@ best_papers:
     paper: "404: Civility Not Found? Evaluating the Effectiveness of Small Language Models in Detecting Incivility in GitHub Conversations"
     year: 2025
     location: "Recife, Brazil"
+    certificate: "/files/certificates/cbsoft-2025-distinguished-artifact.pdf"
 
   - image: "/img/personal/cbsoft_2022.png"
     image_alt: "CBSoft 2022"
@@ -38,6 +39,7 @@ best_papers:
     paper: "How do trivial refactorings affect classification prediction models?"
     year: 2022
     location: "Uberlândia, Brazil"
+    certificate: "/files/certificates/sbcars-2022-best-paper.pdf"
 
   - image: "/img/personal/cbsoft_2021.png"
     image_alt: "CBSoft 2021"
@@ -55,6 +57,7 @@ best_papers:
     venue: "3rd Latin-American School on Software Engineering"
     year: 2016
     location: "Natal, Brazil"
+    certificate: "/files/certificates/ela-es-2016-best-paper.pdf"
 
 competitions:
   - image: "/img/personal/sbsi_2026.svg"
@@ -65,6 +68,7 @@ competitions:
     paper: "Data Privacy in Software Practice: Brazilian Developers' Perspectives"
     year: 2026
     location: "Vitória, Brazil"
+    certificate: "/files/certificates/sbsi-2026-ctccsi-1st-place.pdf"
 
   - image: "/img/personal/cbsoft_2025.png"
     image_alt: "CBSoft 2025"
@@ -74,6 +78,7 @@ competitions:
     paper: "Measuring Trivial and Non-Trivial Refactoring: A Predictive Analysis and Index Proposal (Co-Advisor)"
     year: 2025
     location: "Recife, Brazil"
+    certificate: "/files/certificates/cbsoft-2025-ctd-es-1st-place.pdf"
 
   - image: "/img/personal/sbqs_2025.png"
     image_alt: "SBQS 2025"
@@ -92,6 +97,7 @@ competitions:
     paper: "Unconscious Bias and Perceived Discrimination by Tech Professionals in Brazil"
     year: 2025
     location: "Recife, Brazil"
+    certificate: "/files/certificates/cbsoft-2025-ctic-es-3rd-place.pdf"
 
 grants:
   - image: "/img/personal/funcap.png"
