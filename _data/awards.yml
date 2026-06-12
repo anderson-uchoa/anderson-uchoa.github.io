@@ -21,6 +21,7 @@ best_papers:
     paper: "Diversity Matters: Perceived Inclusion and Discrimination by Brazilian Tech Professionals"
     year: 2025
     location: "Recife, Brazil"
+    certificate: "/files/certificates/sbes-2025-best-paper.pdf"
 
   - image: "/img/personal/cbsoft_2025.png"
     image_alt: "CBSoft 2025"
@@ -89,6 +90,7 @@ competitions:
     paper: "Exploring Code Clone Behavior in Modern Code Review"
     year: 2025
     location: "São José dos Campos, Brazil"
+    certificate: "/files/certificates/sbqs-2025-cticqs-2nd-place.pdf"
 
   - image: "/img/personal/cbsoft_2025.png"
     image_alt: "CBSoft 2025"
