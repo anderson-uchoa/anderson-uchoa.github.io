@@ -2798,6 +2798,7 @@ html.dark-mode .teaching-sem-badge--current { background: #0e2e1a; color: #5ac47
 .srv-role--shadow   { background: #f0ebff; color: #6a35c0; }
 .srv-role--co       { background: #f0f0f4; color: #606070; }
 .srv-role--ideas    { background: #e0f4f4; color: #0e7a7a; }
+.srv-role--tools    { background: #fff0e8; color: #8a3800; }
 .srv-role--showcase { background: #e0f4f4; color: #0e7a7a; }
 .srv-role--chair    { background: #fff5d6; color: #8a6000; }
 .srv-role--advisor  { background: #dff0e8; color: #1a6640; }
@@ -2842,6 +2843,7 @@ html.dark-mode .srv-role--aec        { background: #2a1e0a; color: #d4900a; }
 html.dark-mode .srv-role--shadow     { background: #1e1535; color: #a07ae0; }
 html.dark-mode .srv-role--co         { background: #1e2030; color: #6070a0; }
 html.dark-mode .srv-role--ideas      { background: #0a1e1e; color: #40a0a0; }
+html.dark-mode .srv-role--tools      { background: #2a1400; color: #e08050; }
 html.dark-mode .srv-role--showcase   { background: #0a1e1e; color: #40a0a0; }
 html.dark-mode .srv-role--chair      { background: #1e1800; color: #c0a020; }
 html.dark-mode .srv-role--advisor    { background: #163328; color: #5ecb8a; }

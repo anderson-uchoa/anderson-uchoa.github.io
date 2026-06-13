@@ -1,4 +1,4 @@
-# role values: pc | aec | shadow | co | ideas | showcase | chair
+# role values: pc | aec | shadow | co | ideas | tools | showcase | chair
 
 organization:
   - year: 2025
@@ -10,6 +10,24 @@ organization:
 
 conferences:
   international:
+    - year: 2026
+      name: "19th International Conference on Cooperative and Human Aspects of Software Engineering (CHASE)"
+      role: pc
+    - year: 2026
+      name: "48th International Conference on Software Engineering (ICSE)"
+      role: aec
+    - year: 2026
+      name: "42nd International Conference on Software Maintenance and Evolution (ICSME)"
+      role: ideas
+    - year: 2026
+      name: "26th IEEE International Conference on Source Code Analysis and Manipulation (SCAM)"
+      role: pc
+    - year: 2026
+      name: "19th International Conference on the Quality of Information and Communications Technology (QUATIC)"
+      role: pc
+    - year: 2025
+      name: "47th International Conference on Software Engineering (ICSE)"
+      role: aec
     - year: 2025
       name: "19th International Conference on Cooperative and Human Aspects of Software Engineering (CHASE)"
       role: pc
@@ -42,6 +60,54 @@ conferences:
       role: co
 
   brazilian:
+    - year: 2026
+      name: "XXII Brazilian Symposium on Information Systems (SBSI)"
+      role: pc
+    - year: 2026
+      name: "40th Brazilian Symposium on Software Engineering (SBES)"
+      role: pc
+    - year: 2026
+      name: "40th Brazilian Symposium on Software Engineering (SBES)"
+      role: ideas
+    - year: 2026
+      name: "40th Brazilian Symposium on Software Engineering (SBES)"
+      role: tools
+    - year: 2026
+      name: "XVII Brazilian Conference on Software: Practice and Theory (CBSoft)"
+      role: aec
+    - year: 2026
+      name: "14th Workshop on Software Visualization, Evolution and Maintenance (VEM)"
+      role: pc
+    - year: 2026
+      name: "I Workshop on Software Engineering for Agentic Systems (SE4AS)"
+      role: pc
+    - year: 2026
+      name: "20th Brazilian Symposium on Components, Architectures, and Software Reuse (SBCARS)"
+      role: pc
+    - year: 2025
+      name: "10th Workshop on Social, Human and Economic Aspects of Software (WHASES)"
+      role: pc
+    - year: 2025
+      name: "12th Workshop on Software Visualization, Evolution and Maintenance (VEM)"
+      role: pc
+    - year: 2025
+      name: "39th Brazilian Symposium on Software Engineering (SBES)"
+      role: pc
+    - year: 2025
+      name: "39th Brazilian Symposium on Software Engineering (SBES)"
+      role: ideas
+    - year: 2025
+      name: "39th Brazilian Symposium on Software Engineering (SBES)"
+      role: tools
+    - year: 2025
+      name: "Fourth Brazilian Workshop on Intelligent Software Engineering (ISE)"
+      role: pc
+    - year: 2025
+      name: "XXIV Brazilian Symposium on Software Quality (SBQS)"
+      role: pc
+    - year: 2025
+      name: "21st Brazilian Symposium on Information Systems (SBSI)"
+      role: pc
     - year: 2024
       name: "9th Workshop on Social, Human and Economic Aspects of Software (WHASES)"
       role: pc
@@ -50,6 +116,9 @@ conferences:
       role: pc
     - year: 2024
       name: "XII Escola Regional de Computação do Ceará, Maranhão e Piauí (ERCEMAPI)"
+      role: pc
+    - year: 2024
+      name: "9th Brazilian Software Quality Symposium (SBQS)"
       role: pc
     - year: 2023
       name: "11th Workshop on Software Visualization, Evolution and Maintenance (VEM)"
@@ -66,6 +135,7 @@ conferences:
 
 journals:
   - "Empirical Software Engineering (EMSE)"
+  - "Information and Software Technology (IST)"
   - "Journal of Systems and Software (JSS)"
   - "Software Quality Journal (SQJ)"
   - "Journal of Software Engineering Research and Development (JSERD)"

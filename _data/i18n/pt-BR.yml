@@ -149,8 +149,8 @@ students:
 services:
   title: "Serviços à Comunidade"
   subtitle: "Meu histórico de contribuições à comunidade de pesquisa em engenharia de software."
-  summary_international: "Eventos Internacionais"
-  summary_brazilian: "Eventos Brasileiros"
+  summary_international: "Participações Internacionais"
+  summary_brazilian: "Participações Brasileiras"
   summary_journals: "Periódicos"
   summary_organizer: "Organizador"
   section_organization: "Organização de Eventos"

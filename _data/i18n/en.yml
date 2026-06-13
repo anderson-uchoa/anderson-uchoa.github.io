@@ -148,8 +148,8 @@ students:
 services:
   title: "Services for the Community"
   subtitle: "My contribution history to the software engineering research community."
-  summary_international: "International Venues"
-  summary_brazilian: "Brazilian Venues"
+  summary_international: "Intl. Participations"
+  summary_brazilian: "Brazilian Participations"
   summary_journals: "Journals"
   summary_organizer: "Event Organizer"
   section_organization: "Events Organization"
