@@ -134,6 +134,7 @@ conferences:
       role: pc
 
 journals:
+  - "Automated Software Engineering (ASE)"
   - "Empirical Software Engineering (EMSE)"
   - "Information and Software Technology (IST)"
   - "Journal of Systems and Software (JSS)"
