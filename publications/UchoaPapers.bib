@@ -1,3 +1,68 @@
+@inproceedings{Oliveira2026FeatureRef,
+author    = {Oliveira, José and Colanzi, Thelma E. and Garcia, Alessandro and Bibiano, Ana Carla and Assunção, Wesley K. G. and de Mello, Rafael and Silva, Caio and Uchôa, Anderson and Oliveira, Anderson and Correia, João, Everton L. G. and Mongiovi, Melina},
+title     = {{FeatureRef}: Towards Effective Refactoring of Features},
+booktitle = {Proceedings of the 40th Brazilian Symposium on Software Engineering (SBES)},
+year      = {2026},
+publisher = {Sociedade Brasileira de Computação (SBC)},
+address   = {Porto Alegre, RS, Brasil},
+abstract  = {Software projects comprise multiple features that capture both functional and non-functional requirements. However, many relevant features emerge over time and, as such, are not modularized into modules, such as classes or methods, in the original design. Their effective management requires proper modularization through refactorings as software evolves. Poor feature modularization results in design problems (DPs), such as features whose implementations are tangled with each other or scattered across multiple files. Addressing these DPs would benefit from automated recommendations of feature refactoring. However, existing techniques do not explicitly support feature-driven modularization refactoring. Thus, in this paper, we propose FeatureRef, an automated technique to assist developers in spotting and refactoring feature-related DPs. FeatureRef detects DPs by relying on data from the project design, the source code, and automatically produced mappings of features in existing program files. The technique uses a topic modeling algorithm to automatically determine how existing features are reified in project files. Then, FeatureRef combines feature mappings with indicators of poor structural code quality to find DPs. Finally, to create refactoring recommendations, FeatureRef relies on a novel refactoring recommendation strategy that combines refactoring heuristics with search-based optimization. We evaluated FeatureRef through an empirical study with six open-source projects. The results show that our approach removes nearly three times more feature-related DPs compared to a state-of-the-art baseline that strictly relies on structural metrics to guide the refactoring of feature-related code smells, such as God Class, representing feature tangling, and Feature Envy, representing feature scattering.}
+}
+
+@inproceedings{sun2026evaluating,
+  author    = {Hui Sun and Anderson Uchôa and Rohit Gheyi and Wesley K. G. Assunção},
+  title     = {Evaluating Language Models on Cross-Language Code Functional Equivalence},
+  booktitle = {Proceedings of the 20th International Symposium on Empirical Software Engineering and Measurement (ESEM 2026)},
+  series    = {Leibniz International Proceedings in Informatics (LIPIcs)},
+  publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik},
+  year      = {2026},
+  month     = oct,
+  pages     = {1--20},
+    abstract  = {
+Background. Large Language Models (LLMs) have demonstrated strong
+    performance across a variety of code-understanding tasks, leading many
+    to believe that they can reason about program semantics and further
+    assist downstream tasks such as code translation and code review. A
+    fundamental test of this capability is assessing code functional
+    equivalence. However, existing evaluations primarily focus on
+    intra-language (single programming language) settings or rely on
+    synthetically generated code, raising concerns about whether current
+    results reflect true semantic understanding.
+    Aims. We investigate whether LLMs can accurately judge functional
+    equivalence across different programming languages in human-written
+    code, a setting that requires deeper reasoning beyond superficial
+    similarity.
+    Method. We introduce PolyHuman, a dataset of human-written programs in
+    C++, Java, and Python. Using this dataset, we evaluate intra- and
+    inter-language equivalence detection across open- and closed-source
+    LLMs under realistic conditions. In addition, we select GPT-o4-mini as
+    a representative model to investigate stability assessment. We then
+    manually analyze 81 failure cases in which models incorrectly judge
+    functional equivalence, examining the code logic and the generated
+    Chain-of-Thought reasoning. Finally, we categorize these failures and
+    compare them across GPT-o4-mini, Claude Opus 4.7, and Gemini 3 Flash to
+    determine whether they reflect model-specific issues or broader
+    limitations of state-of-the-art LLMs.
+    Results. We identify a difficulty-dependent breakdown in equivalence
+    judgment, where harder problems make the model increasingly prone to
+    misclassifying non-equivalent code as equivalent, a significant
+    sensitivity to programming language, particularly a more conservative
+    behavior on Python, and a partial reliance on similarity-based cues.
+    Models also show substantial run-to-run instability under identical
+    settings, indicating inconsistent rather than absent capability.
+    Failures are mainly due to three reasons: (1) incorrect abstraction
+    from code to algorithm, (2) correct algorithm identification but
+    flawed reasoning about semantics, and (3) deep implementation-level
+    errors caused by missing knowledge or misinterpreting code logic. We
+    also observed that failures are especially common in code that combines
+    loops, iterations, and conditional branches.
+    Conclusions. Current LLMs do not reliably capture functional
+    equivalence within or across languages. Our findings highlight the need
+    for more realistic benchmarks and suggest improvements through better
+    reasoning-path selection and by addressing reasoning gaps across the
+    three identified failure levels.
+  }
+}
+
 @inproceedings{Pontes2026DataQualityRequirements,
 author    = {Pontes, Kevin and Cordeiro, Arthur and da Silva, Jessica and Souza, Jhefferson and Ávila, Emanuel and Martins, Marcelo and Villamizar, Hugo and Uchôa, Anderson},
 title     = {Practitioners' Perceptions of Data Quality Requirements in Machine Learning-Enabled Systems: An Exploratory Survey},
