@@ -1,6 +1,6 @@
 @inproceedings{Oliveira2026FeatureRef,
 author    = {Oliveira, José and Colanzi, Thelma E. and Garcia, Alessandro and Bibiano, Ana Carla and Assunção, Wesley K. G. and de Mello, Rafael and Silva, Caio and Uchôa, Anderson and Oliveira, Anderson and Correia, João, Everton L. G. and Mongiovi, Melina},
-title     = {{FeatureRef}: Towards Effective Refactoring of Features},
+title     = {FeatureRef: Towards Effective Refactoring of Features},
 booktitle = {Proceedings of the 40th Brazilian Symposium on Software Engineering (SBES)},
 year      = {2026},
 publisher = {Sociedade Brasileira de Computação (SBC)},
@@ -17,50 +17,7 @@ abstract  = {Software projects comprise multiple features that capture both func
   year      = {2026},
   month     = oct,
   pages     = {1--20},
-    abstract  = {
-Background. Large Language Models (LLMs) have demonstrated strong
-    performance across a variety of code-understanding tasks, leading many
-    to believe that they can reason about program semantics and further
-    assist downstream tasks such as code translation and code review. A
-    fundamental test of this capability is assessing code functional
-    equivalence. However, existing evaluations primarily focus on
-    intra-language (single programming language) settings or rely on
-    synthetically generated code, raising concerns about whether current
-    results reflect true semantic understanding.
-    Aims. We investigate whether LLMs can accurately judge functional
-    equivalence across different programming languages in human-written
-    code, a setting that requires deeper reasoning beyond superficial
-    similarity.
-    Method. We introduce PolyHuman, a dataset of human-written programs in
-    C++, Java, and Python. Using this dataset, we evaluate intra- and
-    inter-language equivalence detection across open- and closed-source
-    LLMs under realistic conditions. In addition, we select GPT-o4-mini as
-    a representative model to investigate stability assessment. We then
-    manually analyze 81 failure cases in which models incorrectly judge
-    functional equivalence, examining the code logic and the generated
-    Chain-of-Thought reasoning. Finally, we categorize these failures and
-    compare them across GPT-o4-mini, Claude Opus 4.7, and Gemini 3 Flash to
-    determine whether they reflect model-specific issues or broader
-    limitations of state-of-the-art LLMs.
-    Results. We identify a difficulty-dependent breakdown in equivalence
-    judgment, where harder problems make the model increasingly prone to
-    misclassifying non-equivalent code as equivalent, a significant
-    sensitivity to programming language, particularly a more conservative
-    behavior on Python, and a partial reliance on similarity-based cues.
-    Models also show substantial run-to-run instability under identical
-    settings, indicating inconsistent rather than absent capability.
-    Failures are mainly due to three reasons: (1) incorrect abstraction
-    from code to algorithm, (2) correct algorithm identification but
-    flawed reasoning about semantics, and (3) deep implementation-level
-    errors caused by missing knowledge or misinterpreting code logic. We
-    also observed that failures are especially common in code that combines
-    loops, iterations, and conditional branches.
-    Conclusions. Current LLMs do not reliably capture functional
-    equivalence within or across languages. Our findings highlight the need
-    for more realistic benchmarks and suggest improvements through better
-    reasoning-path selection and by addressing reasoning gaps across the
-    three identified failure levels.
-  }
+  abstract  = {Background. Large Language Models (LLMs) have demonstrated strong performance across a variety of code-understanding tasks, leading many to believe that they can reason about program semantics and further assist downstream tasks such as code translation and code review. A fundamental test of this capability is assessing code functional equivalence. However, existing evaluations primarily focus on intra-language (single programming language) settings or rely on synthetically generated code, raising concerns about whether current results reflect true semantic understanding. Aims. We investigate whether LLMs can accurately judge functional equivalence across different programming languages in human-written code, a setting that requires deeper reasoning beyond superficial similarity. Method. We introduce PolyHuman, a dataset of human-written programs in C++, Java, and Python. Using this dataset, we evaluate intra- and inter-language equivalence detection across open- and closed-source LLMs under realistic conditions. In addition, we select GPT-o4-mini as a representative model to investigate stability assessment. We then manually analyze 81 failure cases in which models incorrectly judge functional equivalence, examining the code logic and the generated Chain-of-Thought reasoning. Finally, we categorize these failures and compare them across GPT-o4-mini, Claude Opus 4.7, and Gemini 3 Flash to determine whether they reflect model-specific issues or broader limitations of state-of-the-art LLMs. Results. We identify a difficulty-dependent breakdown in equivalence judgment, where harder problems make the model increasingly prone to misclassifying non-equivalent code as equivalent, a significant sensitivity to programming language, particularly a more conservative behavior on Python, and a partial reliance on similarity-based cues. Models also show substantial run-to-run instability under identical settings, indicating inconsistent rather than absent capability. Failures are mainly due to three reasons: (1) incorrect abstraction from code to algorithm, (2) correct algorithm identification but flawed reasoning about semantics, and (3) deep implementation-level errors caused by missing knowledge or misinterpreting code logic. We also observed that failures are especially common in code that combines loops, iterations, and conditional branches. Conclusions. Current LLMs do not reliably capture functional equivalence within or across languages. Our findings highlight the need for more realistic benchmarks and suggest improvements through better reasoning-path selection and by addressing reasoning gaps across the three identified failure levels.}
 }
 
 @inproceedings{Pontes2026DataQualityRequirements,
