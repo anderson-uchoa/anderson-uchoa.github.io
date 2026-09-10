@@ -25,33 +25,20 @@
       interfaces aligned with modern standards; and (iv) an MVP with a simulated provider and
       demonstration application to validate the proposed model.
 
-- title: "LLM-Assisted Refactoring: A Human-in-the-Loop Approach for Sustainable Software Quality"
+- title: "LLM-Based and Agentic Approaches for Reliable Software Maintenance and Evolution"
   status: ongoing
   period: "2026 – Present"
   coordinator: "Dr. Anderson Uchôa (UFC)"
   sponsor: "CNPq"
-  tags: [LLMs, refactoring, human-in-the-loop, code quality, AI-assisted development]
+  tags: [LLMs, refactoring, AI agents, code quality, AI-assisted development]
   partners: >-
     Anderson Uchôa (UFC, Brasil), Rohit Gheyi (UFCG, Brasil),
     and Wesley K. G. Assunção (NC State, EUA).
   description:
     - >-
-      Recent advances in Large Language Models (LLMs) have revolutionized the automation of
-      software engineering tasks, especially in code generation and refactoring suggestions.
-      However, despite their potential, the direct use of these tools in real development
-      workflows still faces important limitations: lack of sensitivity to the architectural
-      context of the system, risks of introducing semantic regressions, and low transparency
-      in model decisions.
+      Recent advances in Large Language Models (LLMs) and agent-based systems have expanded the automation of software maintenance and evolution activities. Despite this potential, their adoption still faces challenges related to accuracy, behavioral preservation, context representation, consistency across executions, computational cost, and decision transparency. In this context, this postdoctoral project investigates, develops, and evaluates LLM-based and agentic approaches to reliably support tasks such as software understanding, quality issue detection, refactoring, and change validation. 
     - >-
-      This project aims to investigate, develop, and evaluate an LLM-assisted refactoring
-      approach centered on Human-in-the-Loop (HITL) cycles, in which the developer acts as a
-      critical validation and refinement agent for automatically generated suggestions. The
-      research includes: (i) mapping existing approaches for LLM-based refactoring and HITL
-      collaborative workflows; (ii) context-sensitive prompt engineering; (iii) development of a
-      functional prototype with IDE integration supporting classic smells such as Long Method,
-      God Class, and Feature Envy; (iv) execution of HITL cycles with structured human feedback
-      collection; and (v) empirical study on open-source repositories comparing generated
-      refactorings with real developer history.
+      The research examines how different models, prompting strategies, context representations, and agent architectures influence the quality of the results, including when the division of responsibilities among agents provides meaningful benefits. The studies cover different software artifacts and maintenance scenarios, including the detection and refactoring of configuration issues in CI/CD workflows, the assessment of functional equivalence between programs, and the analysis of how context affects model decisions. The expected outcomes include empirical evidence, datasets, evaluation protocols, and guidelines for the responsible, auditable, and reliable use of LLM-based and agentic systems in Software Engineering.
 
 - title: "SP4Dev — Security and Privacy in Software: Automation Strategies and Development Practices"
   status: ongoing
